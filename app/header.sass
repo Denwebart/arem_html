@@ -1,0 +1,138 @@
+@import "bourbon"
+@import "sass/vars"
+@import "sass/base"
+
+//First screen styles
+
+// HeaderWidger
+#header-widget
+    padding: 5px 0
+    line-height: 40px
+    font-size: em(14px)
+
+    ul
+        display: inline-block
+        height: 40px
+        li
+            display: inline-block
+            margin-right: 25px
+            span
+                float: left
+    i, .fa
+        color: #ffffff
+        float: left
+        font-size: 20px
+        line-height: 40px
+        margin-right: 7px
+
+    .user-panel
+        .avatar
+            width: 40px
+
+// End HeaderWidger
+
+// Header
+#header
+    .logo
+        margin: 20px 0
+    h1
+        margin-top: 30px
+        .slogan
+            margin-top: 15px
+            display: block
+            font-size: 18px
+
+    .contact-menu
+        margin-top: 40px
+    .social-links
+        margin-top: 25px
+
+    .info-menu
+        margin: 15px 0
+        float: right
+    .info-icon
+        font-size: 30px
+        color: $accent-color
+        margin: 15px
+// End Header
+
+// Main Menu
+.menu-section
+    display: inline-block
+    width: 100%
+    background: linear-gradient(to top, $light-gradient-colors)
+    border: 1px solid #f9f9f9
+    border-bottom: none
+    border-radius: 3px
+    line-height: 30px
+    padding: 0 5px
+
+    // menu
+    .main-menu
+        position: relative
+        li
+            float: left
+            padding: 14px 20px
+            border-right: 1px solid #fff
+            border-left: 1px solid #eee
+            border-bottom: 1px solid #f9f9f9
+            i.fa
+                margin-left: 10px
+            a
+                font-size: em(18px)
+                color: #333
+                text-decoration: none
+                &:hover
+                    color: $accent-color
+            // submenu
+            ul
+                display: none
+                position: absolute
+                z-index: 999
+                top: 59px
+                margin-left: -20px
+                background: linear-gradient(to bottom, $light-gradient-colors)
+                border-radius: 0 0 2px 2px
+                border: 1px solid #f9f9f9
+                border-top: 1px solid #eeeeee
+                padding: 10px 0
+                li
+                    padding: 0
+                    float: none
+                    line-height: 1.6
+                    border: none
+                    margin-bottom: 5px
+                    a
+                        display: block
+                        padding: 0 20px
+                        font-size: em(16px)
+            &:hover
+                ul
+                    display: block
+        li.active
+            a
+                color: $accent-color
+
+
+    // search
+    .search-form
+        margin: 12px 20px 0 0
+        input, button
+            border: none
+            background: none
+            opacity: 0.5
+            float: left
+        input
+            height: 30px
+            font-size: em(18px)
+            border-bottom: 1px solid $grey-color
+            padding-right: 3px
+            &:hover, &:focus, &:active,
+            &:hover ~ button, &:focus ~ button, &:active ~ button
+                opacity: 1
+        button
+            padding: 0
+            height: 30px
+            i, .fa
+                font-size: 30px
+// End Main Menu
