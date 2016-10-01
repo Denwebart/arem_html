@@ -9,7 +9,6 @@
         ul
             li
                 font-size: 14px
-                margin-left: 10px
                 /* */
 
 /* Medium Devices, Desktops - SM - для 991 и менее */
@@ -22,6 +21,22 @@
 
 /* Extra Small Devices, Phones - XS - для 480 и менее */
 @media only screen and (max-width : 480px)
+    #header-widget
+        .user-panel
+            a
+                padding: 0 8px
+            .dropdown
+                &.active
+                    > a
+                        i, .fa
+                            &:after
+                                right: 12px
+                &.user.active
+                    > a
+                        i, .fa
+                            &:after
+                                right: 10px
+
     /* */
 
 /* Custom, iPhone Retina - XS - для 320 и менее */
