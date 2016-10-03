@@ -5,6 +5,8 @@
 
 /* Large Devices, Wide Screens - MD - для 1199 и менее*/
 @media only screen and (max-width : 1199px)
+    .align-center-md
+        text-align: center
     #header-widget
         ul
             li
@@ -13,17 +15,30 @@
 
 /* Medium Devices, Desktops - SM - для 991 и менее */
 @media only screen and (max-width : 991px)
+    .align-center-sm
+        text-align: center
     /* */
 
 /* Small Devices, Tablets - XS - для 767 и менее */
 @media only screen and (max-width : 767px)
+    .align-center-xs
+        text-align: center
+
+    /* Footer */
+    footer
+        .copyright
+            margin-top: 20px
+        .social-links
+            margin: 20px 0 10px
+        .title
+            margin: 15px 0 15px
     /* */
 
 /* Extra Small Devices, Phones - XS - для 480 и менее */
 @media only screen and (max-width : 480px)
     #header-widget
         .user-panel
-            a
+            .button
                 padding: 0 8px
             .dropdown
                 &.active
@@ -36,6 +51,24 @@
                         i, .fa
                             &:after
                                 right: 10px
+    #header
+        .logo
+            margin: 10px 0
+        h1
+            margin: 0
+            font-size: 28px
+            width: 240px
+            .slogan
+                font-size: 14px
+                margin-top: 5px
+        .menu-toggle-button
+            margin-top: 3px
+            span
+                display: none
+            i, .fa
+                margin: 0
+        .social-links
+            margin: 20px 0
 
     /* */
 

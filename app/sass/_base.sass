@@ -24,7 +24,7 @@ body input:required:valid,
 body textarea:required:valid
 	color: $grey-color
 
-body
+body, #panel
     background-color: #e1e0e4
 
 body
@@ -86,6 +86,14 @@ a
         color: $accent-color
 
 // Buttons
+button
+    background: none
+    border: none
+button:active, button:focus
+    outline: none
+button::-moz-focus-inner
+    border: 0
+
 .button
     font-family: $title-font
     display: inline-block
@@ -96,11 +104,13 @@ a
     border: 1px solid rgba(255, 255, 255, 0.15)
     &:hover, &:focus, &:active
         border: 1px solid rgba(255, 255, 255, 0.1)
-
+    &.circle-button
+        border-radius: 50%
 .default-button
     color: $dark-color
     background: #e7e7e7
-
+    i, .fa
+        color: $dark-color
     &:hover, &:focus, &:active
         color: $dark-color
         background: #eeeeee
@@ -108,10 +118,20 @@ a
 .accent-button
     color: #ffffff
     background: $accent-color
-
+    i, .fa
+        color: #ffffff
     &:hover, &:focus, &:active
         color: #ffffff
         background: $accent-color-dark
+
+.dark-button
+    color: #ffffff
+    background: $dark-color
+    i, .fa
+        color: #ffffff
+    &:hover, &:focus, &:active
+        color: #ffffff
+        background: #1F3245
 
 // Lists
 ul
@@ -134,6 +154,10 @@ p
 .small
     font-size: em(12px)
     margin-bottom: 12px
+.without-enter
+    white-space: nowrap
+.align-center
+    text-align: center
 
 .info
     color: $accent-color !important
@@ -146,12 +170,20 @@ p
 img, .image
     display: inline-block
     max-width: 100%
+    &.avatar
+        background-color: #E1E0E4
 
 // Icons
 i, .fa
     color: $grey-color
+    margin-right: 7px
+    &.pull-right
+        margin-right: 0
+        margin-left: 7px
     &:hover
         color: $accent-color
+i:only-child, .fa:only-child
+    margin: 0
 
 // Margins and Paddings
 .m-t-20
@@ -168,9 +200,15 @@ i, .fa
     margin-right: 25px
 
 // Sections
+section
+    padding: 30px 25px
+    margin-bottom: 30px
 .dark-section
     background: $dark-color
     color: #ffffff
+
+.white-section
+    background: #f9f9f9
 
 // Delimiter
 .delimiter
@@ -204,6 +242,8 @@ i, .fa
 
 // Social Links
 .social-links
+    margin-bottom: 20px
+    display: inline-block
     i, .fa
         font-size: 20px
 

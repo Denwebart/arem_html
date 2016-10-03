@@ -23,19 +23,19 @@
         float: left
         font-size: 20px
         line-height: 50px
-        margin-right: 7px
 
     .user-panel
         div
             float: left
-        i, .fa
-            margin: 0
-            color: $grey-color
-        a
+        .button
+            border: none
             float: left
             margin: 0 5px
             padding: 0 10px
             position: relative
+            i, .fa
+                margin: 0
+                color: $grey-color
             &.active, &:hover
                 i, .fa
                     color: #ffffff
@@ -65,7 +65,6 @@
                 color: #ffffff
         .avatar
             width: 40px
-            height: 40px
             margin: 5px 15px 0 0
             border-radius: 5px
         .dropdown
@@ -109,11 +108,9 @@
             .container-header
                 padding: 5px 11px 10px
                 text-align: center
+                line-height: 20px
                 .title
-                    line-height: 20px
-                a
-                    span
-                        text-decoration: underline
+                    float: left
             .container-body
                 padding: 0px 6px
             a
@@ -126,7 +123,6 @@
                 float: none
                 line-height: 1
                 color: $dark-color
-                margin-right: 7px
             a i, a .fa, a span
                 line-height: 20px
                 float: left
@@ -150,7 +146,6 @@
                         display: inline-block
                         width: 100%
                         > i, > .fa
-                            float: left
                             margin: 0 15px 0 5px
                             position: absolute
                             left: 8px
@@ -163,14 +158,23 @@
                             color: $grey-color
                             font-size: 14px
                             padding: 0 5px
-                    .date, .text
+                    .avatar
+                        width: 22px
+                        margin: 0 15px 0 5px
+                        position: absolute
+                        left: 5px
+                        top: 2px
+                    .text, .small-text
                         display: inline-block
                         width: 100%
-                    .date
+                    .small-text
                         color: $grey-color
                         font-size: 10px
                     .text
                         font-size: 12px
+                &.letters-list
+                    a:first-child
+                        padding: 0 30px 0 5px
             .user-menu
                 float: left
                 li
@@ -193,20 +197,27 @@
                             font-size: 24px
                     &.active a, a:hover, a:focus
                         opacity: 1
-
+        .user
+            .dropdown-container
+                .container-header
+                    .title
+                        float: none
 
 // End HeaderWidger
 
 // Header
 #header
+    margin-bottom: 24px
     .logo
         margin: 20px 0
     h1
         margin-top: 30px
+        float: left
         .slogan
             margin-top: 15px
             display: block
             font-size: 18px
+            opacity: 0.8
 
     .contact-menu
         margin-top: 40px
