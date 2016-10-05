@@ -2,27 +2,27 @@
 @import "vars"
 
 *::-webkit-input-placeholder
-	color: $grey-color
+	color: $gray-color
 	opacity: 1
 
 *:-moz-placeholder
-	color: $grey-color
+	color: $gray-color
 	opacity: 1
 
 *::-moz-placeholder
-	color: $grey-color
+	color: $gray-color
 	opacity: 1
 
 *:-ms-input-placeholder
-	color: $grey-color
+	color: $gray-color
 	opacity: 1
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid
-	color: $grey-color
+	color: $gray-color
 body input:required:valid,
 body textarea:required:valid
-	color: $grey-color
+	color: $gray-color
 
 body, #panel
     background-color: #e1e0e4
@@ -89,6 +89,10 @@ a
 button
     background: none
     border: none
+    &.active, &:hover, &:focus
+        color: $accent-color
+        i, .fa
+            color: $accent-color
 button:active, button:focus
     outline: none
 button::-moz-focus-inner
@@ -138,6 +142,7 @@ ul
     list-style: none
     margin: 0
     padding: 0
+    display: inline-block
 
 ul.horisontal
     display: block
@@ -150,7 +155,9 @@ ul.horisontal
 
 // Text
 p
-    margin-top: 0
+    margin: 0 0 20px
+    &:last-child
+        margin-bottom: 0
 .small
     font-size: em(12px)
     margin-bottom: 12px
@@ -159,6 +166,9 @@ p
 .align-center
     text-align: center
 
+.help-text
+    color: $dark-gray-color
+    font-size: 14px
 .info
     color: $accent-color !important
 .success
@@ -171,16 +181,22 @@ img, .image
     display: inline-block
     max-width: 100%
     &.avatar
+        border-radius: 5px
         background-color: #E1E0E4
+        &.micro
+            width: 22px
+        &.mini
+            width: 50px
 
 // Icons
 i, .fa
-    color: $grey-color
+    color: $gray-color
     margin-right: 7px
     &.pull-right
         margin-right: 0
         margin-left: 7px
-    &:hover
+a
+    i:hover, .fa:hover
         color: $accent-color
 i:only-child, .fa:only-child
     margin: 0
@@ -188,6 +204,8 @@ i:only-child, .fa:only-child
 // Margins and Paddings
 .m-t-20
     margin-top: 20px
+.m-b-20
+    margin-bottom: 20px
 .m-l-5
     margin-left: 5px
 .m-l-30
@@ -198,10 +216,12 @@ i:only-child, .fa:only-child
     margin-right: 5px
 .m-r-25
     margin-right: 25px
+.p-r-25
+    padding-right: 25px
 
 // Sections
 section
-    padding: 30px 25px
+    padding: 25px
     margin-bottom: 30px
 .dark-section
     background: $dark-color
@@ -272,3 +292,16 @@ input, textarea
         .button
             white-space: nowrap
             border-radius: 0 2px 2px 0
+
+.table-block
+    display: table
+    width: 100%
+    .responsive-block
+        position: relative
+        display: table-cell
+        width: 100%
+        vertical-align: top
+    .fixed-block
+        display: table-cell
+        width: 1%
+        vertical-align: top

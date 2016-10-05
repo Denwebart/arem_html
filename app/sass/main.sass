@@ -43,27 +43,126 @@ body
         svg
             width: 30px
             .close-x
-                stroke: $grey-color
+                stroke: $gray-color
                 fill: transparent
                 stroke-linecap: round
                 stroke-width: 4
     .title
         display: inline-block
         width: 100%
-        color: $grey-color
+        color: $gray-color
         margin: 15px 0 8px
         &:first-child
             margin-top: 0
 
 //Custom styles here
 
+// Widgets
+.widget
+    display: inline-block
+    width: 100%
+
+// like-dislike widget
+#like-dislike-widget
+    color: $gray-color
+    margin-top: 5px
+    .buttons
+        display: inline-block
+        white-space: nowrap
+        height: 26px
+        .like, .dislike
+            padding: 0
+            .count
+                position: relative
+                top: -3px
+            i, .fa
+                font-size: 26px
+        .like
+            margin-right: 25px
+    .percentage
+        float: left
+        margin-top: 5px
+        .percentage-like
+            background: $accent-color
+.percentage
+    width: 100%
+    height: 3px
+    background-color: $gray-color
+    .value
+        height: 3px
+        border-right: 1px solid #eeeeee
+
+// social share widget
+#social-buttons-widget
+    margin-top: 20px
+    .text
+        margin-left: 20px
+
+
+// Page Info
+.page-info
+    display: inline-block
+    width: 100%
+    float: left
+    margin-bottom: 10px
+    > div
+        float: left
+        margin-right: 20px
+        color: $dark-gray-color
+        font-size: em(14px)
+    a, a span
+        color: $dark-gray-color
+        text-decoration: underline
+    a:hover, a:hover span, a:hover i,
+    .active a, .active span, .active i
+        color: $accent-color
+        text-decoration: none
+    .user
+        img
+            margin-right: 7px
+    i, .fa
+        font-size: 20px
+    i, img, a, time, span
+        float: left
+        line-height: 22px
+
+// Page Tags
+.tags
+    a
+        display: inline-block
+        padding: 0 10px
+        background: #e7e7e7
+        border: 1px solid #eeeeee
+        border-radius: 3px
+        font-family: $title-font
+        color: $dark-color
+        text-decoration: none
+        span
+            &:first-child
+                border-right: 1px solid #f9f9f9
+                padding-right: 5px
+        .count
+            float: right
+            border-left: 1px solid #eeeeee
+            padding-left: 5px
+
+// Content
+#content
+    .page-text
+        float: left
+    .tags
+        display: inline-block
+        margin-top: 20px
+
+// End Widgets
+
 // Footer
 footer
     padding: 30px 0 50px 0
-    color: $grey-color !important
+    color: $gray-color !important
 
     .copyright
-        color: $grey-color
+        color: $gray-color
         font-size: em(14px)
         margin-top: 35px
     .social-links
