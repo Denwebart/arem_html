@@ -63,7 +63,7 @@ body
     width: 100%
 
 // like-dislike widget
-#like-dislike-widget
+.like-dislike-widget
     color: $gray-color
     margin-top: 5px
     .buttons
@@ -94,10 +94,11 @@ body
 
 // social share widget
 #social-buttons-widget
-    margin-top: 20px
     .text
         margin-left: 20px
 
+.table-block.page-title
+    margin-bottom: 15px
 
 // Page Info
 .page-info
@@ -110,6 +111,8 @@ body
         margin-right: 20px
         color: $dark-gray-color
         font-size: em(14px)
+        &:last-child
+            margin-right: 0
     a, a span
         color: $dark-gray-color
         text-decoration: underline
@@ -125,7 +128,19 @@ body
     i, img, a, time, span
         float: left
         line-height: 22px
-
+    .like-dislike-widget
+        margin-top: 0
+        height: 22px
+        .buttons
+            height: 22px
+            .like, .dislike
+                .count
+                    position: relative
+                    top: 0
+                i, .fa
+                    font-size: 20px
+            .like
+                margin-right: 20px
 // Page Tags
 .tags
     a
@@ -152,7 +167,66 @@ body
         float: left
     .tags
         display: inline-block
-        margin-top: 20px
+        margin-bottom: 20px
+    #social-buttons-widget
+        margin-bottom: 20px
+
+// Blog List
+.blog
+    margin-bottom: 30px
+    .item
+        position: relative
+        display: inline-block
+        border-top: 1px solid #ffffff
+        border-bottom: 1px solid #eeeeee
+        padding-top: 25px
+        &:first-child
+            border-top: none
+            padding-top: 0
+        &:last-child
+            border-bottom: none
+        &.full
+            .item-image, .item-text
+                width: 100%
+                margin-left: 0
+                margin-top: 0
+        .item-image
+            float: left
+            width: 35%
+            margin: 5px 0 20px
+        .item-text
+            float: left
+            width: calc(65% - 25px)
+            margin-left: 25px
+        .category
+            display: inline-block
+            width: 100%
+            margin-bottom: 20px
+    
+// Pagination
+.pagination
+    text-align: center
+    li
+        float: left
+        padding: 6px 10px
+        border: 1px solid rgba(255, 255, 255, 0)
+        margin-right: 5px
+        &:last-child
+            margin-right: 0
+        &.active, &:hover
+            border-radius: 2px
+            border: 1px solid rgba(255, 255, 255, 0.15)
+            background: $accent-color
+            a, i, .fa
+                color: #ffffff
+                text-decoration: none
+        &:hover
+            background: $accent-color-dark
+        a
+            color: $dark-gray-color
+            i, .fa
+                margin-left: 5px
+
 
 // End Widgets
 
