@@ -5,7 +5,7 @@
 
 	<meta charset="utf-8">
 
-	<title>Главная страница - Avtorem.info</title>
+	<title>Контакты - Avtorem.info</title>
 	<meta name="description" content="">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -505,10 +505,14 @@
                                 </nav>
                                 <div class="search search-form pull-right">
                                     <form action="#" id="search-form">
-                                        <input type="text" value="" placeholder="Поиск по сайту">
-                                        <button type="submit" form="search-form" value="">
-                                            <i class="fa fa-search"></i>
-                                        </button>
+                                        <div class="input-group">
+                                            <input type="text" placeholder="Поиск по сайту">
+                                            <span class="input-group-button">
+                                                <button type="submit" form="search-form" value="">
+                                                    <i class="fa fa-search"></i>
+                                                </button>
+                                            </span>
+                                        </div>
                                     </form>
                                 </div>
                             </div>
@@ -570,7 +574,7 @@
                         </div>
 
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-6 col-sm-6 col-xs-12">
                                 <h3>Связаться с администрацией сайта</h3>
                                 <div class="small-description">
                                     Если у Вас возникли вопросы или есть
@@ -590,8 +594,10 @@
                                     <div class="form-group">
                                         <textarea name="text" rows="5" placeholder="Текст письма *"></textarea>
                                     </div>
-                                    <div class="form-group">
-                                        <input name="send-copy" id="send-copy" type="checkbox" value="1">
+                                    <div class="form-group input-group">
+                                        <div class="fixed">
+                                            <input name="send-copy" id="send-copy" type="checkbox" value="1" checked>
+                                        </div>
                                         <label for="send-copy">
                                             Отправить копию этого сообщения на Ваш адрес e-mail
                                         </label>
@@ -599,12 +605,12 @@
                                     <button class="button accent-button pull-right" type="button">Отправить</button>
                                 </form>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-6 col-sm-6 col-xs-12">
                                 <h3>Мы в социальных сетях</h3>
                                 <div class="small-description">
                                     Подписывайтесь на группы в социальных сетях
                                     и первыми узнавайте свежие новости, участвуйте
-                                    в конкурсах и ...
+                                    в конкурсах и многое другое.
                                 </div>
                                 <div class="social-links">
                                     <a href="#">
@@ -635,7 +641,7 @@
         <footer class="dark-section">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-lg-3 col-md-4">
                         <img src="/img/logo-white.svg" alt="Avtorem.info" class="logo">
 
                         <div class="copyright">
@@ -662,7 +668,7 @@
 
                         <div class="clearfix"></div>
                     </div>
-                    <div class="col-md-2 col-md-offset-1 col-xs-6">
+                    <div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-0 col-xs-6">
                         <div class="title">Меню</div>
                         <nav>
                             <ul class="menu info-menu">
@@ -677,7 +683,7 @@
                             </ul>
                         </nav>
                     </div>
-                    <div class="col-md-2 col-xs-6">
+                    <div class="col-lg-2 col-md-2 col-xs-6">
                         <div class="title">Информация</div>
                         <ul class="menu info-menu">
                             <li><a href="#">Правила сайта</a></li>
@@ -693,7 +699,7 @@
                             </ul>
                         </nav>
                     </div>
-                    <div class="col-md-3 col-xs-12">
+                    <div class="col-lg-3 col-md-4 col-xs-12">
                         <div class="title">
                             Подписка на рассылку
                         </div>
@@ -701,8 +707,8 @@
                             <div class="input-group">
                                 <input type="text" placeholder="Введите email-адрес">
                                 <span class="input-group-button">
-                                <button class="button accent-button" type="button">Подписаться</button>
-                            </span>
+                                    <button class="button accent-button" type="button">Подписаться</button>
+                                </span>
                             </div>
                         </form>
                         <p class="small">

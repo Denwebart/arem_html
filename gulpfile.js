@@ -1,21 +1,21 @@
 var gulp           = require('gulp'),
-		gutil          = require('gulp-util' ),
-		sass           = require('gulp-sass'),
-		browserSync    = require('browser-sync'),
-		concat         = require('gulp-concat'),
-		uglify         = require('gulp-uglify'),
-		cleanCSS       = require('gulp-clean-css'),
-		rename         = require('gulp-rename'),
-		del            = require('del'),
-		imagemin       = require('gulp-imagemin'),
-		pngquant       = require('imagemin-pngquant'),
-		cache          = require('gulp-cache'),
-		autoprefixer   = require('gulp-autoprefixer'),
-		fileinclude    = require('gulp-file-include'),
-		gulpRemoveHtml = require('gulp-remove-html'),
-		bourbon        = require('node-bourbon'),
-		ftp            = require('vinyl-ftp'),
-		notify         = require("gulp-notify");
+    gutil          = require('gulp-util' ),
+    sass           = require('gulp-sass'),
+    browserSync    = require('browser-sync'),
+    concat         = require('gulp-concat'),
+    uglify         = require('gulp-uglify'),
+    cleanCSS       = require('gulp-clean-css'),
+    rename         = require('gulp-rename'),
+    del            = require('del'),
+    imagemin       = require('gulp-imagemin'),
+    pngquant       = require('imagemin-pngquant'),
+    cache          = require('gulp-cache'),
+    autoprefixer   = require('gulp-autoprefixer'),
+    fileinclude    = require('gulp-file-include'),
+    gulpRemoveHtml = require('gulp-remove-html'),
+    bourbon        = require('node-bourbon'),
+    ftp            = require('vinyl-ftp'),
+    notify         = require("gulp-notify");
 
 gulp.task('browser-sync', function() {
 	browserSync({
@@ -52,9 +52,9 @@ gulp.task('headersass', function() {
 
 gulp.task('libs', function() {
 	return gulp.src([
-		'app/libs/jquery/dist/jquery.min.js',
-		'app/libs/slideout.js/dist/slideout.min.js',
-		// 'app/libs/magnific-popup/magnific-popup.min.js'
+            'app/libs/jquery/dist/jquery.min.js',
+            'app/libs/slideout.js/dist/slideout.min.js',
+            'app/libs/iCheck/icheck.min.js'
 		])
 		.pipe(concat('libs.min.js'))
 		.pipe(uglify())

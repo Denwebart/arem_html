@@ -1,6 +1,12 @@
 $(function() {
 
-	// Custom JS
+	// Checkboxes
+    $('input').iCheck({
+        checkboxClass: 'checkbox icheckbox_flat-blue',
+        radioClass: 'iradio_flat-blue'
+    });
+
+    // Dropdown
     $(document).on('click', '.dropdown', function (e) {
         if($(this).is('.active')) {
             $(this).removeClass('active');
