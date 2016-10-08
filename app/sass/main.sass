@@ -62,6 +62,121 @@ body
     display: inline-block
     width: 100%
 
+.sidebar
+    a
+        color: $dark-gray-color
+        &.text
+            color: $dark-color
+            text-decoration: none
+        &:hover
+            color: $accent-color
+    img.avatar
+        background-color: #F9f9f9
+    .small-description
+        a
+            color: $accent-color
+            text-decoration: underline
+            &:hover
+                text-decoration: none
+    .widget
+        padding: 20px 0
+        border-top: 2px solid #ededed
+        border-bottom: 2px solid #dbdbdb
+        color: $dark-gray-color
+        &:first-child
+            border-top: none
+            padding-top: 0
+        &:last-child
+            border-bottom: none
+            padding-bottom: 0
+
+        .widget-title
+            display: inline-block
+            width: 100%
+            .title
+                width: auto
+                display: inline-block
+                margin-bottom: 15px
+            .filters
+                width: auto
+                display: inline-block
+                line-height: 1
+                float: right
+                margin-bottom: 20px
+                a
+                    font-size: em(12px)
+                    color: $dark-color
+                    margin-left: 10px
+                    &.active, &:hover, &:focus
+                        color: $accent-color
+        .item
+            display: inline-block
+            padding: 10px 0
+            border-top: 1px solid #ededed
+            border-bottom: 1px solid #dbdbdb
+            &:first-child
+                border-top: none
+                padding-top: 0
+            &:last-child
+                border-bottom: none
+                padding-bottom: 0
+            .text
+                float: left
+                display: inline-block
+            .item-info
+                display: inline-block
+                width: 100%
+                margin-top: 10px
+                font-size: em(14px)
+                line-height: 22px
+                i, .fa
+                    font-size: 20px
+                > a, > span, > div
+                    float: left
+                    margin-right: 20px
+                    span, i, .fa, a, img
+                        float: left
+                        line-height: 22px
+                    img
+                        margin-right: 7px
+                .date
+                    font-style: italic
+                    font-weight: 400
+        &.widget-questions
+            .item
+                .text
+                    width: calc(100% - 120px)
+                .answers
+                    display: inline-block
+                    width: 100px
+                    margin-left: 20px
+                    span, i, .fa, a, img
+                        float: left
+                        line-height: 22px
+                    i, .fa
+                        float: left
+                        font-size: 20px
+        &.widget-articles
+            .item
+                .item-image
+                    float: left
+                    width: 105px
+                    margin: 5px 20px 0 0
+                .item-content
+                    display: inline-block
+                    width: calc(100% - 125px)
+        &.widget-comments
+            .item
+                .text
+                    padding: 10px 15px 15px
+                    background: #f4f4f4
+                    border: 1px solid #f9f9f9
+                    border-radius: 5px
+.widget-tags
+    .tags
+        a
+            background: linear-gradient(to top, $light-gradient-colors)
+
 // like-dislike widget
 .like-dislike-widget
     color: $gray-color
@@ -144,8 +259,9 @@ body
 // Page Tags
 .tags
     a
-        display: inline-block
+        float: left
         padding: 0 10px
+        margin: 0 25px 20px 0
         background: #e7e7e7
         border: 1px solid #eeeeee
         border-radius: 3px
@@ -167,7 +283,6 @@ body
         float: left
     .tags
         display: inline-block
-        margin-bottom: 20px
     #social-buttons-widget
         margin-bottom: 20px
 
@@ -202,7 +317,7 @@ body
             display: inline-block
             width: 100%
             margin-bottom: 20px
-    
+
 // Pagination
 .pagination
     text-align: center
