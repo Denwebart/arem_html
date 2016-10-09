@@ -178,8 +178,11 @@ body
                         float: left
                         font-size: 20px
                 &.has-solution
-                    .answers, i, .fa
+                    .answers, .answers i, .answers .fa
                         color: $green-color
+                        &:hover
+                            span
+                                color: $green-color
         &.widget-articles
             .item
                 .item-image
