@@ -70,12 +70,15 @@ body
             text-decoration: none
         &:hover
             color: $accent-color
+            span
+                text-decoration: none
+        span
+            text-decoration: underline
     img.avatar
         background-color: #F9f9f9
     .small-description
         a
             color: $accent-color
-            text-decoration: underline
             &:hover
                 text-decoration: none
     .widget
@@ -109,8 +112,25 @@ body
                     margin-left: 10px
                     &.active, &:hover, &:focus
                         color: $accent-color
+        .all-items-button
+            display: inline-block
+            width: 100%
+            margin-top: 10px
+            padding: 10px
+            text-align: center
+            color: $dark-color
+            text-decoration: none
+            span
+                text-decoration: none
+            i, .fa
+                color: $dark-color
+            &:hover, &:focus, &.active
+                i, .fa
+                    color: $accent-color
         .item
             display: inline-block
+            float: left
+            width: 100%
             padding: 10px 0
             border-top: 1px solid #ededed
             border-bottom: 1px solid #dbdbdb
@@ -147,6 +167,7 @@ body
                 .text
                     width: calc(100% - 120px)
                 .answers
+                    font-size: em(14px)
                     display: inline-block
                     width: 100px
                     margin-left: 20px
@@ -156,6 +177,9 @@ body
                     i, .fa
                         float: left
                         font-size: 20px
+                &.has-solution
+                    .answers, i, .fa
+                        color: $green-color
         &.widget-articles
             .item
                 .item-image
@@ -172,10 +196,45 @@ body
                     background: #f4f4f4
                     border: 1px solid #f9f9f9
                     border-radius: 5px
-.widget-tags
-    .tags
-        a
-            background: linear-gradient(to top, $light-gradient-colors)
+                    float: left
+                .item-info
+                    float: left
+                    margin: 0 0 10px
+        &.widget-users
+            .item
+                display: table
+                width: 100%
+                *
+                    display: table-cell
+                    vertical-align: middle
+                .position
+                    width: 30px
+                .user-avatar
+                    width: 70px
+                .user
+                    .login, .rank
+                        display: inline-block
+                        width: 100%
+                    .login
+                        color: $dark-color
+                        text-decoration: none
+                        span
+                            text-decoration: none
+                        &:hover
+                            span
+                                text-decoration: underline
+                    .rank
+                        font-size: em(14px)
+
+                .rating
+                    width: 110px
+                    font-family: $title-font
+                    font-size: em(24px)
+                    color: $accent-color
+        &.widget-tags
+            .tags
+                a
+                    background: linear-gradient(to top, $light-gradient-colors)
 
 // like-dislike widget
 .like-dislike-widget
@@ -230,11 +289,9 @@ body
             margin-right: 0
     a, a span
         color: $dark-gray-color
-        text-decoration: underline
     a:hover, a:hover span, a:hover i,
     .active a, .active span, .active i
         color: $accent-color
-        text-decoration: none
     .user
         img
             margin-right: 7px
@@ -269,6 +326,7 @@ body
         color: $dark-color
         text-decoration: none
         span
+            text-decoration: none
             &:first-child
                 border-right: 1px solid #f9f9f9
                 padding-right: 5px
@@ -276,6 +334,8 @@ body
             float: right
             border-left: 1px solid #eeeeee
             padding-left: 5px
+        &:hover
+            color: $accent-color
 
 // Content
 #content

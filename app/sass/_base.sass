@@ -77,10 +77,14 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
 a
     color: $accent-color
     text-decoration: underline
-
+    span
+        text-decoration: underline
     &:hover, &:focus, &.active
         color: $accent-color
         text-decoration: none
+        span, i, .fa
+            color: $accent-color
+            text-decoration: none
 
 .dark-section a
     color: #ffffff
