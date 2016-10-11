@@ -223,9 +223,6 @@ body
                         text-decoration: none
                         span
                             text-decoration: none
-                        &:hover
-                            span
-                                text-decoration: underline
                     .rank
                         font-size: em(14px)
 
@@ -238,6 +235,7 @@ body
             .tags
                 a
                     background: linear-gradient(to top, $light-gradient-colors)
+                    margin-bottom: 20px
 
 // like-dislike widget
 .like-dislike-widget
@@ -272,7 +270,8 @@ body
 // social share widget
 #social-buttons-widget
     .text
-        margin-left: 20px
+        margin: 0 20px 10px 0
+        width: 100%
 
 .table-block.page-title
     margin-bottom: 15px
@@ -318,10 +317,11 @@ body
                 margin-right: 20px
 // Page Tags
 .tags
+    float: left
     a
         float: left
         padding: 0 10px
-        margin: 0 25px 20px 0
+        margin: 0 25px 15px 0
         background: #e7e7e7
         border: 1px solid #eeeeee
         border-radius: 3px
@@ -380,6 +380,21 @@ body
             display: inline-block
             width: 100%
             margin-bottom: 20px
+            span
+                margin-right: 10px
+                float: left
+            ul
+                display: inline-block
+                float: left
+                height: auto
+                li
+                    float: left
+                    height: 20px
+                    &:after
+                        content: "/"
+                        margin: 0 5px
+                    &:last-child:after
+                        content: none
 
 // Pagination
 .pagination
@@ -389,6 +404,7 @@ body
         padding: 6px 10px
         border: 1px solid rgba(255, 255, 255, 0)
         margin-right: 5px
+        cursor: pointer
         &:last-child
             margin-right: 0
         &.active, &:hover
