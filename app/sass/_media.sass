@@ -3,15 +3,64 @@
 
 /*==========  Desktop First  ==========*/
 
-/* Large Devices, Wide Screens - MD - для 1199 и менее*/
+/* Large Devices, Wide Screens - LG - от 1200 до 1470 */
+@media (min-width : 1200px) and (max-width : 1470px)
+    #header
+        .logo
+            margin-top: 25px
+        h1
+            font-size: em(32px)
+            /* */
+
+/* Large Devices, Wide Screens - MD - для 1199 и менее */
 @media only screen and (max-width : 1199px)
     .align-center-md
         text-align: center
+    .social-links
+        ul:last-child
+            margin-left: 40px
     #header-widget
         ul
             li
                 font-size: 14px
-                /* */
+    #header
+        //.logo
+        //    margin: 20px 0
+        h1
+            margin-top: 23px
+            font-size: em(26px)
+            .slogan
+                font-size: 0.58em
+
+        .contact-menu
+            margin-top: 26px
+        .contact-menu li,
+        .social-links ul li
+            margin-right: 15px
+            &:last-child
+                margin-right: 0
+        .social-links
+            margin-top: 20px
+        .contact-menu,
+        .info-menu
+            font-size: em(15px)
+        .info-icon
+            margin: 15px 10px
+    .menu-section
+        .main-menu
+            li
+                a
+                    font-size: em(16px)
+                ul
+                    top: 53px
+        .search-form
+            input
+                width: 55px
+                font-size: em(16px)
+            button
+                i, .fa
+                    font-size: 26px
+            /* */
 
 /* Medium Devices, Desktops - SM - для 991 и менее */
 @media only screen and (max-width : 991px)
@@ -105,3 +154,5 @@
 /* Large Devices, Wide Screens - LG - для 1200 и более */
 @media only screen and (min-width : 1200px)
 	/* */
+
+
