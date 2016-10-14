@@ -17,6 +17,13 @@
 	color: $gray-color
 	opacity: 1
 
+button, input
+    &:active, &:focus
+        outline: none !important
+button, input
+    &::-moz-focus-inner
+        border: 0 !important
+
 body input:focus:required:invalid,
 body textarea:focus:required:invalid
 	color: $gray-color
@@ -198,6 +205,10 @@ p
 .danger
     color: $red-color !important
 
+.opacity-0
+    @include transition(0.5s)
+    opacity: 0
+
 // Images
 img, .image
     display: inline-block
@@ -297,6 +308,8 @@ section
     display: inline-block
     i, .fa
         font-size: 20px
+    ul:last-child
+        margin-left: 50px
 
 // Forms
 label
