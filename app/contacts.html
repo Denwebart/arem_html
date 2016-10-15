@@ -118,6 +118,47 @@
 
     <div id="panel">
         <header>
+            <!--Для незарегистрированных пользователей-->
+            <!--<div id="header-widget" class="dark-section">-->
+            <!--<div class="container-fluid">-->
+            <!--<div class="row">-->
+            <!--<div class="col-md-12">-->
+            <!--<div class="pull-left hidden-xs hidden-sm">-->
+            <!--<div class="pull-left m-r-25 hidden-md">-->
+            <!--<a href="#">Регистрируйтесь</a>, чтобы:-->
+            <!--</div>-->
+            <!--<ul class="pull-left">-->
+            <!--<li>-->
+            <!--<i class="fa fa-question"></i>-->
+            <!--<span class="visible-lg">задавать вопросы,</span>-->
+            <!--<span class="visible-md">Задавйте вопросы,</span>-->
+            <!--</li>-->
+            <!--<li>-->
+            <!--<i class="fa fa-file-text"></i>-->
+            <!--<span class="visible-lg">писать статьи,</span>-->
+            <!--<span class="visible-md">пишите статьи,</span>-->
+            <!--</li>-->
+            <!--<li>-->
+            <!--<i class="fa fa-comments"></i>-->
+            <!--<span class="visible-lg">общаться с пользователями,</span>-->
+            <!--<span class="visible-md">общайтесь с пользователями,</span>-->
+            <!--</li>-->
+            <!--<li>-->
+            <!--<i class="fa fa-gift"></i>-->
+            <!--<span class="visible-lg">получать призы!</span>-->
+            <!--<span class="visible-md">получайте призы!</span>-->
+            <!--</li>-->
+            <!--</ul>-->
+            <!--</div>-->
+
+            <!--<div class="pull-right">-->
+            <!--<i class="fa fa-user"></i><a href="#" class="m-r-5">Войти</a>/<a href="#" class="m-l-5">Зарегистрироваться</a>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--</div>-->
+
             <!--Для зарегистрированных пользователей-->
             <div id="header-widget" class="dark-section">
                 <div class="container-fluid">
@@ -138,6 +179,11 @@
 
                             <div class="pull-right">
                                 <div class="user-panel">
+                                    <div><span class="visible-lg">LG</span></div>
+                                    <div><span class="visible-md">MD</span></div>
+                                    <div><span class="visible-sm">SM</span></div>
+                                    <div><span class="visible-xs">XS</span></div>
+
                                     <div class="notifications pull-left dropdown">
                                         <a href="#" class="notification button"><i class="fa fa-bell-o"></i></a>
                                         <div class="dropdown-container">
@@ -224,7 +270,7 @@
                                                 <ul class="list messages-list">
                                                     <li>
                                                         <a href="#">
-                                                            <img src="img/uploads/avatar.jpg" alt="" class="avatar">
+                                                            <img src="/img/uploads/avatar.jpg" alt="" class="avatar">
                                                             <span class="small-text">Vasya, 2 мин. назад</span>
                                                             <span class="text">
                                                             Здравствуйте! Хотел поблагодарить за помощь в ремонте автомобиля ...
@@ -236,7 +282,7 @@
                                                     </li>
                                                     <li>
                                                         <a href="#">
-                                                            <img src="img/uploads/default-avatar.png" alt="" class="avatar">
+                                                            <img src="/img/uploads/default-avatar.png" alt="" class="avatar">
                                                             <span class="small-text">Den, 2 ч. назад</span>
                                                             <span class="text">
                                                             Привет, Вань!
@@ -248,7 +294,7 @@
                                                     </li>
                                                     <li>
                                                         <a href="#">
-                                                            <img src="img/uploads/avatar.jpg" alt="" class="avatar">
+                                                            <img src="/img/uploads/avatar.jpg" alt="" class="avatar">
                                                             <span class="small-text">Master, 2 д. назад</span>
                                                             <span class="text">
                                                             Иван, подскажите, пожалуйста, как поменять заднюю балку?
@@ -354,12 +400,12 @@
             <div id="header">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-md-4 col-sm-7">
                             <a href="index.html">
                                 <img src="/img/logo-full.svg" alt="Avtorem.info" class="logo">
                             </a>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-3 col-sm-5">
                             <h1>
                                 Школа авторемонта
                                 <span class="slogan">
@@ -367,14 +413,14 @@
                                 и обслуживанию автомобилей своими руками
                             </span>
                             </h1>
-                            <button class="menu-toggle-button toggle-button pull-right visible-xs">
+                            <button class="menu-toggle-button toggle-button pull-right visible-xs visible-sm">
                                 <i class="fa fa-bars fa-2x"></i>
                                 <span>Меню</span>
                             </button>
                         </div>
-                        <div class="col-md-5 hidden-xs">
+                        <div class="col-md-5 hidden-xs hidden-sm">
                             <div class="pull-left">
-                                <nav class="hidden-xs">
+                                <nav>
                                     <ul class="menu contact-menu horisontal">
                                         <li><a href="contacts.html"><i class="fa fa-envelope"></i>Контакты</a></li>
                                         <li><a href="#"><i class="fa fa-sitemap"></i>Карта сайта</a></li>
@@ -389,13 +435,13 @@
                                         <li><a href="#"><i class="fa fa-odnoklassniki"></i></a></li>
                                     </ul>
 
-                                    <ul class="pull-left horisontal m-l-50">
+                                    <ul class="pull-left horisontal">
                                         <li><a href="#"><i class="fa fa-bookmark-o"></i></a></li>
                                         <li><a href="#"><i class="fa fa-rss"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
-                            <div class="pull-right hidden-xs">
+                            <div class="pull-right hidden-xs hidden-sm">
                                 <ul class="menu info-menu">
                                     <li><a href="#">Правила сайта</a></li>
                                     <li><a href="#">ЧаВо</a></li>
@@ -410,7 +456,7 @@
                     <div class="row hidden-xs">
                         <div class="col-md-12">
                             <div class="menu-section">
-                                <nav>
+                                <nav class="hidden-sm">
                                     <ul class="menu main-menu pull-left">
                                         <li class="active">
                                             <a href="index.html">
@@ -594,40 +640,316 @@
 
                     </section>
                 </div>
+                <div class="col-md-4 sidebar">
+                    <div class="widget widget-questions">
+                        <div class="widget-title">
+                            <h4 class="title">Вопросы пользователей</h4>
+                            <div class="filters">
+                                <a class="active" href="#">свежие</a>
+                                <a href="#">лучшие</a>
+                                <a href="#">популярные</a>
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class="item">
+                                <a href="#" class="text">Свист коробки передач ваз 21099</a>
+                                <a href="#" class="answers">
+                                    <i class="fa fa-comments-o"></i>
+                                    <span class="count">0</span>
+                                </a>
+                                <div class="item-info">
+                                    <a href="#" class="author">
+                                        <img src="/img/uploads/default-avatar.png" alt="" class="avatar micro"><span>Парк</span>
+                                    </a>
+                                    <span class="date">3 мин. назад</span>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <a href="#" class="text">Можно ли ездить со сломанной передней пружиной?</a>
+                                <a href="#" class="answers">
+                                    <i class="fa fa-comments"></i>
+                                    <span class="count">23</span>
+                                </a>
+                                <div class="item-info">
+                                    <a href="#" class="author">
+                                        <img src="/img/uploads/default-avatar.png" alt="" class="avatar micro"><span>Alexander</span>
+                                    </a>
+                                    <span class="date">2 часа назад</span>
+                                </div>
+                            </div>
+                            <div class="item has-solution">
+                                <a href="#" class="text">
+                                    Надо ли делать развал схождение после замены
+                                    сальников рулевой колонки колонки колонки на ваз 2106?
+                                </a>
+                                <a href="#" class="answers">
+                                    <i class="fa fa-comments"></i>
+                                    <span class="count">2 213</span>
+                                </a>
+                                <div class="item-info">
+                                    <a href="#" class="author">
+                                        <img src="/img/uploads/avatar-1.jpg" alt="" class="avatar micro"><span>Muph1984</span>
+                                    </a>
+                                    <span class="date">30 августа</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget widget-articles">
+                        <div class="widget-title">
+                            <h4 class="title">Статьи за неделю</h4>
+                            <div class="filters">
+                                <a class="active" href="#">свежие</a>
+                                <a href="#">лучшие</a>
+                                <a href="#">популярные</a>
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class="item">
+                                <a href="#" class="text">
+                                    <img src="/img/uploads/statya-1-mini.png" alt="" class="item-image">
+                                </a>
+                                <div class="item-content">
+                                    <a href="#" class="text">
+                                        Замена сайлентблоков передних (нижних верхних)
+                                        рычагов на автомобилях ВАЗ-2101, ВАЗ-2102, ВАЗ-2103,
+                                        ВАЗ-2104, ВАЗ-2105, ВАЗ-2106, ВАЗ-2107
+                                    </a>
+                                    <div class="item-info">
+                                        <span class="date">8 мин. назад</span>
+                                        <div class="answers">
+                                            <i class="fa fa-thumbs-o-up"></i>
+                                            <span class="count">0</span>
+                                        </div>
+                                        <div class="views">
+                                            <i class="fa fa-eye"></i>
+                                            <span class="count">34</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <a href="#" class="text">
+                                    <img src="/img/uploads/statya-2-mini.png" alt="" class="item-image">
+                                </a>
+                                <div class="item-content">
+                                    <a href="#" class="text">
+                                        Замена охлаждающей жидкости (антифриза или тосола)
+                                        в автомобиле ВАЗ-2101, ВАЗ-2104, ВАЗ-2105, ВАЗ-2106, ВАЗ-2107
+                                    </a>
+                                    <div class="item-info" class="item-image">
+                                        <span class="date">Сегодня в 18:23</span>
+                                        <div class="answers active">
+                                            <i class="fa fa-thumbs-up"></i>
+                                            <span class="count">0</span>
+                                        </div>
+                                        <div class="views">
+                                            <i class="fa fa-eye"></i>
+                                            <span class="count">2 443</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <a href="#" class="text">
+                                    <img src="/img/uploads/statya-3-mini.png" alt="" class="item-image">
+                                </a>
+                                <div class="item-content">
+                                    <a href="#" class="text">
+                                        Замена радиатора печки на автомобиле ВАЗ-2101,
+                                        ВАЗ-2102, ВАЗ-2106, ВАЗ-2107
+                                    </a>
+                                    <div class="item-info">
+                                        <span class="date">15 августа</span>
+                                        <div class="answers">
+                                            <i class="fa fa-thumbs-o-up"></i>
+                                            <span class="count">2 657</span>
+                                        </div>
+                                        <div class="views">
+                                            <i class="fa fa-eye"></i>
+                                            <span class="count">32 453</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget widget-users">
+                        <h4 class="title">Лучшие пользователи</h4>
+                        <div class="small-description">
+                            Здесь отображаются самые активные пользователи сайта.
+                            <br>
+                            <a href="#">Как сюда попасть?</a>
+                        </div>
+                        <div class="items">
+                            <div class="item">
+                                <div class="position">1</div>
+                                <a href="#" class="user-avatar">
+                                    <img src="/img/uploads/ivan.jpg" alt="" class="avatar mini">
+                                </a>
+                                <div class="user">
+                                    <a href="#" class="login"><span>Ivan</span></a>
+                                    <span class="rank">Эксперт</span>
+                                </div>
+                                <div class="rating">1 416</div>
+                            </div>
+                            <div class="item">
+                                <div class="position">2</div>
+                                <a href="#" class="user-avatar">
+                                    <img src="/img/uploads/avatar-2.jpg" alt="" class="avatar mini">
+                                </a>
+                                <div class="user">
+                                    <a href="#" class="login"><span>SKS</span></a>
+                                    <span class="rank">Эксперт</span>
+                                </div>
+                                <div class="rating">1 097</div>
+                            </div>
+                            <div class="item">
+                                <div class="position">3</div>
+                                <a href="#" class="user-avatar">
+                                    <img src="/img/uploads/avatar-3.jpg" alt="" class="avatar mini">
+                                </a>
+                                <div class="user">
+                                    <a href="#" class="login"><span>Мастер</span></a>
+                                    <span class="rank">Профи</span>
+                                </div>
+                                <div class="rating">987</div>
+                            </div>
+                            <div class="item">
+                                <div class="position">4</div>
+                                <a href="#" class="user-avatar">
+                                    <img src="/img/uploads/avatar-1.jpg" alt="" class="avatar mini">
+                                </a>
+                                <div class="user">
+                                    <a href="#" class="login"><span>Muph1984</span></a>
+                                    <span class="rank">Энтузиаст</span>
+                                </div>
+                                <div class="rating">456</div>
+                            </div>
+                            <div class="item">
+                                <div class="position">5</div>
+                                <a href="#" class="user-avatar">
+                                    <img src="/img/uploads/default-avatar.png" alt="" class="avatar mini">
+                                </a>
+                                <div class="user">
+                                    <a href="#" class="login"><span>Макс</span></a>
+                                    <span class="rank">Любитель</span>
+                                </div>
+                                <div class="rating">123</div>
+                            </div>
+                        </div>
+                        <a href="#" class="all-items-button">
+                            <i class="fa fa-users"></i>
+                            <span>Все пользователи</span>
+                        </a>
+                    </div>
+                    <div class="widget widget-comments">
+                        <div class="widget-title">
+                            <h4 class="title">Ответы пользователей</h4>
+                            <div class="filters">
+                                <a class="active" href="#">свежие</a>
+                                <a href="#">лучшие</a>
+                                <a href="#">популярные</a>
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class="item">
+                                <div class="item-info">
+                                    <a href="#" class="author">
+                                        <img src="/img/uploads/ivan.jpg" alt="" class="avatar micro"><span>Ivan</span>
+                                    </a>
+                                    <span class="date">1 минуту назад</span>
+                                </div>
+                                <a href="#" class="text">
+                                    Да, действительно, верхняя опора требует срочной замены.
+                                    В противном случае, шток амортизационной стойки может
+                                    в один прекрасный момент упереться в ...
+                                </a>
+                            </div>
+                            <div class="item">
+                                <div class="item-info">
+                                    <a href="#" class="author">
+                                        <img src="/img/uploads/ivan.jpg" alt="" class="avatar micro"><span>Ivan</span>
+                                    </a>
+                                    <span class="date">Сегодня в 12:23</span>
+                                </div>
+                                <a href="#" class="text">
+                                    В подобной ситуации трудно назвать причину без осмотра
+                                    и проверки двигателя. Довольно странно всё ...
+                                </a>
+                            </div>
+                            <div class="item">
+                                <div class="item-info">
+                                    <a href="#" class="author">
+                                        <img src="/img/uploads/ivan.jpg" alt="" class="avatar micro"><span>Ivan</span>
+                                    </a>
+                                    <span class="date">23 августа</span>
+                                </div>
+                                <a href="#" class="text">
+                                    Передние тормозные шланги от автомобилей Ваз не
+                                    подходят на автомобили Дэу Нексия и Дэу Ланос. Так же ...
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget widget-tags">
+                        <h4 class="title">Популярные теги</h4>
+                        <div class="tags">
+                            <a href="#">
+                                <span>Daewoo Lanos</span>
+                                <span class="count">234</span>
+                            </a>
+                            <a href="#">
+                                <span>Замена колеса</span>
+                                <span class="count">34</span>
+                            </a>
+                            <a href="#">
+                                <span>Колесные диски</span>
+                                <span class="count">4</span>
+                            </a>
+                            <a href="#">
+                                <span>Ремонт</span>
+                                <span class="count">67</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
         <footer class="dark-section">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-3 col-md-4">
-                        <img src="/img/logo-white.svg" alt="Avtorem.info" class="logo">
+                    <div class="col-lg-3 col-md-4 col-sm-12">
+                        <div class="row">
+                            <div class="full-xxs col-xs-6 col-sm-5 col-md-12">
+                                <img src="/img/logo-white.svg" alt="Avtorem.info" class="logo">
+                            </div>
+                            <div class="full-xxs col-xs-6 col-sm-7 col-md-12">
+                                <div class="copyright">
+                                    При использовании авторских статей
+                                    ссылка на сайт обязательна.
+                                    <span class="without-enter">
+                                        © <a href="#" class="active">www.avtorem.info</a> 2010 - 2016
+                                    </span>
+                                </div>
+                                <div class="social-links">
+                                    <ul class="pull-left horisontal">
+                                        <li><a href="#"><i class="fa fa-vk"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-odnoklassniki"></i></a></li>
+                                    </ul>
 
-                        <div class="copyright">
-                            При использовании авторских статей
-                            ссылка на сайт обязательна.
-                            <span class="without-enter">
-                                © <a href="#" class="active">www.avtorem.info</a> 2010 - 2016
-                            </span>
+                                    <ul class="pull-left horisontal">
+                                        <li><a href="#"><i class="fa fa-bookmark-o"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-
-                        <div class="social-links">
-                            <ul class="pull-left horisontal">
-                                <li><a href="#"><i class="fa fa-vk"></i></a></li>
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-odnoklassniki"></i></a></li>
-                            </ul>
-
-                            <ul class="pull-left horisontal m-l-50">
-                                <li><a href="#"><i class="fa fa-bookmark-o"></i></a></li>
-                                <li><a href="#"><i class="fa fa-rss"></i></a></li>
-                            </ul>
-                        </div>
-
-                        <div class="clearfix"></div>
                     </div>
-                    <div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-0 col-xs-6">
+                    <div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-0 col-sm-3 col-xs-6">
                         <div class="title">Меню</div>
                         <nav>
                             <ul class="menu info-menu">
@@ -642,7 +964,7 @@
                             </ul>
                         </nav>
                     </div>
-                    <div class="col-lg-2 col-md-2 col-xs-6">
+                    <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6">
                         <div class="title">Информация</div>
                         <ul class="menu info-menu">
                             <li><a href="#">Правила сайта</a></li>
@@ -658,7 +980,7 @@
                             </ul>
                         </nav>
                     </div>
-                    <div class="col-lg-3 col-md-4 col-xs-12">
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                         <div class="title">
                             Подписка на рассылку
                         </div>
@@ -666,8 +988,8 @@
                             <div class="input-group">
                                 <input type="text" placeholder="Введите email-адрес">
                                 <span class="input-group-button">
-                                    <button class="button accent-button" type="button">Подписаться</button>
-                                </span>
+                                <button class="button accent-button" type="button">Подписаться</button>
+                            </span>
                             </div>
                         </form>
                         <p class="small">
