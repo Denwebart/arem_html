@@ -42,4 +42,15 @@ $(function() {
         $('.menu-section nav').addClass('opacity-0');
     });
 
+    // Popup
+    $(document).on('click', '.show-popup-button', function (e) {
+        var popupId = $(this).data('popupId');
+        $("html, body").css("overflow", "hidden");
+        $('#' + popupId).addClass('open');
+        $('#' + popupId + ' input').focus();
+    });
+    $(document).on('click', '.popup-close-button', function (e) {
+        $("html, body").css("overflow", "auto");
+        $(this).parent().removeClass('open');
+    });
 });

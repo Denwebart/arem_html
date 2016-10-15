@@ -81,7 +81,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
         color: $dark-gray-color
 
 // Links
-a
+a, button
     color: $accent-color
     text-decoration: underline
     span
@@ -92,6 +92,9 @@ a
         span, i, .fa
             color: $accent-color
             text-decoration: none
+button
+    span
+        text-decoration: none
 
 .dark-section a
     color: #ffffff
@@ -151,6 +154,15 @@ button::-moz-focus-inner
     &:hover, &:focus, &:active
         color: #ffffff
         background: #1F3245
+
+button
+    svg
+        width: 30px
+        .close-x
+            stroke: $gray-color
+            fill: transparent
+            stroke-linecap: round
+            stroke-width: 4
 
 // Lists
 ul

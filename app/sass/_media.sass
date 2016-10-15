@@ -60,6 +60,10 @@
             button
                 i, .fa
                     font-size: 26px
+    /* Footer */
+    footer
+        .last-column
+            margin-right: 25px
             /* */
 
 /* Medium Devices, Desktops - SM - для 991 и менее */
@@ -69,20 +73,34 @@
 
     /* Footer */
     footer
+        .first-column,
+        .last-column
+            margin: 0
         .copyright
-            margin-top: 0
+            margin-top: 10px
         .social-links
             margin: 20px 5px 0
         .title
             margin: 20px 0 15px
-/* */
+        /* */
 
 /* Small Devices, Tablets - XS - для 767 и менее */
 @media only screen and (max-width : 767px)
     .align-center-xs
         text-align: center
 
+    // Mobile menu button
+    .mobile-buttons-menu
+        button
+            span
+                display: none
+            i, .fa
+                margin: 0
+
     /* Footer */
+    footer
+        .copyright
+            font-size: 12px
     /* */
 
 /* Extra Small Devices, Phones - XS - для 480 и менее */
@@ -115,14 +133,13 @@
             .slogan
                 font-size: 14px
                 margin-top: 5px
-        .menu-toggle-button
-            margin-top: 3px
-            span
-                display: none
-            i, .fa
-                margin: 0
         .social-links
             margin: 20px 0
+
+    // Mobile menu button
+    .mobile-buttons-menu
+        button
+            margin-top: 3px
 
     /* Footer */
     footer
