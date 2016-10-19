@@ -140,24 +140,27 @@
                         border-top: none
                     &:last-child
                         border-bottom: none
-                    a:first-child
-                        position: relative
-                        padding: 0 30px 0 45px
-                        display: inline-block
-                        width: 100%
-                        > i, > .fa
-                            margin: 0 15px 0 5px
+                    a
+                        span
+                            text-decoration: none
+                        &:first-child
+                            position: relative
+                            padding: 0 30px 0 45px
+                            display: inline-block
+                            width: 100%
+                            > i, > .fa
+                                margin: 0 15px 0 5px
+                                position: absolute
+                                left: 8px
+                                top: 2px
+                        &.delete-button
                             position: absolute
-                            left: 8px
-                            top: 2px
-                    a.delete-button
-                        position: absolute
-                        top: 7px
-                        right: 0
-                        > i, > .fa
-                            color: $gray-color
-                            font-size: 14px
-                            padding: 0 5px
+                            top: 7px
+                            right: 0
+                            > i, > .fa
+                                color: $gray-color
+                                font-size: 14px
+                                padding: 0 5px
                     .avatar
                         width: 22px
                         margin: 0 15px 0 5px
@@ -173,8 +176,9 @@
                     .text
                         font-size: 12px
                 &.letters-list
-                    a:first-child
-                        padding: 0 30px 0 5px
+                    a
+                        &:first-child
+                            padding: 0 30px 0 5px
             .user-menu
                 float: left
                 li
@@ -188,6 +192,7 @@
                         width: 100%
                         opacity: 0.6
                         span
+                            text-decoration: none
                             display: inline-block
                             width: 100%
                             float: none
@@ -195,8 +200,11 @@
                         i, .fa
                             float: none
                             font-size: 24px
-                    &.active a, a:hover, a:focus
+                            margin: 0
+                    &.active a, a:hover, a:focus,
+                    a:hover span
                         opacity: 1
+                        color: inherit
         .user
             .dropdown-container
                 .container-header
