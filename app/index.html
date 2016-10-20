@@ -389,7 +389,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <a href="#" class="button"><i class="fa fa-power-off"></i></a>
+                                    <a href="#" class="exit-button button"><i class="fa fa-power-off"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -400,12 +400,12 @@
             <div id="header">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-md-4 col-sm-6 col-xs-6 full-xxs">
+                        <div class="col-md-4 col-sm-6 col-xs-6 col-logo">
                             <a href="index.html">
                                 <img src="/img/logo-full.svg" alt="Avtorem.info" class="logo">
                             </a>
                         </div>
-                        <div class="col-md-3 col-sm-4 col-xs-4">
+                        <div class="col-md-3 col-sm-4 col-xs-5 col-title">
                             <h1>
                                 Школа авторемонта
                                 <span class="slogan">
@@ -414,15 +414,11 @@
                                 </span>
                             </h1>
                         </div>
-                        <div class="visible-xs visible-sm col-sm-2 col-xs-2">
+                        <div class="visible-xs visible-sm col-sm-2 col-xs-1 col-menu-button">
                             <div class="menu mobile-buttons-menu">
                                 <button class="menu-toggle-button toggle-button pull-right">
-                                    <span>Меню</span>
                                     <i class="fa fa-bars fa-2x"></i>
-                                </button>
-                                <button class="pull-right">
-                                    <span>Поиск</span>
-                                    <i class="fa fa-search fa-2x"></i>
+                                    <span>Меню</span>
                                 </button>
                             </div>
                         </div>
@@ -516,12 +512,12 @@
                                         </li>
                                     </ul>
                                 </nav>
-                                <div class="search search-form pull-right">
-                                    <form action="#" id="search-form">
+                                <div class="search-section pull-right">
+                                    <form action="#" class="search-form" id="search-form-1">
                                         <div class="input-group">
                                             <input type="text" placeholder="Поиск по сайту">
                                             <span class="input-group-button">
-                                                <button type="submit" form="search-form" value="">
+                                                <button type="submit" form="search-form-1" value="">
                                                     <i class="fa fa-search"></i>
                                                 </button>
                                             </span>
@@ -538,6 +534,18 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-8">
+                    <div class="search-section visible-sm visible-xs">
+                        <form action="#" class="search-form white-form" id="search-form-2">
+                            <div class="input-group">
+                                <input type="text" placeholder="Поиск по сайту">
+                                <span class="input-group-button">
+                                    <button type="submit" form="search-form-2" value="" class="button accent-button">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
                     <section id="content" class="white-section">
                         <!--<ul class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">-->
                             <!--<li class="home-page" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">-->
@@ -918,46 +926,55 @@
                         </div>
                         <div class="items">
                             <div class="item">
-                                <a href="#" class="text">Свист коробки передач ваз 21099</a>
+                                <a href="#" class="user-avatar">
+                                    <img src="/img/uploads/default-avatar.png" alt="" class="avatar mini">
+                                </a>
+                                <div class="item-content">
+                                    <div class="item-info">
+                                        <a href="#"><span class="author">Парк</span></a>
+                                        <span class="date">3 мин. назад</span>
+                                    </div>
+                                    <a href="#" class="text">Свист коробки передач ваз 21099</a>
+                                </div>
                                 <a href="#" class="answers">
                                     <i class="fa fa-comments-o"></i>
                                     <span class="count">0</span>
                                 </a>
-                                <div class="item-info">
-                                    <a href="#" class="author">
-                                        <img src="/img/uploads/default-avatar.png" alt="" class="avatar micro"><span>Парк</span>
-                                    </a>
-                                    <span class="date">3 мин. назад</span>
-                                </div>
                             </div>
                             <div class="item">
-                                <a href="#" class="text">Можно ли ездить со сломанной передней пружиной?</a>
+                                <a href="#" class="user-avatar">
+                                    <img src="/img/uploads/default-avatar.png" alt="" class="avatar mini">
+                                </a>
+                                <div class="item-content">
+                                    <div class="item-info">
+                                        <a href="#"><span class="author">Alexander</span></a>
+                                        <span class="date">2 часа назад</span>
+                                    </div>
+                                    <a href="#" class="text">Можно ли ездить со сломанной передней пружиной?</a>
+                                </div>
                                 <a href="#" class="answers">
                                     <i class="fa fa-comments"></i>
                                     <span class="count">23</span>
                                 </a>
-                                <div class="item-info">
-                                    <a href="#" class="author">
-                                        <img src="/img/uploads/default-avatar.png" alt="" class="avatar micro"><span>Alexander</span>
-                                    </a>
-                                    <span class="date">2 часа назад</span>
-                                </div>
                             </div>
                             <div class="item has-solution">
-                                <a href="#" class="text">
-                                    Надо ли делать развал схождение после замены
-                                    сальников рулевой колонки колонки колонки на ваз 2106?
+                                <a href="#" class="user-avatar">
+                                    <img src="/img/uploads/avatar-1.jpg" alt="" class="avatar mini">
                                 </a>
+                                <div class="item-content">
+                                    <div class="item-info">
+                                        <a href="#"><span class="author">Muph1984</span></a>
+                                        <span class="date">30 августа</span>
+                                    </div>
+                                    <a href="#" class="text">
+                                        Надо ли делать развал схождение после замены
+                                        сальников рулевой колонки колонки колонки на ваз 2106?
+                                    </a>
+                                </div>
                                 <a href="#" class="answers">
                                     <i class="fa fa-comments"></i>
                                     <span class="count">2 213</span>
                                 </a>
-                                <div class="item-info">
-                                    <a href="#" class="author">
-                                        <img src="/img/uploads/avatar-1.jpg" alt="" class="avatar micro"><span>Muph1984</span>
-                                    </a>
-                                    <span class="date">30 августа</span>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -1057,7 +1074,9 @@
                                     <a href="#" class="login"><span>Ivan</span></a>
                                     <span class="rank">Эксперт</span>
                                 </div>
-                                <div class="rating">1 416</div>
+                                <div class="rating">
+                                    <span class="count">1 416</span>
+                                </div>
                             </div>
                             <div class="item">
                                 <div class="position">2</div>
@@ -1068,7 +1087,9 @@
                                     <a href="#" class="login"><span>SKS</span></a>
                                     <span class="rank">Эксперт</span>
                                 </div>
-                                <div class="rating">1 097</div>
+                                <div class="rating">
+                                    <span class="count">1 097</span>
+                                </div>
                             </div>
                             <div class="item">
                                 <div class="position">3</div>
@@ -1079,7 +1100,10 @@
                                     <a href="#" class="login"><span>Мастер</span></a>
                                     <span class="rank">Профи</span>
                                 </div>
-                                <div class="rating">987</div>
+                                <div class="rating">
+                                    <span class="count">987</span>
+                                    <span class="rating-up">+1</span>
+                                </div>
                             </div>
                             <div class="item">
                                 <div class="position">4</div>
@@ -1090,7 +1114,10 @@
                                     <a href="#" class="login"><span>Muph1984</span></a>
                                     <span class="rank">Энтузиаст</span>
                                 </div>
-                                <div class="rating">456</div>
+                                <div class="rating">
+                                    <span class="count">456</span>
+                                    <span class="rating-down">-12</span>
+                                </div>
                             </div>
                             <div class="item">
                                 <div class="position">5</div>
@@ -1101,7 +1128,9 @@
                                     <a href="#" class="login"><span>Макс</span></a>
                                     <span class="rank">Любитель</span>
                                 </div>
-                                <div class="rating">123</div>
+                                <div class="rating">
+                                    <span class="count">123</span>
+                                </div>
                             </div>
                         </div>
                         <a href="#" class="all-items-button">
@@ -1120,41 +1149,65 @@
                         </div>
                         <div class="items">
                             <div class="item">
-                                <div class="item-info">
-                                    <a href="#" class="author">
-                                        <img src="/img/uploads/ivan.jpg" alt="" class="avatar micro"><span>Ivan</span>
-                                    </a>
-                                    <span class="date">1 минуту назад</span>
-                                </div>
-                                <a href="#" class="text">
-                                    Да, действительно, верхняя опора требует срочной замены.
-                                    В противном случае, шток амортизационной стойки может
-                                    в один прекрасный момент упереться в ...
+                                <a href="#" class="user-avatar">
+                                    <img src="/img/uploads/ivan.jpg" alt="" class="avatar mini">
                                 </a>
+                                <div class="item-content">
+                                    <div class="item-info">
+                                        <a href="#" class="author">
+                                            <span>Ivan</span>
+                                        </a>
+                                        <span class="date">1 минуту назад</span>
+                                        <a href="#" class="reply-link pull-right">
+                                            <i class="fa fa-reply fa-flip-horizontal"></i>
+                                        </a>
+                                    </div>
+                                    <a href="#" class="text">
+                                        Да, действительно, верхняя опора требует срочной замены.
+                                        В противном случае, шток амортизационной стойки может
+                                        в один прекрасный момент упереться в ...
+                                    </a>
+                                </div>
                             </div>
                             <div class="item">
-                                <div class="item-info">
-                                    <a href="#" class="author">
-                                        <img src="/img/uploads/ivan.jpg" alt="" class="avatar micro"><span>Ivan</span>
-                                    </a>
-                                    <span class="date">Сегодня в 12:23</span>
-                                </div>
-                                <a href="#" class="text">
-                                    В подобной ситуации трудно назвать причину без осмотра
-                                    и проверки двигателя. Довольно странно всё ...
+                                <a href="#" class="user-avatar">
+                                    <img src="/img/uploads/ivan.jpg" alt="" class="avatar mini">
                                 </a>
+                                <div class="item-content">
+                                    <div class="item-info">
+                                        <a href="#" class="author">
+                                            <span>Ivan</span>
+                                        </a>
+                                        <span class="date">Сегодня в 12:23</span>
+                                        <a href="#" class="reply-link pull-right">
+                                            <i class="fa fa-reply fa-flip-horizontal"></i>
+                                        </a>
+                                    </div>
+                                    <a href="#" class="text">
+                                        В подобной ситуации трудно назвать причину без осмотра
+                                        и проверки двигателя. Довольно странно всё ...
+                                    </a>
+                                </div>
                             </div>
                             <div class="item">
-                                <div class="item-info">
-                                    <a href="#" class="author">
-                                        <img src="/img/uploads/ivan.jpg" alt="" class="avatar micro"><span>Ivan</span>
-                                    </a>
-                                    <span class="date">23 августа</span>
-                                </div>
-                                <a href="#" class="text">
-                                    Передние тормозные шланги от автомобилей Ваз не
-                                    подходят на автомобили Дэу Нексия и Дэу Ланос. Так же ...
+                                <a href="#" class="user-avatar">
+                                    <img src="/img/uploads/ivan.jpg" alt="" class="avatar mini">
                                 </a>
+                                <div class="item-content">
+                                    <div class="item-info">
+                                        <a href="#" class="author">
+                                            <span>Ivan</span>
+                                        </a>
+                                        <span class="date">23 августа</span>
+                                        <a href="#" class="reply-link pull-right">
+                                            <i class="fa fa-reply fa-flip-horizontal"></i>
+                                        </a>
+                                    </div>
+                                    <a href="#" class="text">
+                                        Передние тормозные шланги от автомобилей Ваз не
+                                        подходят на автомобили Дэу Нексия и Дэу Ланос. Так же ...
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>

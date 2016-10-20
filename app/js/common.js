@@ -35,10 +35,10 @@ $(function() {
     });
 
     // Search
-    $('.menu-section #search-form input').focusout(function (e) {
+    $('.menu-section .search-form input').focusout(function (e) {
         $('.menu-section nav').removeClass('opacity-0');
     });
-    $('.menu-section #search-form input').focusin(function (e) {
+    $('.menu-section .search-form input').focusin(function (e) {
         $('.menu-section nav').addClass('opacity-0');
     });
 

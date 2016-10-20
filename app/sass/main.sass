@@ -57,7 +57,7 @@ body
 
 .sidebar
     a
-        color: $dark-gray-color
+        color: $gray-color
         &.text
             color: $dark-color
             text-decoration: none
@@ -78,7 +78,7 @@ body
         padding: 20px 0
         border-top: 2px solid #ededed
         border-bottom: 2px solid #dbdbdb
-        color: $dark-gray-color
+        color: $gray-color
         &:first-child
             border-top: none
             padding-top: 0
@@ -92,7 +92,7 @@ body
             .title
                 width: auto
                 display: inline-block
-                margin-bottom: 15px
+                margin-bottom: 20px
             .filters
                 width: auto
                 display: inline-block
@@ -140,7 +140,7 @@ body
                 display: inline-block
                 width: 100%
                 margin-top: 10px
-                font-size: em(14px)
+                font-size: em(13px)
                 line-height: 22px
                 i, .fa
                     font-size: 20px
@@ -157,13 +157,22 @@ body
                     font-weight: 400
         &.widget-questions
             .item
-                .text
-                    width: calc(100% - 120px)
+                display: table
+                width: 100%
+                > *
+                    display: table-cell
+                    vertical-align: top
+                .user-avatar
+                    width: 70px
+                .item-content
+                    > *
+                        float: left
+                    .item-info
+                        margin: 0 0 5px
                 .answers
                     font-size: em(14px)
-                    display: inline-block
                     width: 100px
-                    margin-left: 20px
+                    padding-left: 20px
                     span, i, .fa, a, img
                         float: left
                         line-height: 22px
@@ -187,15 +196,40 @@ body
                     width: calc(100% - 125px)
         &.widget-comments
             .item
-                .text
+                display: table
+                width: 100%
+                border: none
+                > *
+                    display: table-cell
+                    vertical-align: top
+                .user-avatar
+                    width: 70px
+                .item-content
+                    position: relative
                     padding: 10px 15px 15px
                     background: #f4f4f4
                     border: 1px solid #f9f9f9
-                    border-radius: 5px
-                    float: left
-                .item-info
-                    float: left
-                    margin: 0 0 10px
+                    border-radius: 3px
+                    &:before
+                        content: ""
+                        width: 12px
+                        height: 12px
+                        background: #f4f4f4
+                        border: 1px solid #f9f9f9
+                        border-top: none
+                        border-right: none
+                        transform: rotate(45deg)
+                        position: absolute
+                        top: 15px
+                        left: -7px
+                    > *
+                        float: left
+                    .item-info
+                        margin: 0 0 5px
+                .reply-link
+                    i, .fa
+                        font-size: 16px
+                    margin: 0
         &.widget-users
             .item
                 display: table
@@ -224,10 +258,23 @@ body
                     font-family: $title-font
                     font-size: em(24px)
                     color: $accent-color
+                    .rating-up, .rating-down
+                        font-size: 0.5em
+                        top: -7px
+                        position: relative
+                        left: 5px
+                        i, .fa
+                            float: left
+                            margin: 3px 3px 0 0
+                            color: inherit
+                    .rating-up
+                        color: $green-color
+                    .rating-down
+                        color: $red-color
         &.widget-tags
             .tags
                 a
-                    background: linear-gradient(to top, $light-gradient-colors)
+                    background: #f4f4f4
                     margin-bottom: 20px
 
 // like-dislike widget
@@ -240,7 +287,10 @@ body
         height: 26px
         .like, .dislike
             padding: 0
+            text-decoration: none
             .count
+                color: $dark-gray-color
+                text-decoration: none
                 position: relative
                 top: -3px
             i, .fa

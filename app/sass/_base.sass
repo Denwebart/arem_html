@@ -141,7 +141,7 @@ button::-moz-focus-inner
     color: #ffffff
     background: $accent-color
     i, .fa
-        color: #ffffff
+        color: #ffffff !important
     &:hover, &:focus, &:active
         color: #ffffff
         background: $accent-color-dark
@@ -226,7 +226,7 @@ img, .image
     display: inline-block
     max-width: 100%
     &.avatar
-        border-radius: 5px
+        border-radius: 50%
         background-color: #E1E0E4
         &.micro
             width: 22px
@@ -337,7 +337,9 @@ input, textarea
     width: 100%
     &:hover, &:focus
         background: #ececec
-        box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.1)
+
+.white-form input, textarea
+    background: #ffffff
 
 .form-group
     .checkbox
