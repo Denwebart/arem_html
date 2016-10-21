@@ -14,11 +14,15 @@
 
 /* Large Devices, Wide Screens - MD - для 1199 и менее */
 @media only screen and (max-width : 1199px)
+    body
+        font-size: 15px
     .align-center-md
         text-align: center
     .social-links
         ul:last-child
             margin-left: 40px
+
+    /* Header */
     #header-widget
         ul
             li
@@ -47,17 +51,41 @@
     .menu-section
         .main-menu
             li
-                a
-                    font-size: em(16px)
+                //a
+                //    font-size: em(16px)
                 ul
                     top: 53px
         .search-form
             input
                 width: 55px
-                font-size: em(16px)
+                //font-size: em(16px)
             button
                 i, .fa
                     font-size: 26px
+
+
+    /* Content */
+    .sidebar
+        .widget
+            .item
+                .text
+                    font-size: 14px
+                .item-info
+                    font-size: 12px
+            &.widget-questions
+                .item
+                    .user-avatar
+                        width: 60px
+                    .answers
+                        width: 90px
+                        padding-left: 10px
+            &.widget-users
+                .item
+                    .user-avatar
+                        width: 60px
+                    .rating
+                        width: 80px
+
     /* Footer */
     footer
         .last-column
@@ -118,8 +146,8 @@
 
     /* Footer */
     footer
-        .copyright
-            font-size: 12px
+        //.copyright
+        //    font-size: em(12px)
     /* */
 
 /* Small Devices, Tablets - XS - для 609 и менее */
@@ -145,6 +173,15 @@
             max-width: 300px
         .mobile-buttons-menu
             margin-top: 0
+    footer
+        .social-links
+            ul
+                &:last-child
+                    margin: 0
+                li
+                    margin-right: 15px
+                    &:last-child
+                        margin-right: 15px
 /* */
 
 /* Extra Small Devices, Phones - XS - для 480 и менее */
