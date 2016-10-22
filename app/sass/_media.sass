@@ -14,10 +14,14 @@
 
 /* Large Devices, Wide Screens - MD - для 1199 и менее */
 @media only screen and (max-width : 1199px)
-    body
-        font-size: 15px
     .align-center-md
         text-align: center
+    body
+        font-size: 15px
+    i, .fa
+        margin-right: 5px
+        &.pull-right
+            margin-left: 5px
     .social-links
         ul:last-child
             margin-left: 40px
@@ -71,6 +75,11 @@
                 float: none
                 width: 100%
 
+    .pagination
+        li
+            a
+                span
+                    display: none
     /* Sidebar */
     .sidebar
         .widget
@@ -242,6 +251,7 @@
             .item-image,
             .item-text
                 width: 100%
+                height: auto !important
                 img
                     width: 100%
             .read-more

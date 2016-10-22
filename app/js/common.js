@@ -64,7 +64,6 @@ $(function() {
             fontSize = 15;
         }
 
-        console.log(fontSize);
         if(windowWidth > 1199 || (windowWidth < 992 && windowWidth > 767)) {
             textHeight = imageHeight - titleHeight - 5;
         } else {
@@ -77,7 +76,7 @@ $(function() {
             textHeight = 'auto';
         }
 
-        $this.find('.item-text').height(textHeight);
+        $this.find('.item-text').height(textHeight - 5);
     }
 
     $(document).ready(function () {

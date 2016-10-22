@@ -34,6 +34,7 @@ body
 .slideout-open .slideout-panel
 
 #menu
+    font-size: 16px
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 1)
     padding: 12px 20px 20px
     .menu-close-button
@@ -47,6 +48,20 @@ body
         margin: 15px 0 8px
         &:first-child
             margin-top: 0
+    .menu
+        width: 100%
+        li
+            a
+                line-height: 1.7
+                display: inline-block
+                width: 100%
+            i.fa
+                float: right
+                line-height: 1.7
+                padding: 0 10px
+                margin: 0
+            ul
+                display: none
 
 //Custom styles here
 
@@ -330,7 +345,7 @@ body
         float: left
         margin-right: 20px
         color: $dark-gray-color
-        font-size: em(14px)
+        font-size: em(13px)
         &:last-child
             margin-right: 0
     a, a span
@@ -424,10 +439,12 @@ body
             float: right
         .item-text
             position: relative
-            height: 0
             float: left
             overflow: hidden
             text-overflow: ellipsis
+        &:not(.full)
+            .item-text
+                height: 0
         .read-more
             position: absolute
             bottom: 0
@@ -482,8 +499,12 @@ body
             background: $accent-color-dark
         a
             color: $dark-gray-color
+        &.last, &.next
             i, .fa
                 margin-left: 5px
+        &.first, &.before
+            i, .fa
+                margin-right: 5px
 
 // Contact Page
 #content
