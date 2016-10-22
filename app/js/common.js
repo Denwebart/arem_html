@@ -53,4 +53,43 @@ $(function() {
         $("html, body").css("overflow", "auto");
         $(this).parent().removeClass('open');
     });
+
+    // Blog
+    function blogItemHeight($this) {
+        var windowWidth = $(window).width();
+        var imageHeight = $this.find(".item-image img").height();
+        var titleHeight = $this.find(".item-title").height();
+        var fontSize = 16;
+        if(windowWidth < 1200) {
+            fontSize = 15;
+        }
+
+        console.log(fontSize);
+        if(windowWidth > 1199 || (windowWidth < 992 && windowWidth > 767)) {
+            textHeight = imageHeight - titleHeight - 5;
+        } else {
+            textHeight = imageHeight + 10;
+        }
+
+        textHeight = textHeight - (textHeight % (1.5 * fontSize));
+
+        if(windowWidth <= 480) {
+            textHeight = 'auto';
+        }
+
+        $this.find('.item-text').height(textHeight);
+    }
+
+    $(document).ready(function () {
+        $(".blog .item:not(.full)").each(function(){
+            blogItemHeight($(this));
+        });
+    });
+    $(window).resize(function () {
+            $(".blog .item:not(.full)").each(function(){
+                blogItemHeight($(this));
+            });
+        }
+    );
+
 });

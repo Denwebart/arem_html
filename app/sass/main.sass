@@ -68,7 +68,7 @@ body
         span
             text-decoration: underline
     img.avatar
-        background-color: #F9f9f9
+        background-color: $light-color
     .small-description
         a
             color: $accent-color
@@ -209,14 +209,14 @@ body
                     position: relative
                     padding: 10px 15px 15px
                     background: #f4f4f4
-                    border: 1px solid #f9f9f9
+                    border: 1px solid $light-color
                     border-radius: 3px
                     &:before
                         content: ""
                         width: 12px
                         height: 12px
                         background: #f4f4f4
-                        border: 1px solid #f9f9f9
+                        border: 1px solid $light-color
                         border-top: none
                         border-right: none
                         transform: rotate(45deg)
@@ -375,7 +375,7 @@ body
         span
             text-decoration: none
             &:first-child
-                border-right: 1px solid #f9f9f9
+                border-right: 1px solid $light-color
                 padding-right: 5px
         .count
             float: right
@@ -394,6 +394,7 @@ body
         margin-bottom: 20px
 
 // Blog List
+
 .blog
     margin-bottom: 30px
     .item
@@ -414,12 +415,31 @@ body
                 margin-top: 0
         .item-image
             float: left
-            width: 35%
-            margin: 5px 0 20px
+            width: calc(35% - 25px)
+            margin: 5px 25px 20px 0
+        .item-title,
         .item-text
+            width: 65%
+        .item-title
+            float: right
+        .item-text
+            position: relative
+            height: 0
             float: left
-            width: calc(65% - 25px)
-            margin-left: 25px
+            overflow: hidden
+            text-overflow: ellipsis
+        .read-more
+            position: absolute
+            bottom: 0
+            right: 0
+            background: $light-color
+            padding-left: 18px
+            &:before
+                content: '...'
+                position: absolute
+                margin-left: -15px
+                color: #333333
+                text-decoration: none
         .category
             display: inline-block
             width: 100%

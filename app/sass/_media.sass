@@ -65,6 +65,13 @@
 
 
     /* Content */
+    .blog
+        .item
+            .item-title
+                float: none
+                width: 100%
+
+    /* Sidebar */
     .sidebar
         .widget
             .item
@@ -101,6 +108,13 @@
     #header
         margin-bottom: 0
 
+    /* Content */
+    .blog
+        .item
+            .item-title
+                float: right
+                width: 65%
+
     /* Footer */
     footer
         .first-column,
@@ -116,6 +130,9 @@
 
 /* Small Devices, Tablets - XS - для 767 и менее */
 @media only screen and (max-width : 767px)
+    h1, h2, h3, h4, h5, h6,
+    .h1, .h2, .h3, .h4, .h5, .h6
+        margin: 0 0 15px
     .align-center-xs
         text-align: center
 
@@ -143,6 +160,17 @@
         .fixed-block
             display: inline-block
             width: auto
+
+    .blog
+        .item
+            .item-image
+                width: calc(50% - 20px)
+                margin-right: 20px
+            .item-title
+                float: none
+                width: 100%
+            .item-text
+                width: 50%
 
     /* Footer */
     footer
@@ -189,6 +217,7 @@
     .full-xxs
         width: 100%
 
+    /* Header */
     #header-widget
         .user-panel
             .button
@@ -204,6 +233,19 @@
                         i, .fa
                             &:after
                                 right: 10px
+
+    /* Content */
+    .blog
+        .item
+            .item-title
+                font-size: 24px
+            .item-image,
+            .item-text
+                width: 100%
+                img
+                    width: 100%
+            .read-more
+                bottom: 20px
 
     /* Footer */
     footer
