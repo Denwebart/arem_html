@@ -33,6 +33,16 @@ $(function() {
     document.querySelector('.menu-close-button').addEventListener('click', function() {
         slideout.close();
     });
+    $('#menu').on('click', '.open-dropdown', function (e) {
+        e.preventDefault();
+        var $submenu = $(this).parent().parent().find('ul');
+        if($submenu.is(':visible')) {
+            $submenu.slideUp();
+        } else {
+            $submenu.slideDown();
+        }
+    });
+
 
     // Search
     $('.menu-section .search-form input').focusout(function (e) {
