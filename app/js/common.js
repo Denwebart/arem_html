@@ -18,7 +18,7 @@ $(function() {
 
     // Slideout.js Menu
     $('#menu').attr('style', 'display:block');
-    
+
     var slideout = new Slideout({
         'panel': document.getElementById('panel'),
         'menu': document.getElementById('menu'),
@@ -68,25 +68,20 @@ $(function() {
     function blogItemHeight($this) {
         var windowWidth = $(window).width();
         var imageHeight = $this.find(".item-image img").height();
-        var titleHeight = $this.find(".item-title").height();
+        var titleHeight = $this.find(".item-title").outerHeight(true);
+        var infoHeight = $this.find(".item-text .page-info").outerHeight(true);
         var fontSize = 16;
         if(windowWidth < 1200) {
             fontSize = 15;
         }
 
-        if(windowWidth > 1199 || (windowWidth < 992 && windowWidth > 767)) {
-            textHeight = imageHeight - titleHeight - 5;
-        } else {
-            textHeight = imageHeight + 10;
-        }
-
-        textHeight = textHeight - (textHeight % (1.5 * fontSize));
+        textHeight = imageHeight - (imageHeight % (1.5 * fontSize)) + 4;
 
         if(windowWidth <= 480) {
             textHeight = 'auto';
         }
 
-        $this.find('.item-text').height(textHeight - 5);
+        $this.find('.item-text').height(textHeight);
     }
 
     $(document).ready(function () {

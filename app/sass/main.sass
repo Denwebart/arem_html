@@ -432,32 +432,34 @@ body
         .item-image
             float: left
             width: calc(35% - 25px)
-            margin: 5px 25px 20px 0
-        .item-title,
+            margin: 0 25px 20px 0
         .item-text
             width: 65%
         .item-title
+            width: 100%
             float: right
         .item-text
             position: relative
             float: left
             overflow: hidden
             text-overflow: ellipsis
+            //&:after
+            //    content: '...'
+            //    position: absolute
+            //    bottom: 0
+            //    right: 0
+            //    background: $light-color
+            //    color: #333333
         &:not(.full)
             .item-text
                 height: 0
-        .read-more
-            position: absolute
-            bottom: 0
-            right: 0
-            background: $light-color
-            padding-left: 18px
-            &:before
-                content: '...'
+            .read-more
                 position: absolute
-                margin-left: -15px
-                color: #333333
-                text-decoration: none
+                bottom: 0
+                right: 0
+                font-size: 20px
+                background: $light-color
+                padding-left: 5px
         .category
             display: inline-block
             width: 100%
