@@ -16,6 +16,11 @@
 @media only screen and (max-width : 1199px)
     .align-center-md
         text-align: center
+    .indent
+        &.indent-md
+            display: inline-block
+        &.indent-lg
+            display: none
     body
         font-size: 15px
     i, .fa
@@ -114,6 +119,11 @@
 @media only screen and (max-width : 991px)
     .align-center-sm
         text-align: center
+    .indent
+        &.indent-sm
+            display: inline-block
+        &.indent-md, &.indent-lg
+            display: none
 
     /* Header */
     #header
@@ -145,6 +155,11 @@
         margin: 0 0 15px
     .align-center-xs
         text-align: center
+    .indent
+        &.indent-xs
+            display: inline-block
+        &.indent-sm, &.indent-md, &.indent-lg
+            display: none
 
     /* Header */
     #header
