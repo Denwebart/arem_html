@@ -73,6 +73,9 @@
         .item
             .item-image
                 margin-right: 20px
+            &:not(.full)
+                .read-more
+                    bottom: -4px
 
     .pagination
         li
@@ -117,10 +120,10 @@
         margin-bottom: 0
 
     /* Content */
-    .blog
-        .item
-            .item-title
-                width: 100%
+    .without-padding
+        padding: 0
+    section
+        padding: 25px 15px
 
     /* Footer */
     footer
@@ -174,6 +177,17 @@
                 width: calc(50% - 20px)
             .item-text
                 width: 50%
+            .delimiter
+                .link
+                    left: 50% // 75%
+                    a
+                        left: 0
+            .page-info
+                .user
+                    .avatar
+                        margin: 0
+                    .login
+                        display: none
 
     /* Footer */
     footer
@@ -241,14 +255,39 @@
     .blog
         .item
             .item-image
+                margin-bottom: 15px
                 width: 100%
                 img
                     width: 100%
             .item-text
                 width: 100%
                 height: auto !important
-            .read-more
-                bottom: 20px
+                .page-info
+                    text-align: center
+                    > div
+                        float: none
+                    .user
+                        .avatar
+                            margin-right: 7px
+                        .login
+                            display: inline
+            .item-info
+                margin-top: 30px
+                .page-info
+                    text-align: center
+                    > div
+                        float: none
+                    .like-dislike-widget
+                        display: inline-block
+                        width: 100%
+            &:not(.full)
+                .read-more
+                    bottom: 16px
+            .delimiter
+                .link
+                    left: 50%
+                    a
+                        left: -50%
 
     /* Footer */
     footer

@@ -341,10 +341,10 @@ body
     display: inline-block
     width: 100%
     float: left
-    margin-bottom: 10px
     > div
         float: left
-        margin-right: 20px
+        display: inline-block
+        margin: 0 20px 10px 0
         color: $dark-gray-color
         font-size: em(13px)
         &:last-child
@@ -412,7 +412,7 @@ body
 // Blog List
 
 .blog
-    margin-bottom: 30px
+    margin-bottom: 20px
     .item
         position: relative
         display: inline-block
@@ -423,7 +423,7 @@ body
             border-top: none
             padding-top: 0
         &:last-child
-            border-bottom: none
+            //border-bottom: none
         &.full
             .item-image, .item-text
                 width: 100%
@@ -438,18 +438,18 @@ body
         .item-title
             width: 100%
             float: right
+        .delimiter
+            .link
+                left: 65%
+        .item-info
+            display: inline-block
+            width: 100%
+            margin: 15px 0 0
         .item-text
             position: relative
             float: left
             overflow: hidden
             text-overflow: ellipsis
-            //&:after
-            //    content: '...'
-            //    position: absolute
-            //    bottom: 0
-            //    right: 0
-            //    background: $light-color
-            //    color: #333333
         &:not(.full)
             .item-text
                 height: 0
@@ -463,23 +463,16 @@ body
         .category
             display: inline-block
             width: 100%
-            margin-bottom: 20px
-            span
-                margin-right: 10px
-                float: left
-            ul
-                display: inline-block
-                float: left
-                height: auto
-                li
-                    float: left
-                    height: 20px
-                    &:after
-                        content: "/"
-                        margin: 0 5px
-                    &:last-child:after
-                        content: none
-
+            > li, > a
+                &:after
+                    color: $gray-color
+            a
+                color: $dark-gray-color
+                &:hover
+                    color: $accent-color
+    .pagination
+        border-top: 1px solid #ffffff
+        padding-top: 20px
 // Pagination
 .pagination
     text-align: center
@@ -495,7 +488,7 @@ body
             border-radius: 2px
             border: 1px solid rgba(255, 255, 255, 0.15)
             background: $accent-color
-            a, i, .fa
+            a, i, .fa, span
                 color: #ffffff
                 text-decoration: none
         &:hover
