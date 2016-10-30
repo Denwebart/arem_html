@@ -70,8 +70,6 @@ body
 .widget
     display: inline-block
     width: 100%
-
-.sidebar
     a
         color: $gray-color
         &.text
@@ -83,6 +81,12 @@ body
                 text-decoration: none
         span
             text-decoration: underline
+    &.widget-related
+        .item
+            .item-image
+                margin-bottom: 10px
+
+.sidebar
     img.avatar
         background-color: $light-color
     .small-description
@@ -359,7 +363,7 @@ body
             margin-right: 7px
     i, .fa
         font-size: 20px
-        color: $gray-color !important
+        color: $gray-color
     i, img, a, time, span
         float: left
         line-height: 22px
@@ -513,6 +517,8 @@ body
             margin-bottom: 20px
             text-decoration: none
             line-height: 50px
+            &:last-child
+                margin-bottom: 0
             i, .fa, span
                 float: left
             i, .fa
@@ -526,9 +532,120 @@ body
             color: $accent-color
         a:hover span
             text-decoration: underline
-
-
 // End Widgets
+
+// Comments
+.comments-list
+    display: inline-block
+    width: 100%
+    margin-bottom: 20px
+    padding: 0 70px 0 0
+    > .comment
+        margin-bottom: 20px
+        &:last-child
+            margin-bottom: 0
+    .comments-list
+        margin: 20px 0 0 70px
+        padding: 0
+.comment
+    float: left
+    display: inline-block
+    width: 100%
+    .comment-left-side
+        float: left
+        width: 50px
+        margin-right: 20px
+    .comment-right-side
+        float: left
+        width: calc(100% - 70px)
+
+    .like-dislike
+        margin-top: 10px
+        text-align: center
+        .total-count
+            font-size: em(20px)
+        button
+            height: 20px
+            float: left
+            padding: 0
+            &:last-child
+                float: right
+            i, .fa
+                font-size: 20px
+
+    .comment-container
+        background: #f4f4f4
+        border-radius: 3px
+        border: 1px solid #eeeeee
+        .container-header
+            display: inline-block
+            width: 100%
+            float: left
+            padding: 7px 10px 7px 20px
+            border-bottom: 1px solid #eeeeee
+            > *
+                float: left
+                margin-right: 20px
+                line-height: 24px
+                &:last-child
+                    margin-right: 0
+        .container-body
+            display: inline-block
+            width: 100%
+            float: left
+            padding: 10px 10px 15px 20px
+            border-top: 1px solid #f9f9f9
+
+    .user
+        text-decoration: none
+        .login
+            color: $dark-color
+            text-decoration: none
+            font-weight: bold
+            &:hover
+                color: $accent-color
+    .date
+        font-size: em(14px)
+        color: $dark-gray-color
+        font-style: italic
+
+    .buttons
+        > *
+            padding: 0 5px
+            margin-left: 5px
+        i, .fa
+            font-size: 20px
+    .comment-text
+        p
+            margin-bottom: 15px
+            &:last-child
+                margin-bottom: 5px
+    .reply
+        float: right
+        > *
+            float: left
+        span
+            line-height: 20px
+        i, .fa
+            margin-top: 5px
+
+
+.user-info
+    text-decoration: none
+    display: inline-block
+    margin-bottom: 10px
+    float: left
+    .avatar
+        float: left
+        margin-right: 7px
+    .login
+        float: left
+        text-decoration: underline
+        color: $dark-gray-color
+        &:hover
+            text-decoration: none
+            color: $accent-color
+// End Comments
 
 // Footer
 footer

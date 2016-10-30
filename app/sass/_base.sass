@@ -242,7 +242,7 @@ img, .image
             width: 50px
 
 // Icons
-i, .fa
+.fa
     color: $gray-color
     margin-right: 7px
     &.pull-right
@@ -290,8 +290,12 @@ i:only-child, .fa:only-child
 // Sections
 section
     display: inline-block
+    width: 100%
     padding: 25px
     margin-bottom: 30px
+    section
+        padding: 0
+
 .dark-section
     background: $dark-color
     color: #ffffff
@@ -385,8 +389,9 @@ input, textarea
     &:hover, &:focus
         background: #ececec
 
-.white-form input, textarea
-    background: #ffffff
+.white-form
+    input, textarea
+        background: #ffffff
 
 .form-group
     .checkbox
@@ -400,6 +405,7 @@ input, textarea
     display: inline-block
     width: 100%
     margin-bottom: 20px
+    float: left
 
 .input-group
     display: table
@@ -421,9 +427,9 @@ input, textarea
             top: 3px
             margin: 0
     .fixed:first-child
-        padding-right: 20px
+        padding-right: 10px
     .fixed:last-child
-        padding-left: 20px
+        padding-left: 10px
 
 .table-block
     display: table
