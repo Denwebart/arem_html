@@ -83,6 +83,8 @@ body
             text-decoration: underline
     &.widget-related
         .item
+            position: relative
+            margin-bottom: 20px
             .item-image
                 margin-bottom: 10px
 
@@ -537,18 +539,6 @@ body
 // End Widgets
 
 // Comments
-.comments-list
-    display: inline-block
-    width: 100%
-    margin-bottom: 20px
-    padding: 0 70px 0 0
-    > .comment
-        margin-bottom: 20px
-        &:last-child
-            margin-bottom: 0
-    .comments-list
-        margin: 20px 0 0 70px
-        padding: 0
 .comment
     float: left
     display: inline-block
@@ -576,7 +566,7 @@ body
                 font-size: 20px
 
     .comment-container
-        background: #f4f4f4
+        background: #ececec
         border-radius: 3px
         border: 1px solid #eeeeee
         .container-header
@@ -584,7 +574,7 @@ body
             width: 100%
             float: left
             padding: 7px 10px 7px 20px
-            border-bottom: 1px solid #eeeeee
+            border-bottom: 1px solid #e5e5e5
             > *
                 float: left
                 margin-right: 20px
@@ -595,17 +585,17 @@ body
             display: inline-block
             width: 100%
             float: left
-            padding: 10px 10px 15px 20px
-            border-top: 1px solid #f9f9f9
-
+            padding: 5px 10px 15px 20px
+            border-top: 1px solid #f4f4f4
     .user
         text-decoration: none
         .login
             color: $dark-color
             text-decoration: none
             font-weight: bold
-            &:hover
-                color: $accent-color
+    a.user
+        .login:hover
+            color: $accent-color
     .date
         font-size: em(14px)
         color: $dark-gray-color
@@ -619,8 +609,8 @@ body
             font-size: 20px
     .comment-text
         p
-            margin-bottom: 15px
-            &:last-child
+            margin-bottom: 10px
+            &:last-of-type
                 margin-bottom: 5px
     .reply
         float: right
@@ -631,6 +621,20 @@ body
         i, .fa
             margin-top: 5px
 
+.comments-list
+    display: inline-block
+    width: 100%
+    margin-bottom: 20px
+    padding: 0 70px 0 0
+    > .comment
+        margin-bottom: 20px
+        &:last-child
+            margin-bottom: 0
+    .comments-list
+        margin: 20px 0 0 70px
+        padding: 0
+        .comment-container
+            background: #f0f0f0
 
 .user-info
     text-decoration: none
