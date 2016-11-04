@@ -192,7 +192,7 @@
                     a
                         display: inline-block
                         width: 100%
-                        opacity: 0.6
+                        color: $dark-gray-color
                         span
                             text-decoration: none
                             display: inline-block
@@ -200,13 +200,16 @@
                             float: none
                             margin-top: 10px
                         i, .fa
+                            color: $gray-color
                             float: none
                             font-size: 24px
                             margin: 0
                     &.active a, a:hover, a:focus,
                     a:hover span
                         opacity: 1
-                        color: inherit
+                        color: $dark-color
+                        i, .fa
+                            color: inherit
         .user
             .dropdown-container
                 .container-header
