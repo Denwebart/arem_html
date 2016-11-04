@@ -180,7 +180,9 @@
     // Widgets
     .widget
         &.widget-related
+            margin-bottom: 0
             .item
+                margin-bottom: 20px
                 .text
                     position: absolute
                     bottom: 10px
@@ -198,6 +200,12 @@
                         background: rgba(255, 255, 255, 0.85)
 
     /* Content */
+    #content
+        .social-links
+            margin-bottom: 0
+            a
+                width: 50%
+
     .table-block.page-title
         .responsive-block
             display: inline-block
@@ -223,6 +231,47 @@
                         margin: 0
                     .login
                         display: none
+    // Comments
+    .comment
+        .comment-left-side
+            width: 100%
+            margin: 0 0 10px 0
+        .comment-right-side
+            width: 100%
+        .user
+            width: 100%
+            .avatar, .login
+                float: left
+                line-height: 30px
+            .avatar
+                width: 30px
+                margin-right: 10px
+        .like-dislike
+            float: right
+            width: auto
+            margin-top: 0
+            padding-top: 0
+            text-align: center
+            .total-count
+                position: relative
+                top: 0
+                left: 0
+                float: left
+                margin: 0 10px
+                .count
+                    left: 0
+                    top: 1px
+                    line-height: 30px
+            button
+                margin: 0
+                height: auto
+                i, .fa
+                    line-height: 30px
+
+    .comments-list
+        .comments-list
+            margin: 20px 0 0 40px
+            width: calc(100% - 40px)
 
     /* Footer */
     footer
@@ -254,16 +303,20 @@
         .mobile-buttons-menu
             margin-top: 0
 
-    // Page Info
-    .page-info
-        text-align: center
-        > div
-            float: none
-            &:last-child
-                margin-right: 20px
-        .clearfix
-            display: block
-
+    /* Content */
+    #content
+        .social-links
+            a
+                width: 100%
+    .blog
+        .item
+            .page-info
+                text-align: left
+                > div
+                    float: left
+                    margin-bottom: 5px
+            .item-info
+                margin-top: 25px
     /* Footer */
     footer
         .social-links
@@ -320,7 +373,6 @@
                         .login
                             display: inline
             .item-info
-                margin-top: 30px
                 .page-info
                     text-align: center
                     > div
