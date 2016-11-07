@@ -420,10 +420,18 @@ body
         margin-bottom: 10px
         li
             margin-bottom: 10px
+    .submenu
+        .item
+            display: inline-block
+            width: 100%
+            height: 100px
+            margin: 0 0 20px 0
 
 // Blog List
 
 .blog
+    display: inline-block
+    width: 100%
     margin-bottom: 20px
     .item
         position: relative
@@ -482,7 +490,29 @@ body
                 color: $dark-gray-color
                 &:hover
                     color: $accent-color
+    .filters
+        display: inline-block
+        width: 100%
+        float: left
+        padding: 10px 0
+        border-top: 1px solid #ffffff
+        border-bottom: 1px solid #eeeeee
+        color: $dark-gray-color
+        font-size: em(14px)
+        & + .list
+            border-top: 1px solid #ffffff
+            padding-top: 20px
+        .on-page
+            float: left
+        .sortby
+            float: right
+    &.with-filters
+        border-top: 1px solid #eeeeee
+    .list
+        float: left
     .pagination
+        display: inline-block
+        width: 100%
         border-top: 1px solid #ffffff
         padding-top: 20px
 // Pagination
