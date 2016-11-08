@@ -8,6 +8,7 @@ $(function() {
 
     // Dropdown
     $(document).on('click', '.dropdown', function (e) {
+        e.preventDefault();
         if($(this).is('.active')) {
             $(this).removeClass('active');
         } else {
