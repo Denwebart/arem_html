@@ -365,6 +365,21 @@ section
     a
         color: #ffffff
 
+/* Notification icon */
+.notification
+    position: relative
+    &:after
+        content: ""
+        width: 8px
+        height: 8px
+        border-radius: 50%
+        background: $accent-color
+        position: absolute
+        right: -12px
+        top: 0
+        border: 3px solid $light-color
+        box-sizing: content-box
+
 // Social Links
 .social-links
     margin-bottom: 20px

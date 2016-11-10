@@ -747,10 +747,14 @@ footer
 .user-sidebar
     background: $light-color
     margin-top: 50px //
+    padding-bottom: 30px
+    text-align: center
     .user-info
         display: inline-block
         width: 100%
-        margin-bottom: 20px
+        > div
+            display: inline-block
+            width: 100%
         .user-avatar
             display: inline-block
             width: 100%
@@ -762,5 +766,53 @@ footer
                 width: auto
                 max-width: 140px
                 border-radius: 5px
+                border: 3px solid #ffffff
+        .login
+            font-size: em(24px)
+            font-family: $title-font
+            color: #3d4347
+            text-decoration: none
+            &:hover
+                color: inherit
+        .fullname
+            font-size: em(18px)
+        .rank
+            color: #565a5f
+            margin-top: 10px
+        .is-online
+            font-size: em(12px)
+            color: $dark-gray-color
+            &.online
+                color: $green-color
+    .user-menu
+        text-align: left
+        margin: 30px 0 0 -20px
+        li
+            margin-bottom: 10px
+            a
+                text-decoration: none
+                i, .fa
+                    width: 20px
+                    text-align: center
+                span
+                    text-decoration: none
+                    color: $dark-gray-color
+#user-statistics
+    height: 40px
+    margin-bottom: 10px
+    color: #565a5f
+    .item
+        float: left
+        display: inline-block
+        margin-left: 25px
+        > *
+            color: #565a5f
+            font-size: em(14px)
+            line-height: 40px
+        .count
+            font-size: em(24px)
+        &.rating
+            .count
+                color: $green-color
 
 @import "media"
