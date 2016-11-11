@@ -49,6 +49,19 @@ body
     max-width: 1600px
 
 // Headers
+.title
+    display: inline-block
+    width: 100%
+    h1, h2, h3, h4, h5, h6,
+    .h1, .h2, .h3, .h4, .h5, .h6
+        display: inline-block
+        margin-right: 25px
+    .small-description
+        display: inline-block
+        margin-bottom: 0
+        a
+            color: $gray-color
+
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6
 	font-family: $title-font
@@ -83,6 +96,19 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
     .h1, .h2, .h3, .h4, .h5, .h6
         color: $dark-gray-color
 
+// Icons
+.fa
+    color: $gray-color
+    margin-right: 7px
+    &.pull-right
+        margin-right: 0
+        margin-left: 7px
+a
+    i:hover, .fa:hover
+        color: $accent-color
+i:only-child, .fa:only-child
+    margin: 0
+
 // Links
 a, button
     color: $accent-color
@@ -95,6 +121,17 @@ a, button
         span, i, .fa
             color: $accent-color
             text-decoration: none
+a.link
+    font-family: $title-font
+    text-decoration: none
+    span
+        text-decoration: underline
+    i, .fa
+        color: $accent-color
+        margin-right: 2px
+    &:hover span
+        text-decoration: none
+
 button
     span
         text-decoration: none
@@ -132,11 +169,21 @@ button::-moz-focus-inner
         border: 1px solid rgba(255, 255, 255, 0.1)
     &.circle-button
         border-radius: 50%
+
+.button-group
+    .button
+        float: left
+        border-radius: 0
+        &:first-child
+            border-radius: 2px 0 0 2px
+        &:last-child
+            border-radius: 0 2px 2px 0
+
 .default-button
     color: $dark-color
     background: #e7e7e7
     i, .fa
-        color: $dark-color
+        color: $dark-color !important
     &:hover, &:focus, &:active
         color: $dark-color
         background: #eeeeee
@@ -154,7 +201,7 @@ button::-moz-focus-inner
     color: #ffffff
     background: $dark-color
     i, .fa
-        color: #ffffff
+        color: #ffffff !important
     &:hover, &:focus, &:active
         color: #ffffff
         background: #1F3245
@@ -195,6 +242,8 @@ ul.horisontal
 
 p
     margin: 0 0 20px
+.font-20
+    font-size: em(20px)
 .small
     font-size: em(12px) !important
     margin-bottom: 12px
@@ -202,6 +251,9 @@ p
     font-size: em(12px) !important
     color: $gray-color
     margin-bottom: 20px
+a.small-description
+    &:hover
+        color: $gray-color
 .without-enter
     white-space: nowrap
 .align-center
@@ -241,22 +293,11 @@ img, .image
         &.mini
             width: 50px
 
-// Icons
-.fa
-    color: $gray-color
-    margin-right: 7px
-    &.pull-right
-        margin-right: 0
-        margin-left: 7px
-a
-    i:hover, .fa:hover
-        color: $accent-color
-i:only-child, .fa:only-child
-    margin: 0
-
 // Margins and Paddings
 .m-t-20
     margin-top: 20px
+.m-b-0
+    margin-bottom: 0
 .m-b-10
     margin-bottom: 10px
 .m-b-20

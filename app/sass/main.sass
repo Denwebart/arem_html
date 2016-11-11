@@ -259,7 +259,7 @@ body
                 *
                     display: table-cell
                     vertical-align: middle
-                .position
+                .rating-position
                     width: 30px
                 .user-avatar
                     width: 70px
@@ -752,6 +752,7 @@ footer
     .user-info
         display: inline-block
         width: 100%
+        margin-bottom: 15px
         > div
             display: inline-block
             width: 100%
@@ -767,6 +768,7 @@ footer
                 max-width: 140px
                 border-radius: 5px
                 border: 3px solid #ffffff
+                box-shadow: 0 -5px 7px rgba(0, 0, 0, 0.1)
         .login
             font-size: em(24px)
             font-family: $title-font
@@ -778,15 +780,39 @@ footer
             font-size: em(18px)
         .rank
             color: #565a5f
-            margin-top: 10px
+            margin: 10px 0 3px
+        .rating-position
+            .label
+                display: inline-block
+                background: #ffffff
+                border: 1px solid #eeeeee
+                border-radius: 12px
+                padding: 1px 0 1px 10px
+                font-family: $title-font
+                font-size: em(16px)
+                line-height: 22px
+                > *
+                    float: left
+                svg.image
+                    position: relative
+                    top: 1px
+                    width: 22px
+                    margin-left: 5px
+                    path
+                        fill: $dark-color
         .is-online
             font-size: em(12px)
             color: $dark-gray-color
+            font-weight: bold
             &.online
                 color: $green-color
+    .user-buttons
+        display: inline-block
+        width: 100%
+        margin: 5px 0
     .user-menu
         text-align: left
-        margin: 30px 0 0 -20px
+        margin: 15px 0 0 -15px
         li
             margin-bottom: 10px
             a
@@ -797,7 +823,12 @@ footer
                 span
                     text-decoration: none
                     color: $dark-gray-color
-#user-statistics
+            &.active a, &:hover a
+                color: $dark-color
+                > *
+                     color: inherit
+
+.user-statistics
     height: 40px
     margin-bottom: 10px
     color: #565a5f
@@ -805,14 +836,83 @@ footer
         float: left
         display: inline-block
         margin-left: 25px
+        height: 40px
         > *
             color: #565a5f
             font-size: em(14px)
             line-height: 40px
+            float: left
         .count
             font-size: em(24px)
+            margin-right: 5px
+        &.subscribers
+            margin: 0
         &.rating
             .count
-                color: $green-color
+                color: $accent-color
+                margin: 0 0 0 5px
+
+.info-list
+    display: inline-block
+    width: 100%
+    &.two-col
+        .item
+            width: 50%
+    .item
+        display: inline-block
+        width: 100%
+        float: left
+        margin-bottom: 15px
+        .title, .value
+            display: inline-block
+            width: 100%
+            float: left
+        .title
+            font-size: em(12px)
+            line-height: 16px
+            color: $gray-color
+        .value
+            line-height: 20px
+            i, .fa
+                color: inherit
+
+.images-collage
+    display: inline-block
+    width: 100%
+    > *
+        float: left
+        display: inline-block
+        width: calc(100% / 3)
+        border: 1px solid $light-color
+        &:first-child
+            width: calc(2 * 100% / 3)
+
+.user-balance
+    text-align: right
+    .image
+        float: left
+        width: 40%
+        margin-top: -45px
+    .description
+        float: left
+        display: inline-block
+        width: 60%
+        padding: 5px 20px 0 0
+        .small-description
+            display: inline-block
+            width: 100%
+
+.user-awards
+    display: inline-block
+    width: 100%
+    margin: 0 -10px
+    .item
+        float: left
+        display: inline-block
+        width: 10%
+        padding: 0 10px
+        margin-bottom: 20px
+        .small-description
+            margin-bottom: 0
 
 @import "media"

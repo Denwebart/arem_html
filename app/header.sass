@@ -39,7 +39,7 @@
                     color: #ffffff
         .exit-button
             margin-right: -7px
-        .notification
+        .notification.button
             i, .fa
                 color: $green-color
             &.active, &:hover
@@ -52,7 +52,7 @@
                 border: 3px solid $dark-color
         .notifications .notification:after
                 right: 7px
-        .notifications .letters:after
+        .letters .notification:after
                 right: 2px
         .active a
             i, .fa
@@ -203,6 +203,10 @@
                         color: $dark-color
                         i, .fa
                             color: inherit
+                    &.notification
+                        &:after
+                            right: 17px
+                            top: 2px
         .user
             .dropdown-container
                 .container-header
