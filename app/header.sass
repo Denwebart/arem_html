@@ -62,68 +62,32 @@
             margin: 5px 15px 0 0
         .dropdown
             &.active
-                > a
-                    i, .fa
-                        &:after
-                            content: ""
-                            width: 12px
-                            height: 12px
-                            background: #f9f9f9
-                            transform: rotate(45deg)
-                            position: absolute
-                            bottom: -6px
-                            right: 14px
-                .dropdown-container
-                    display: block
+                > .dropdown-arrow
+                    &:after
+                        background: $light-color
+                        bottom: -6px
             &.user.active
                 > a
                     i, .fa
                         &:after
                             right: 12px
         .dropdown-container
-            display: none
-            position: absolute
-            z-index: 9999
             top: 50px
-            right: 0
             width: 314px
-            background-color: #f9f9f9
-            border: 1px solid #ffffff
-            border-top: none
-            border-radius: 0 0 3px 3px
-            color: $dark-color
-            line-height: 1
+            background-color: $light-color
             padding: 10px 0
-            .container-header,
-            .container-body
-                display: inline-block
-                width: 100%
+            i, .fa
+                line-height: 1
             .container-header
                 padding: 5px 11px 10px
-                text-align: center
-                line-height: 20px
-                .title
-                    float: left
-                    i, .fa
-                        margin-right: 7px
+                i, .fa
+                    color: $dark-color
             .container-body
                 padding: 0px 6px
-            a
-                display: inline-block
-                float: none
-                color: $dark-color
-                margin: 0
-                padding: 0
-            a i, a .fa, i, .fa
-                float: none
-                line-height: 1
-                color: $dark-color
-            a i, a .fa, a span
-                line-height: 20px
-                float: left
             ul
                 height: auto
             .list
+                height: auto
                 padding: 5px 0
                 li
                     width: 100%

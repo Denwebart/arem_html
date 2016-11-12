@@ -412,6 +412,18 @@ body
 
 // Content
 #content
+    .title
+        display: inline-block
+        width: 100%
+        h1, h2, h3, h4, h5, h6,
+        .h1, .h2, .h3, .h4, .h5, .h6
+            display: inline-block
+            margin-right: 25px
+        .small-description
+            display: inline-block
+            margin-bottom: 0
+            a
+                color: $gray-color
     .page-text
         float: left
     .tags
@@ -504,8 +516,12 @@ body
             padding-top: 20px
         .on-page
             float: left
-        .sortby
+        .sort
             float: right
+            > *
+                float: left
+            .sortby
+                margin-left: 20px
     &.with-filters
         border-top: 1px solid #eeeeee
     .list

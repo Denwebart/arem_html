@@ -49,19 +49,6 @@ body
     max-width: 1600px
 
 // Headers
-.title
-    display: inline-block
-    width: 100%
-    h1, h2, h3, h4, h5, h6,
-    .h1, .h2, .h3, .h4, .h5, .h6
-        display: inline-block
-        margin-right: 25px
-    .small-description
-        display: inline-block
-        margin-bottom: 0
-        a
-            color: $gray-color
-
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6
 	font-family: $title-font
@@ -499,3 +486,74 @@ input, textarea
         display: table-cell
         width: 1%
         vertical-align: top
+
+.dropdown
+    position: relative
+    &.active
+        > .dropdown-arrow
+            position: relative
+            &:after
+                content: ""
+                width: 12px
+                height: 12px
+                background: #ffffff
+                border-left: 1px solid #ffffff
+                border-top: 1px solid #ffffff
+                box-shadow: -3px -3px 3px rgba(0, 0, 0, 0.05)
+                transform: rotate(45deg)
+                position: absolute
+                z-index: 9999
+                top: 23px
+                right: 14px
+        .dropdown-container
+            display: inline-block
+            width: 100%
+    .dropdown-container
+        display: none
+        position: absolute
+        z-index: 9998
+        top: 30px
+        right: 0
+        min-width: 200px
+        width: auto
+        background-color: #ffffff
+        border: 1px solid #ffffff
+        border-top: none
+        border-radius: 3px
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2)
+        color: $dark-color
+        line-height: 1
+        padding: 15px 0
+        .container-header,
+        .container-body
+            display: inline-block
+            width: 100%
+        .container-header
+            padding: 15px 20px 10px
+            text-align: center
+            line-height: 20px
+            .title
+                float: left
+                i, .fa
+                    margin-right: 7px
+        .container-body
+            padding: 0px 20px
+        a
+            display: inline-block
+            float: none
+            color: $dark-color
+            margin: 0
+            padding: 0
+        a i, a .fa, i, .fa
+            float: none
+            line-height: 1
+            color: $dark-color
+        a i, a .fa, a span
+            line-height: 20px
+            float: left
+        ul
+            display: inline-block
+            width: 100%
+            height: auto
+
+.select-list
