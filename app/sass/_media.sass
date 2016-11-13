@@ -173,7 +173,9 @@
     .mobile-buttons-menu
         button
             span
-                display: none
+                //display: none
+                line-height: 1
+                font-size: em(14px)
             i, .fa
                 margin: 0
 
@@ -182,9 +184,15 @@
         &.widget-related
             margin-bottom: 0
             .item
+                position: relative
                 margin-bottom: 20px
+                .item-image
+                    position: relative
+                    z-index: 1
                 .text
                     position: absolute
+                    z-index: 10
+                    left: 0
                     bottom: 10px
                     padding: 10px 20px
                     background: rgba(255, 255, 255, 0.7)
