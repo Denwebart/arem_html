@@ -61,16 +61,17 @@
             width: 40px
             margin: 5px 15px 0 0
         .dropdown
+            position: inherit
             &.active
-                > .dropdown-arrow
+                .button
+                    i, .fa
+                        color: #ffffff
+                .dropdown-arrow
                     &:after
                         background: $light-color
-                        bottom: -6px
-            &.user.active
-                > a
-                    i, .fa
-                        &:after
-                            right: 12px
+                        top: 44px
+                        right: 50%
+                        margin-right: -5px
         .dropdown-container
             top: 50px
             width: 314px
