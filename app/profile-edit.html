@@ -677,134 +677,71 @@
                                 <a href="index.html" itemprop="item"><span itemprop="name">Главная</span></a>
                                 <meta itemprop="position" content="1">
                             </li>
+                            <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                                <a href="profile.html" itemprop="item"><span itemprop="name">Профиль пользователя Ivan</span></a>
+                                <meta itemprop="position" content="2">
+                            </li>
                         </ul>
 
-                        <div class="buttons pull-right">
+                        <div class="buttons pull-right m-t--5">
                             <a href="profile-edit.html" class="link">
-                                <i class="fa fa-pencil"></i>
-                                <span>Редактировать</span>
+                                <i class="fa fa-angle-left"></i>
+                                <span>Отмена</span>
+                            </a>
+                            <a href="profile-edit.html" class="button accent-button m-l-20">
+                                <i class="fa fa-save"></i>
+                                Сохранить
                             </a>
                         </div>
 
-                        <h2>Редактирование профиля пользователя Ivan</h2>
+                        <h2>Редактирование профиля</h2>
 
-                        <div class="row">
-                            <div class="col-md-8 col-sm-8">
-                                <div class="info-list two-col">
-                                    <div class="item">
-                                        <span class="title">Роль:</span>
-                                        <span class="value">Администратор</span>
+                        <form action="" id="edit-form">
+                            <div class="row">
+                                <div class="col-md-7 col-sm-7">
+                                    <div class="form-group" title="Имя">
+                                        <input name="name" type="text" placeholder="Имя">
                                     </div>
-                                    <div class="item">
-                                        <span class="title">Автомобиль:</span>
-                                        <span class="value">Daewoo Nexia</span>
+                                    <div class="form-group" title="Фамилия">
+                                        <input name="email" type="text" placeholder="Фамилия">
                                     </div>
-                                    <div class="item">
-                                        <span class="title">Зарегистрирован:</span>
-                                        <span class="value">4 февраля 2015 </span>
+                                    <div class="form-group" title="Email">
+                                        <input name="subject" type="text" placeholder="Email" value="avtorem.info@yandex.ru">
                                     </div>
-                                    <div class="item">
-                                        <span class="title">Профессия:</span>
-                                        <span class="value">Автомеханик</span>
+                                    <div class="form-group" title="О себе">
+                                        <textarea name="text" rows="5" placeholder="Текст письма *"></textarea>
                                     </div>
-                                    <div class="item">
-                                        <span class="title">Email:</span>
-                                        <span class="value">avtorem.info@yandex.ru</span>
+                                    <div class="form-group input-group">
+                                        <div class="fixed">
+                                            <input name="send-copy" id="send-copy" type="checkbox" value="1" checked>
+                                        </div>
+                                        <label for="send-copy">
+                                            Отправить копию этого сообщения на Ваш адрес e-mail
+                                        </label>
                                     </div>
-                                    <div class="item">
-                                        <span class="title">Пол:</span>
-                                        <span class="value">Мужской</span>
-                                    </div>
-                                    <div class="item">
-                                        <span class="title">Местоположение:</span>
-                                        <span class="value">Украина, Харьков</span>
-                                    </div>
-                                    <div class="item">
-                                        <span class="title">Дата рождения:</span>
-                                        <span class="value">3 февраля 1979</span>
-                                    </div>
+                                    <button class="button accent-button pull-right" type="button">Отправить</button>
+                                </div>
+                                <div class="col-md-5 col-sm-5">
+
                                 </div>
                             </div>
-                            <div class="col-md-4 col-sm-4">
-                                <div class="images-collage">
-                                    <a href="#"><img src="img/uploads/car-1.jpg" alt=""></a>
-                                    <a href="#"><img src="img/uploads/car-1.jpg" alt=""></a>
-                                    <a href="#"><img src="img/uploads/car-1.jpg" alt=""></a>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="small-description m-b-0">О себе:</div>
-                        <div class="text page-text">
-                            <p>
-                                Зовут меня Плахотин Иван. Родился, живу и работаю
-                                в «Первой столице» Украины, славном городе Харькове.
-                                Там же закончил школу и университет ХГТУСХ
-                                имени П. Василенко, с дипломом инженера-механика
-                                по ремонту и обслуживанию с\х техники. И вот уже более
-                                10 лет своей жизни посвятил ремонту легковых автомобилей
-                                в своей небольшой мастерской. Все статьи на сайте написал
-                                лично, исходя из персонального опыта и багажа знаний.
-                                И практически все фотографии сделал сам, как говорится
-                                «в рабочей обстановке».
-                            </p>
-                        </div>
-
-                        <div class="title">
-                            <h3>Рейтинг и баллы</h3>
-                            <div class="small-description">
-                                <a href="#">Как заработать рейтинг и получить баллы?</a>
+                            <div class="small-description m-b-0">О себе:</div>
+                            <div class="text page-text">
+                                <p>
+                                    Зовут меня Плахотин Иван. Родился, живу и работаю
+                                    в «Первой столице» Украины, славном городе Харькове.
+                                    Там же закончил школу и университет ХГТУСХ
+                                    имени П. Василенко, с дипломом инженера-механика
+                                    по ремонту и обслуживанию с\х техники. И вот уже более
+                                    10 лет своей жизни посвятил ремонту легковых автомобилей
+                                    в своей небольшой мастерской. Все статьи на сайте написал
+                                    лично, исходя из персонального опыта и багажа знаний.
+                                    И практически все фотографии сделал сам, как говорится
+                                    «в рабочей обстановке».
+                                </p>
                             </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="info-list">
-                                    <div class="item">
-                                        <span class="title">Рейтинг:</span>
-                                        <span class="value">
-                                            <i class="fa fa-signal"></i>
-                                            <span class="count font-20">1 416</span>
-                                        </span>
-                                    </div>
-                                    <div class="item">
-                                        <span class="title">Баллы:</span>
-                                        <span class="value">
-                                            <i class="fa fa-money"></i>
-                                            <span class="count font-20 m-r-25">1 416</span>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="user-balance">
-                                    <div class="description">
-                                        <a href="#" class="small-description">Пополнить баланс</a>
-                                        <a href="#" class="small-description">Выбрать сувенир</a>
-                                    </div>
-                                    <img src="img/money.svg" alt="" class="image">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="title">
-                            <h3>Награды</h3>
-                            <div class="small-description">
-                                <a href="#">Как получить награду?</a>
-                            </div>
-                        </div>
-
-                        <div class="user-awards">
-                            <a href="#" class="item" title="Лучший знаток 2015 года">
-                                <img src="img/uploads/awards/pisatel-goda.png" alt="">
-                            </a>
-                            <a href="#" class="item" title="Лучший писатель 2015 года">
-                                <img src="img/uploads/awards/znatok-goda.png" alt="">
-                            </a>
-                            <a href="#" class="item" title="Лучший комментатор августа 2015 года">
-                                <img src="img/uploads/awards/kommentator-mesyatsa.png" alt="">
-                            </a>
-                        </div>
+                        </form>
                     </section>
                 </div>
                 <div class="col-lg-3 hidden-md sidebar">
