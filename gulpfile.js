@@ -55,7 +55,8 @@ gulp.task('libs', function() {
             'app/libs/jquery/dist/jquery.min.js',
             'app/libs/slideout.js/dist/slideout.min.js',
             'app/libs/iCheck/icheck.min.js',
-            'app/libs/dropify/dist/js/dropify.min.js'
+            'app/libs/dropify/dist/js/dropify.min.js',
+            'app/libs/is_js/is.min.js'
 		])
 		.pipe(concat('libs.min.js'))
 		.pipe(uglify())

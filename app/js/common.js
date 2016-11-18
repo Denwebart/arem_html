@@ -1,5 +1,10 @@
 $(function() {
 
+    // Detect Windows Phone
+    if(is.windowsPhone()) {
+        $('body').addClass('is-windows-phone')
+    }
+
 	// Checkboxes
     $('input').iCheck({
         checkboxClass: 'checkbox icheckbox_flat-blue',
