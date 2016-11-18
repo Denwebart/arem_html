@@ -32,6 +32,9 @@ $(function() {
         'tolerance': 70,
         'side': 'right'
     });
+
+    slideout.enableTouch();
+
     // Slideout.js Menu - Toggle button
     document.querySelector('.toggle-button').addEventListener('click', function() {
         slideout.toggle();
