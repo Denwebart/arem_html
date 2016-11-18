@@ -703,34 +703,93 @@
                                         <input name="name" type="text" placeholder="Имя">
                                     </div>
                                     <div class="form-group" title="Фамилия">
-                                        <input name="email" type="text" placeholder="Фамилия">
+                                        <input name="lastname" type="text" placeholder="Фамилия">
                                     </div>
                                     <div class="form-group" title="Email">
-                                        <input name="subject" type="text" placeholder="Email" value="avtorem.info@yandex.ru">
+                                        <input name="email" type="text" placeholder="Email" value="avtorem.info@yandex.ru">
                                     </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="small-description m-b-10">Местоположение:</div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group" title="Страна">
+                                                <input name="country" type="text" placeholder="Страна">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group" title="Город">
+                                                <input name="city" type="text" placeholder="Город">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="small-description m-b-10">Автомобиль:</div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group" title="Модель">
+                                                <input name="car_model" type="text" placeholder="Модель">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group" title="Марка">
+                                                <input name="car_make" type="text" placeholder="Марка">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group" title="Профессия">
+                                        <input name="profession" type="text" placeholder="Профессия">
+                                    </div>
+
                                 </div>
                                 <div class="col-md-5 col-sm-5">
+                                    <div class="form-group" title="Аватарка">
+                                        <input name="file" type="file" class="dropify">
+                                    </div>
 
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="small-description m-b-10">Дата рождения:</div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group" title="День">
+                                                <input name="day" type="text" placeholder="День">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group" title="Месяц">
+                                                <input name="month" type="text" placeholder="Месяц">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group" title="Год">
+                                                <input name="year" type="text" placeholder="Год">
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div class="col-md-12">
                                     <div class="form-group" title="О себе">
                                         <textarea name="text" rows="5" placeholder="Текст письма *">Зовут меня Плахотин Иван. Родился, живу и работаю в «Первой столице» Украины, славном городе Харькове. Там же закончил школу и университет ХГТУСХ имени П. Василенко, с дипломом инженера-механика по ремонту и обслуживанию с\х техники. И вот уже более 10 лет своей жизни посвятил ремонту легковых автомобилей в своей небольшой мастерской. Все статьи на сайте написал лично, исходя из персонального опыта и багажа знаний. И практически все фотографии сделал сам, как говорится «в рабочей обстановке».</textarea>
                                     </div>
-                                    <div class="form-group input-group">
-                                        <div class="fixed">
-                                            <input name="send-copy" id="send-copy" type="checkbox" value="1" checked>
-                                        </div>
-                                        <label for="send-copy">
-                                            Отправить копию этого сообщения на Ваш адрес e-mail
-                                        </label>
+
+                                    <div class="buttons pull-right m-t--5">
+                                        <a href="profile-edit.html" class="link">
+                                            <i class="fa fa-angle-left"></i>
+                                            <span>Отмена</span>
+                                        </a>
+                                        <a href="profile-edit.html" class="button accent-button m-l-20">
+                                            <i class="fa fa-save"></i>
+                                            Сохранить
+                                        </a>
                                     </div>
-                                    <button class="button accent-button pull-right" type="button">Отправить</button>
                                 </div>
                             </div>
-
-                            <div class="small-description m-b-0">О себе:</div>
-
                         </form>
                     </section>
                 </div>

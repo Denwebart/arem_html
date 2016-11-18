@@ -97,4 +97,25 @@ $(function() {
         }
     );
 
+
+    /* User Profile */
+
+    // Dropify - file upload
+    // Image Uploader
+    var drEvent = $('.dropify').dropify({
+        messages: {
+            'default': 'Кликните или перетащите файл.',
+            'replace': 'Кликните или перетащите файл для замены.',
+            'remove': 'Удалить',
+            'error': 'Ошибка.'
+        },
+        error: {
+            'fileSize': 'Размер файла слишком большой (максимум 3Мб).'
+        }
+    });
+    drEvent.on('dropify.afterClear', function(event, element){
+        $('#deleteImage').val(1);
+    });
+
+
 });
