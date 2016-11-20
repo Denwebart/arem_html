@@ -23,8 +23,6 @@ $(function() {
     });
 
     // Slideout.js Menu
-    $('#menu').attr('style', 'display:block');
-
     var slideout = new Slideout({
         'panel': document.getElementById('panel'),
         'menu': document.getElementById('menu'),
