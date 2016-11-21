@@ -84,7 +84,7 @@ $(function() {
 
         textHeight = imageHeight - (imageHeight % (1.5 * fontSize)) + 4;
 
-        if(windowWidth <= 480) {
+        if(imageHeight == null || windowWidth <= 480) {
             textHeight = 'auto';
         }
 
