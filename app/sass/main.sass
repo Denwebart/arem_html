@@ -466,6 +466,12 @@ body
             margin: 0 25px 20px 0
         .item-text
             width: 65%
+            position: relative
+            float: left
+            overflow: hidden
+            text-overflow: ellipsis
+            p:last-of-type
+                margin-bottom: 0
         .item-title
             width: 100%
             float: right
@@ -476,11 +482,6 @@ body
             display: inline-block
             width: 100%
             margin: 15px 0 0
-        .item-text
-            position: relative
-            float: left
-            overflow: hidden
-            text-overflow: ellipsis
         &:not(.full)
             .item-text
                 height: 0
@@ -491,9 +492,12 @@ body
                 font-size: 20px
                 background: $light-color
                 padding-left: 5px
+        h3, .h3
+            float: left
         .category
             display: inline-block
             width: 100%
+            float: left
             > li, > a
                 &:after
                     color: $gray-color
@@ -501,6 +505,55 @@ body
                 color: $dark-gray-color
                 &:hover
                     color: $accent-color
+        &.question
+            .item-text
+                width: 100%
+                margin: 0 0 15px
+            .item-info
+                margin: 0
+                padding: 0 0 0 70px
+            .tags
+                padding: 0 0 0 70px
+            .item-content
+                display: table
+                width: 100%
+                > *
+                    display: table-cell
+                    vertical-align: top
+                .user-avatar
+                    width: 70px
+                    padding: 30px 0 0
+                .item-title
+                    > *
+                        float: left
+                    .item-info
+                        margin: 0 0 5px
+                .answers-count
+                    width: 100px
+                    padding: 30px 0 0 20px
+                    text-align: center
+                    a
+                        text-decoration: none
+                    .count, .title
+                        float: left
+                        width: 100%
+                        text-align: center
+                    .count
+                        font-family: $title-font
+                        font-size: em(24px)
+                        line-height: 1
+                        text-decoration: none
+                    .title
+                        font-size: em(14px)
+            &.has-solution
+                .answers-count
+                    color: $green-color
+                    > *, .count, .title
+                        color: $green-color
+                    &:hover
+                        > *, .count, .title
+                            color: $green-color
+
     .filters
         display: inline-block
         width: 100%
