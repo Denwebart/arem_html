@@ -26,7 +26,8 @@
     .user-panel
         div
             float: left
-        .button
+        .button,
+        .dropdown-button
             border: none
             float: left
             margin: 0 5px
@@ -39,7 +40,8 @@
                     color: #ffffff
         .exit-button
             margin-right: -7px
-        .notification.button
+        .notification.button,
+        .notification.dropdown-button
             i, .fa
                 color: $green-color
             &.active, &:hover
@@ -63,7 +65,8 @@
         .dropdown
             position: inherit
             &.active
-                .button
+                .button,
+                .dropdown-button
                     i, .fa
                         color: #ffffff
                 .dropdown-arrow
