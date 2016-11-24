@@ -212,6 +212,10 @@
             display: inline-block
             width: auto
 
+    // Page Tags
+    .tags
+        a
+            margin: 0 15px 15px 0
     .blog
         .item
             .item-image
@@ -227,6 +231,8 @@
                 .user
                     .avatar
                         margin: 0
+            &.article
+                .page-info
                     .login
                         display: none
     // Comments
@@ -306,6 +312,15 @@
         .social-links
             a
                 width: 100%
+    // Page Tags
+    .tags
+        a
+            span
+                &:first-child
+                    border-right: none
+                    padding-right: 0
+            .count
+                display: none
     .blog
         .item
             .page-info
@@ -356,6 +371,7 @@
             .item-text
                 width: 100%
                 height: auto !important
+                margin-bottom: 20px
                 .page-info
                     text-align: center
                     > div
@@ -381,6 +397,26 @@
                     left: 50%
                     a
                         left: -50%
+            &.question
+                .item-info, .tags, .breadcrumbs
+                    padding-left: 0
+                .breadcrumbs
+                    padding-right: 70px
+                .item-info
+                    padding-right: 50px
+                .item-info
+                    .page-info
+                        text-align: left
+                        > div
+                            float: left
+                        .like-dislike-widget
+                            width: auto
+                .item-content
+                    .user-avatar
+                        display: none
+                    .answers-count
+                        width: 70px
+                        padding: 5px 0 0 10px
 
     /* Footer */
     footer
