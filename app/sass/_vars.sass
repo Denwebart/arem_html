@@ -17,3 +17,20 @@ $light-gradient-colors: #f6f9fa 0%, #f9f9fa 25%, #eeeeee 80%, #ececed 100%
 
 =transition($time)
     transition: all $time ease
+
+=title-on-image($position-top, $position-right, $position-bottom, $position-left)
+    position: absolute
+    z-index: 10
+    top: $position-top
+    right: $position-right
+    bottom: $position-bottom
+    left: $position-left
+    padding: 10px 20px
+    background: rgba(255, 255, 255, 0.7)
+    display: inline-block
+    width: 100%
+    transition: all 0.5s ease-in-out
+    overflow: hidden
+    max-height: calc(100% - 20px)
+    color: $dark-color
+    text-decoration: none

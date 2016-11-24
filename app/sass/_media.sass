@@ -189,18 +189,8 @@
                 .item-image
                     position: relative
                     z-index: 1
-                .text
-                    position: absolute
-                    z-index: 10
-                    left: 0
-                    bottom: 10px
-                    padding: 10px 20px
-                    background: rgba(255, 255, 255, 0.7)
-                    display: inline-block
-                    width: 100%
-                    transition: all 0.5s ease-in-out
-                    overflow: hidden
-                    max-height: calc(100% - 20px)
+                .title
+                    @include title-on-image(auto, auto, 10px, 0)
                     &:hover
                         color: inherit
                 &:hover

@@ -71,9 +71,11 @@ body
     width: 100%
     a
         color: $gray-color
-        &.text
+        &.text, & .text
             color: $dark-color
             text-decoration: none
+            &:hover
+                color: $accent-color
         &:hover
             color: $accent-color
             span
@@ -83,6 +85,9 @@ body
     &.widget-related
         .item
             position: relative
+            display: inline-block
+            width: 100%
+            overflow: hidden
             .item-image
                 margin-bottom: 10px
 
@@ -433,10 +438,24 @@ body
             margin-bottom: 10px
     .submenu
         .item
+            position: relative
             display: inline-block
             width: 100%
-            height: 100px
             margin: 0 0 20px 0
+            overflow: hidden
+        &.title-on-image
+            .item
+                .title
+                    @include title-on-image(auto, auto, 0, 0)
+                    padding: 7px 20px
+                    line-height: 1.3
+                .label
+                    position: absolute
+                    top: 0
+                    right: 0
+                &:hover .title
+                    bottom: -100%
+                    color: $accent-color
 
 // Blog List
 
