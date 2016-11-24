@@ -685,6 +685,15 @@
 
                         <h2>Вопросы пользователя Ivan</h2>
 
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <div id="chart1"></div>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+
+                            </div>
+                        </div>
+
                         <div class="blog with-filters">
                             <div class="filters">
                                 <div class="on-page">
@@ -1420,6 +1429,56 @@
 		]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
 	</script>
 	<!-- Optimized loading JS End -->
+
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+        // Load the Visualization API and the corechart package.
+        google.charts.load('current', {'packages':['corechart']});
+
+        // Set a callback to run when the Google Visualization API is loaded.
+        google.charts.setOnLoadCallback(drawChart);
+
+        // Callback that creates and populates a data table,
+        // instantiates the pie chart, passes in the data and
+        // draws it.
+        function drawChart() {
+
+            // Create the data table.
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Topping');
+            data.addColumn('number', 'Slices');
+            data.addRows([
+                ['Решенные', 12],
+                ['Без ответов', 5]
+            ]);
+
+            // Set chart options
+            var options = {
+//                'title':'How Much Pizza I Ate Last Night',
+//                'width':400,
+//                'height':300,
+                chartArea: {
+                    'width': '100%',
+                    'height': '90%'
+                },
+                backgroundColor: 'none',
+                legend: {
+                    position: 'right'
+                },
+                is3D: true,
+                slices: {
+                    0: { color: '#0095D8' },
+                    1: { color: '#9A9DA0' }
+                }
+            };
+
+            // Instantiate and draw our chart, passing in some options.
+            var chart = new google.visualization.PieChart(document.getElementById('chart1'));
+            chart.draw(data, options);
+        }
+    </script>
 
 </body>
 </html>
