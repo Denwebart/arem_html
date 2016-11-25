@@ -136,7 +136,7 @@ button
 button
     background: none
     border: none
-    &.active, &:hover, &:focus
+    &.active, &:hover
         color: $accent-color
         i, .fa
             color: $accent-color
@@ -551,13 +551,20 @@ input
         .dropdown-container
             display: inline-block
             width: 100%
+    .dropdown-button
+        color: $accent-color
+        text-decoration: none
+        border-bottom: 1px dashed
+    &.active .dropdown-button,
+    .dropdown-button:hover
+        border-bottom: none
     .dropdown-container
         display: none
         position: absolute
         z-index: 9998
         top: 30px
         right: 0
-        min-width: 200px
+        min-width: 240px
         width: auto
         background-color: #ffffff
         border: 1px solid #ffffff
@@ -588,9 +595,7 @@ input
             margin: 0
             padding: 0
         a i, a .fa, i, .fa
-            float: none
             line-height: 1
-            color: $dark-color
         a i, a .fa, a span
             line-height: 20px
             float: left
@@ -600,3 +605,17 @@ input
             height: auto
 
 .select-list
+    li
+        display: inline-block
+        width: 100%
+        position: relative
+        margin: 5px 0
+        cursor: pointer
+        i, .fa
+            float: left
+            width: 25px
+            margin: 1px 0 0 0
+        &:hover
+            color: $accent-color
+            i, .fa
+                color: $accent-color

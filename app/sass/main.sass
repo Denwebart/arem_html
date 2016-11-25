@@ -456,7 +456,9 @@ body
                     text-decoration: none
                 &:hover .title
                     bottom: -100%
-                    color: $accent-color
+                &:hover .title,
+                &:hover .title span
+                    color: $dark-color
 
 // Blog List
 
@@ -597,8 +599,15 @@ body
             float: right
             > *
                 float: left
-            .sortby
-                margin-left: 20px
+            .sortby, .direction
+                margin-left: 10px
+            .direction
+                button
+                    float: left
+                    padding: 0 5px
+                    margin-left: 5px
+                    i, .fa
+                        margin: 0
     &.with-filters
         border-top: 1px solid #eeeeee
     .list
