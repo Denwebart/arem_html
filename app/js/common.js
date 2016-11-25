@@ -42,12 +42,20 @@ $(function() {
     slideout.enableTouch();
 
     // Slideout.js Menu - Toggle button
-    document.querySelector('.toggle-button').addEventListener('click', function() {
+    /* открытие меню по клику на кнопку меню */
+    document.querySelector('.toggle-button').addEventListener('click', function(e) {
+        e.stopPropagation();
         slideout.toggle();
     });
-    document.querySelector('.menu-close-button').addEventListener('click', function() {
+    /* закрытие меню по клику на кнопку закрытия */
+    document.querySelector('.menu-close-button').addEventListener('click', function(e) {
         slideout.close();
     });
+    /* закрытие меню по клику за пределами меню */
+    document.querySelector('#panel').addEventListener('click', function(e) {
+        slideout.close();
+    });
+    /* открытие/закрытие подменю */
     $('#menu').on('click', '.open-dropdown', function (e) {
         e.preventDefault();
         var $submenu = $(this).parent().parent().find('ul');
