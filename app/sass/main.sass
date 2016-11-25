@@ -947,6 +947,9 @@ footer
     height: 40px
     margin-bottom: 10px
     color: #565a5f
+    a.item:hover, a.item.active
+        > *
+            color: $accent-color
     .item
         float: left
         display: inline-block
@@ -957,8 +960,13 @@ footer
             font-size: em(14px)
             line-height: 40px
             float: left
+        i, .fa
+            font-size: 16px
+            margin: 0
+            color: $dark-gray-color
         .count
-            font-size: em(24px)
+            text-decoration: none !important
+            font-size: em(20px)
             margin-right: 5px
         &.subscribers
             margin: 0
