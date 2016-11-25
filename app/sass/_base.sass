@@ -78,6 +78,12 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
     text-decoration: none
     &:hover, &:focus, &:active
         color: $accent-color
+.page-title
+    width: 100%
+    h1, h2, h3, h4, h5, h6,
+    .h1, .h2, .h3, .h4, .h5, .h6
+        display: i
+        width: auto
 .sidebar
     h1, h2, h3, h4, h5, h6,
     .h1, .h2, .h3, .h4, .h5, .h6
@@ -183,10 +189,6 @@ button::-moz-focus-inner
     &:hover, &:focus, &.active
         color: $dark-color
         background: #eeeeee
-    &.dashed-button
-        color: $dark-color
-        &:hover, &.active
-            color: $dark-color
 
 .accent-button
     color: #ffffff
@@ -196,10 +198,6 @@ button::-moz-focus-inner
     &:hover, &:focus, &.active
         color: #ffffff
         background: $accent-color-dark
-    &.dashed-button
-        color: $accent-color
-        &:hover, &.active
-            color: #ffffff
 
 .dark-button
     color: #ffffff
@@ -209,19 +207,19 @@ button::-moz-focus-inner
     &:hover, &:focus, &.active
         color: #ffffff
         background: #1F3245
-    &.dashed-button
-        color: $dark-color
-        &:hover, &.active
-            color: #ffffff
 
 .dashed-button,
-.dashed-button:focus
+.dashed-button:not(.active):focus,
+.dashed-button:not(.active):hover
+    color: $accent-color
     background: none
     span
         border-bottom: 1px dashed
     &.active, &:hover
         span
             border-bottom: none
+.small-button
+    padding: 2px 10px 3px
 
 button
     svg
@@ -315,6 +313,8 @@ svg
 // Margins and Paddings
 .m-t--5
     margin-top: -5px
+.m-t--15
+    margin-top: -15px
 .m-t-20
     margin-top: 20px
 .m-t-30

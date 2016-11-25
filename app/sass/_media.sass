@@ -204,13 +204,14 @@
             a
                 width: 50%
 
-    .table-block.page-title
-        .responsive-block
-            display: inline-block
-            width: 100%
-        .fixed-block
-            display: inline-block
-            width: auto
+    .table-block:not(.enter-xxs)
+        &.page-title
+            .responsive-block
+                display: inline-block
+                width: 100%
+            .fixed-block
+                display: inline-block
+                width: auto
 
     // Page Tags
     .tags
@@ -348,10 +349,20 @@
                         margin-right: 15px
 /* */
 
-/* Extra Small Devices, Phones - XS - для 480 и менее */
+/* Extra Small Devices, Phones - XS (XXS) - для 480 и менее */
 @media only screen and (max-width : 480px)
     .full-xxs
         width: 100%
+    .hidden-xxs
+        display: none
+    .table-block.enter-xxs
+        &.page-title
+            .responsive-block
+                display: inline-block
+                width: 100%
+            .fixed-block
+                display: inline-block
+                width: auto
 
     /* Header */
     #header-widget
@@ -360,7 +371,6 @@
                 padding: 0 8px
 
     /* Content */
-
     .blog
         .item
             .item-image
