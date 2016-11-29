@@ -30,6 +30,21 @@ $(function() {
         }
     });
 
+    // Slide Down Container
+    $(document).on('click', '.slide-down-button', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var $container = $(this).parent(),
+            $content = $container.find('.slide-down-content');
+        if($content.is(':visible')) {
+            $content.slideUp();
+            $container.removeClass('open');
+        } else {
+            $content.slideDown();
+            $container.addClass('open');
+        }
+    });
+
     // Slideout.js Menu
     var slideout = new Slideout({
         'panel': document.getElementById('panel'),

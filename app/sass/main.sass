@@ -829,6 +829,29 @@ ul.tree
             padding: 10px 20px
             margin: 0 20px
             border-left: 3px solid #e1e0e4
+// Slide down container
+.slide-down-container
+    display: inline-block
+    width: 100%
+    margin-bottom: 10px
+    .slide-down-button
+        text-decoration: none
+        span
+            border-bottom: 1px dashed
+        i, .fa
+            @include transition(0.5s)
+        &:hover
+            span
+                border-bottom: none
+    .slide-down-content
+        display: none
+        clear: both
+    &.open
+        .slide-down-button
+            i, .fa
+                transform: rotate(180deg)
+        .slide-down-content
+            display: block
 
 // Footer
 body.is-windows-phone

@@ -563,29 +563,59 @@
                             <div class="input-group two-fields">
                                 <input class="input" type="text" name="query" placeholder="Поиск по сайту" value="замена">
                                 <div class="input dropdown select-dropdown">
-                                    <a href="#" class="dropdown-button dropdown-arrow">дате</a>
+                                    <a href="#" class="dropdown-button dropdown-arrow">По всему сайту</a>
                                     <div class="dropdown-container">
                                         <div class="container-body">
                                             <ul class="select-list">
-                                                <li data-value="published_at selected">
-                                                    <i class="fa fa-calendar-o"></i>
-                                                    <span>дате</span>
+                                                <li data-value="1">
+                                                    <i class="icon icon-dash"><span></span></i>
+                                                    <span>Автоистория</span>
                                                 </li>
-                                                <li data-value="popular">
-                                                    <i class="fa fa-thumbs-o-up"></i>
-                                                    <span>рейтингу (оценке)</span>
+                                                <li data-value="2">
+                                                    <i class="icon icon-dash"><span></span></i>
+                                                    <span>Статьи</span>
+                                                    <ul>
+                                                        <li data-value="21">
+                                                            <i class="icon icon-dash"><span></span></i>
+                                                            <span>ВАЗ 2101, ВАЗ 2102, ВАЗ 2105, ВАЗ 2106, ВАЗ 2107, Жигули, Классика</span>
+                                                        </li>
+                                                        <li data-value="22">
+                                                            <i class="icon icon-dash"><span></span></i>
+                                                            <span>ВАЗ 2108, ВАЗ 2109, ВАЗ 2110, ВАЗ 1117 Калина, ВАЗ 2170 Приора</span>
+                                                        </li>
+                                                        <li data-value="23">
+                                                            <i class="icon icon-dash"><span></span></i>
+                                                            <span>Daewoo Lanos, Nexia, Matiz, Sens</span>
+                                                        </li>
+                                                        <li data-value="24">
+                                                            <i class="icon icon-dash"><span></span></i>
+                                                            <span>Mitsubishi (Мицубиси)</span>
+                                                        </li>
+                                                        <li data-value="25">
+                                                            <i class="icon icon-dash"><span></span></i>
+                                                            <span>Таврия, Славута, ЗАЗ-1102</span>
+                                                        </li>
+                                                        <li data-value="26">
+                                                            <i class="icon icon-dash"><span></span></i>
+                                                            <span>Chery (Чери)</span>
+                                                        </li>
+                                                    </ul>
                                                 </li>
-                                                <li data-value="price">
-                                                    <i class="fa fa-eye"></i>
-                                                    <span>просмотрам</span>
+                                                <li data-value="3">
+                                                    <i class="icon icon-dash"><span></span></i>
+                                                    <span>Советы</span>
                                                 </li>
-                                                <li data-value="rating">
-                                                    <i class="fa fa-comment-o"></i>
-                                                    <span>комментариям</span>
+                                                <li data-value="4">
+                                                    <i class="icon icon-dash"><span></span></i>
+                                                    <span>Гараж</span>
                                                 </li>
-                                                <li data-value="popular">
-                                                    <i class="fa fa-heart-o"></i>
-                                                    <span>количеству сохранивших</span>
+                                                <li data-value="5">
+                                                    <i class="icon icon-dash"><span></span></i>
+                                                    <span>Вопрос-ответ</span>
+                                                </li>
+                                                <li data-value="6">
+                                                    <i class="icon icon-dash"><span></span></i>
+                                                    <span>Бортовой журнал</span>
                                                 </li>
                                             </ul>
                                         </div>
@@ -597,9 +627,83 @@
                                     </button>
                                 </span>
                             </div>
+                            <div class="slide-down-container">
+                                <button class="slide-down-button pull-right">
+                                    <span>Расширенный поиск</span>
+                                    <i class="fa fa-angle-double-down"></i>
+                                </button>
+                                <div class="slide-down-content">
+                                    <div class="form-group input-group">
+                                        <div class="fixed">
+                                            <input name="with-images" id="with-images" type="checkbox" value="1">
+                                        </div>
+                                        <label for="with-images">
+                                            Только с картинками
+                                        </label>
+                                    </div>
+                                    <div class="form-group input-group">
+                                        <div class="fixed">
+                                            <input name="has-comments" id="has-comments" type="checkbox" value="1" checked>
+                                        </div>
+                                        <label for="has-comments">
+                                            С комментариями
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="tags">С тегами:</label>
+                                        <input name="tags" id="tags" type="text" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
                         </form>
 
-                        <div class="blog search-result">
+                        <div class="blog search-result with-filters">
+                            <div class="filters">
+                                <div class="on-page">
+                                    Всего<span class="hidden-xxs"> результатов</span>:
+                                    <span class="count">121</span>
+                                </div>
+                                <div class="sort">
+                                    <span>Сортировать по:</span>
+                                    <div class="sortby dropdown">
+                                        <a href="#" class="dropdown-button dropdown-arrow">дате</a>
+                                        <div class="dropdown-container">
+                                            <div class="container-body">
+                                                <ul class="select-list">
+                                                    <li data-value="published_at" class="selected">
+                                                        <i class="fa fa-calendar-o"></i>
+                                                        <span>дате</span>
+                                                    </li>
+                                                    <li data-value="popular">
+                                                        <i class="fa fa-thumbs-o-up"></i>
+                                                        <span>рейтингу (оценке)</span>
+                                                    </li>
+                                                    <li data-value="price">
+                                                        <i class="fa fa-eye"></i>
+                                                        <span>просмотрам</span>
+                                                    </li>
+                                                    <li data-value="rating">
+                                                        <i class="fa fa-comment-o"></i>
+                                                        <span>комментариям</span>
+                                                    </li>
+                                                    <li data-value="popular">
+                                                        <i class="fa fa-heart-o"></i>
+                                                        <span>количеству сохранивших</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="direction">
+                                        <button data-value="desc" title="По убыванию" class="active">
+                                            <i class="fa fa-angle-down"></i>
+                                        </button>
+                                        <button data-value="asc" title="По возростанию">
+                                            <i class="fa fa-angle-up"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="list">
                                 <div class="item article">
                                     <div class="item-title">
@@ -662,7 +766,7 @@
                                             </div>
                                             <div class="comments-count" title="Количество комментариев">
                                                 <a href="page.html#comments">
-                                                    <i class="fa fa-comment"></i>
+                                                    <i class="fa fa-comment-o"></i>
                                                     <span class="count" itemprop="commentCount">12 222</span>
                                                 </a>
                                             </div>
@@ -684,24 +788,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="tags">
-                                        <a href="#">
-                                            <span>Daewoo Lanos</span>
-                                            <span class="count">234</span>
-                                        </a>
-                                        <a href="#">
-                                            <span>Замена колеса</span>
-                                            <span class="count">34</span>
-                                        </a>
-                                        <a href="#">
-                                            <span>Колесные диски</span>
-                                            <span class="count">4</span>
-                                        </a>
-                                        <a href="#">
-                                            <span>Ремонт</span>
-                                            <span class="count">67</span>
-                                        </a>
                                     </div>
                                 </div>
                                 <div class="item article">
@@ -764,11 +850,11 @@
                                             </div>
                                             <div class="comments-count" title="Количество комментариев">
                                                 <a href="page.html#comments">
-                                                    <i class="fa fa-comment"></i><span class="count" itemprop="commentCount">12</span>
+                                                    <i class="fa fa-comments-o"></i><span class="count" itemprop="commentCount">12</span>
                                                 </a>
                                             </div>
                                             <div class="saved-count" title="Сколько пользователей сохранили">
-                                                <i class="fa fa-heart"></i>
+                                                <i class="fa fa-heart-o"></i>
                                                 <span>1</span>
                                             </div>
 
@@ -819,7 +905,7 @@
                                             электрика, сантехника есть свой любимый инструмент,
                                             который сделан именно под его руку и безотказно
                                             служит уже не один год. Когда такой инструмент (ключ,
-                                            отвёртка, пассатижи, молоток и т.д.) ломается, приходит
+                                            отвёртка, пассатижи, молоток и и т.д.) ломается, приходит
                                             в негодность, то настроение от такого события резко
                                             ухудшается. Тут тебе и потеря верного соратника, и
                                             дополнительные финансовые траты... Знакомо? Так, например,
@@ -844,12 +930,12 @@
                                             </div>
                                             <div class="comments-count" title="Количество комментариев">
                                                 <a href="page.html#comments">
-                                                    <i class="fa fa-comment-o"></i><span class="count" itemprop="commentCount">0</span>
+                                                    <i class="fa fa-comments-o"></i><span class="count" itemprop="commentCount">12</span>
                                                 </a>
                                             </div>
                                             <div class="saved-count" title="Сколько пользователей сохранили">
                                                 <i class="fa fa-heart-o"></i>
-                                                <span>0</span>
+                                                <span>1</span>
                                             </div>
 
                                             <div class="like-dislike-widget pull-right">
