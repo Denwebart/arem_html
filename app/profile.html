@@ -116,7 +116,7 @@
         </div>
     </div>
 
-    <div id="panel">
+    <div id="panel" class="user-profile">
         <header>
             <!--Для незарегистрированных пользователей-->
             <!--<div id="header-widget" class="dark-section">-->
@@ -548,12 +548,226 @@
 
         <div class="container-fluid">
             <div class="row">
+                <div class="col-md-9 without-padding">
+                    <div class="white-section">
+                        <div id="user-menu-section">
+                            <ul class="menu user-menu">
+                                <li class="active"><a href="profile.html"><i class="fa fa-user"></i><span>Профиль</span></a></li>
+                                <li class="notification"><a href="profile-cars.html"><i class="fa fa-car"></i><span>Автомобили</span></a></li>
+                                <li class="notification"><a href="profile-questions.html"><i class="fa fa-question-circle"></i><span>Вопросы</span></a></li>
+                                <li class="notification"><a href="profile-articles.html"><i class="fa fa-book"></i><span>Журнал</span></a></li>
+                                <li class="notification"><a href="profile-comments.html"><i class="fa fa-comment"></i><span>Комментарии</span></a></li>
+                                <li class="notification"><a href="profile-answers.html"><i class="fa fa-comments"></i><span>Ответы</span></a></li>
+                                <li class="notification"><a href="profile-messages.html"><i class="fa fa-paper-plane"></i><span>Сообщения</span></a></li>
+                                <li class="notification"><a href="profile-saved.html"><i class="fa fa-heart"></i><span>Сохраненное</span></a></li>
+                                <li class="notification"><a href="profile-subscriptions.html"><i class="fa fa-newspaper-o"></i><span>Подписки</span></a></li>
+                                <li class="notification"><a href="profile-notifications.html"><i class="fa fa-bell"></i><span>Уведомления</span></a></li>
+                            </ul>
+                        </div>
+                        <div id="user-section">
+                            <div class="user-avatar">
+                                <a href="profile.html">
+                                    <img src="img/uploads/avatar-2.jpg" alt="" class="avatar">
+                                </a>
+                            </div>
+                            <div class="user-profile-picture" style="background: url('img/uploads/user-background.jpg');">
+
+                                <div class="button-group pull-left">
+                                    <button class="button accent-button">
+                                        <i class="fa fa-newspaper-o"></i>
+                                        Подписаться
+                                    </button>
+                                    <a href="profile-subscribers.html" class="button default-button">
+                                        <i class="fa fa-users"></i>
+                                        124 890
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="user-statistics">
+                                <div class="pull-left">
+                                    <div class="item rating">
+                                        <span>Рейтинг:</span>
+                                        <!--<i class="fa fa-signal" title="Рейтинг"></i>-->
+                                        <span class="count">1 416</span>
+                                    </div>
+                                </div>
+
+                                <div class="pull-right">
+                                    <!-- иконка не закрашена, если 0 -->
+                                    <a href="profile-articles.html" class="item articles">
+                                        <span class="count">127</span>
+                                        <!--<i class="fa fa-file-text" title="Статьи"></i>-->
+                                        <span>статей</span>
+                                    </a>
+                                    <a href="profile-questions.html" class="item questions">
+                                        <span class="count">54</span>
+                                        <!--<i class="fa fa-question" title="Вопросы"></i>-->
+                                        <span>вопроса</span>
+                                    </a>
+                                    <a href="profile-answers.html" class="item answers">
+                                        <span class="count">933</span>
+                                        <!--<i class="fa fa-comments" title="Ответы"></i>-->
+                                        <span>ответов</span>
+                                    </a>
+                                    <a href="profile-comments.html" class="item comments">
+                                        <span class="count">3 245</span>
+                                        <!--<i class="fa fa-comment" title="комментарии"></i>-->
+                                        <span>комментариев</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <section id="content">
+                            <ul class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                                <li class="home-page" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                                    <a href="index.html" itemprop="item"><span itemprop="name">Главная</span></a>
+                                    <meta itemprop="position" content="1">
+                                </li>
+                            </ul>
+
+                            <div class="buttons pull-right">
+                                <a href="profile-edit.html" class="link">
+                                    <i class="fa fa-pencil"></i>
+                                    <span>Редактировать</span>
+                                </a>
+                            </div>
+
+                            <h2>Профиль пользователя Ivan</h2>
+
+                            <div class="small-description m-t--15">
+                                В сообществе Avtorem.info уже
+                                <span class="date">1 год 10 месяцев 12 дней</span>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-8 col-sm-8">
+                                    <div class="info-list two-col">
+                                        <div class="item">
+                                            <span class="title">Роль:</span>
+                                            <span class="value">Администратор</span>
+                                        </div>
+                                        <div class="item">
+                                            <span class="title">Автомобиль:</span>
+                                            <span class="value">Daewoo Nexia</span>
+                                        </div>
+                                        <div class="item">
+                                            <span class="title">Зарегистрирован:</span>
+                                            <span class="value">4 февраля 2015 </span>
+                                        </div>
+                                        <div class="item">
+                                            <span class="title">Профессия:</span>
+                                            <span class="value">Автомеханик</span>
+                                        </div>
+                                        <div class="item">
+                                            <span class="title">Email:</span>
+                                            <span class="value">avtorem.info@yandex.ru</span>
+                                        </div>
+                                        <div class="item">
+                                            <span class="title">Пол:</span>
+                                            <span class="value">Мужской</span>
+                                        </div>
+                                        <div class="item">
+                                            <span class="title">Местоположение:</span>
+                                            <span class="value">Украина, Харьков</span>
+                                        </div>
+                                        <div class="item">
+                                            <span class="title">Дата рождения:</span>
+                                            <span class="value">3 февраля 1979</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-4">
+                                    <div class="images-collage">
+                                        <a href="#"><img src="img/uploads/car-1.jpg" alt=""></a>
+                                        <a href="#"><img src="img/uploads/car-1.jpg" alt=""></a>
+                                        <a href="#"><img src="img/uploads/car-1.jpg" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="small-description m-b-0">О себе:</div>
+                            <div class="text page-text">
+                                <p>
+                                    Зовут меня Плахотин Иван. Родился, живу и работаю
+                                    в «Первой столице» Украины, славном городе Харькове.
+                                    Там же закончил школу и университет ХГТУСХ
+                                    имени П. Василенко, с дипломом инженера-механика
+                                    по ремонту и обслуживанию с\х техники. И вот уже более
+                                    10 лет своей жизни посвятил ремонту легковых автомобилей
+                                    в своей небольшой мастерской. Все статьи на сайте написал
+                                    лично, исходя из персонального опыта и багажа знаний.
+                                    И практически все фотографии сделал сам, как говорится
+                                    «в рабочей обстановке».
+                                </p>
+                            </div>
+
+                            <div class="title">
+                                <h3>Рейтинг и баллы</h3>
+                                <div class="small-description">
+                                    <a href="#">Как заработать рейтинг и получить баллы?</a>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="info-list">
+                                        <div class="item">
+                                            <span class="title">Рейтинг:</span>
+                                            <span class="value">
+                                            <i class="fa fa-signal"></i>
+                                            <span class="count font-20">1 416</span>
+                                        </span>
+                                        </div>
+                                        <div class="item">
+                                            <span class="title">Баллы:</span>
+                                            <span class="value">
+                                            <i class="fa fa-money"></i>
+                                            <span class="count font-20 m-r-25">1 416</span>
+                                        </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="user-balance">
+                                        <div class="description">
+                                            <a href="#" class="small-description">Пополнить баланс</a>
+                                            <a href="#" class="small-description">Выбрать сувенир</a>
+                                        </div>
+                                        <img src="img/money.svg" alt="" class="image">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="title">
+                                <h3>Награды</h3>
+                                <div class="small-description">
+                                    <a href="#">Как получить награду?</a>
+                                </div>
+                            </div>
+
+                            <div class="user-awards">
+                                <a href="#" class="item" title="Лучший знаток 2015 года">
+                                    <img src="img/uploads/awards/pisatel-goda.png" alt="">
+                                </a>
+                                <a href="#" class="item" title="Лучший писатель 2015 года">
+                                    <img src="img/uploads/awards/znatok-goda.png" alt="">
+                                </a>
+                                <a href="#" class="item" title="Лучший комментатор августа 2015 года">
+                                    <img src="img/uploads/awards/kommentator-mesyatsa.png" alt="">
+                                </a>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    Виджеты
+                </div>
+            </div>
+            <div class="row">
                 <div class="col-lg-2 col-md-3 col-sm-3">
                     <div class="user-sidebar">
                         <div class="user-info">
-                            <div class="user-avatar">
-                                <a href="profile.html"><img src="img/uploads/avatar-2.jpg" alt="" class="avatar"></a>
-                            </div>
+
                             <div class="login">Ivan</div>
                             <div class="fullname">Иван Плахотин</div>
                             <div class="rank">Эксперт</div>
@@ -611,212 +825,11 @@
                         <!--Виден, если кнопок нет-->
                         <!--<div class="delimiter"></div>-->
 
-                        <ul class="menu user-menu">
-                            <li class="active"><a href="profile.html"><i class="fa fa-user"></i><span>Профиль</span></a></li>
-                            <li><a href="profile-cars.html"><i class="fa fa-car"></i><span>Автомобили</span></a></li>
-                            <li><a href="profile-questions.html"><i class="fa fa-question-circle"></i><span>Вопросы</span></a></li>
-                            <li><a href="profile-articles.html"><i class="fa fa-book"></i><span>Журнал</span></a></li>
-                            <li><a href="profile-comments.html"><i class="fa fa-comment"></i><span>Комментарии</span></a></li>
-                            <li><a href="profile-answers.html"><i class="fa fa-comments"></i><span>Ответы</span></a></li>
-                            <li><a href="profile-messages.html"><i class="fa fa-plane"></i><span>Сообщения</span></a></li>
-                            <li><a href="profile-saved.html"><i class="fa fa-heart"></i><span>Сохраненное</span></a></li>
-                            <li><a href="profile-subscriptions.html"><i class="fa fa-newspaper-o"></i><span>Подписки</span></a></li>
-                            <li class="notification"><a href="profile-notifications.html"><i class="fa fa-bell"></i><span>Уведомления</span></a></li>
-                        </ul>
+
                     </div>
                 </div>
                 <div class="col-lg-7 col-md-9 col-sm-9 without-padding">
-                    <div class="user-statistics">
-                        <div class="pull-left">
-                            <!-- Для чужого профиля -->
-                            <div class="button-group pull-left">
-                                <button class="button accent-button">
-                                    <i class="fa fa-newspaper-o"></i>
-                                    Подписаться
-                                </button>
-                                <a href="profile-subscribers.html" class="button default-button">
-                                    <i class="fa fa-users"></i>
-                                    124 890
-                                </a>
-                            </div>
 
-                            <!-- Для своего профиля -->
-                            <!--<div class="item subscribers">-->
-                                <!--<span class="count">890</span>-->
-                                <!--<a href="#">подписчиков</a>-->
-                            <!--</div>-->
-
-                            <div class="item rating">
-                                <span>Рейтинг:</span>
-                                <!--<i class="fa fa-signal" title="Рейтинг"></i>-->
-                                <span class="count">1 416</span>
-                            </div>
-                        </div>
-
-                        <div class="pull-right">
-                            <!-- иконка не закрашена, если 0 -->
-                            <a href="profile-articles.html" class="item articles">
-                                <span class="count">127</span>
-                                <!--<i class="fa fa-file-text" title="Статьи"></i>-->
-                                <span>статей</span>
-                            </a>
-                            <a href="profile-questions.html" class="item questions">
-                                <span class="count">54</span>
-                                <!--<i class="fa fa-question" title="Вопросы"></i>-->
-                                <span>вопроса</span>
-                            </a>
-                            <a href="profile-answers.html" class="item answers">
-                                <span class="count">933</span>
-                                <!--<i class="fa fa-comments" title="Ответы"></i>-->
-                                <span>ответов</span>
-                            </a>
-                            <a href="profile-comments.html" class="item comments">
-                                <span class="count">3 245</span>
-                                <!--<i class="fa fa-comment" title="комментарии"></i>-->
-                                <span>комментариев</span>
-                            </a>
-                        </div>
-                    </div>
-                    <section id="content" class="white-section">
-                        <ul class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
-                            <li class="home-page" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-                                <a href="index.html" itemprop="item"><span itemprop="name">Главная</span></a>
-                                <meta itemprop="position" content="1">
-                            </li>
-                        </ul>
-
-                        <div class="buttons pull-right">
-                            <a href="profile-edit.html" class="link">
-                                <i class="fa fa-pencil"></i>
-                                <span>Редактировать</span>
-                            </a>
-                        </div>
-
-                        <h2>Профиль пользователя Ivan</h2>
-
-                        <div class="small-description m-t--15">
-                            В сообществе Avtorem.info уже
-                            <span class="date">1 год 10 месяцев 12 дней</span>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-8 col-sm-8">
-                                <div class="info-list two-col">
-                                    <div class="item">
-                                        <span class="title">Роль:</span>
-                                        <span class="value">Администратор</span>
-                                    </div>
-                                    <div class="item">
-                                        <span class="title">Автомобиль:</span>
-                                        <span class="value">Daewoo Nexia</span>
-                                    </div>
-                                    <div class="item">
-                                        <span class="title">Зарегистрирован:</span>
-                                        <span class="value">4 февраля 2015 </span>
-                                    </div>
-                                    <div class="item">
-                                        <span class="title">Профессия:</span>
-                                        <span class="value">Автомеханик</span>
-                                    </div>
-                                    <div class="item">
-                                        <span class="title">Email:</span>
-                                        <span class="value">avtorem.info@yandex.ru</span>
-                                    </div>
-                                    <div class="item">
-                                        <span class="title">Пол:</span>
-                                        <span class="value">Мужской</span>
-                                    </div>
-                                    <div class="item">
-                                        <span class="title">Местоположение:</span>
-                                        <span class="value">Украина, Харьков</span>
-                                    </div>
-                                    <div class="item">
-                                        <span class="title">Дата рождения:</span>
-                                        <span class="value">3 февраля 1979</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-4">
-                                <div class="images-collage">
-                                    <a href="#"><img src="img/uploads/car-1.jpg" alt=""></a>
-                                    <a href="#"><img src="img/uploads/car-1.jpg" alt=""></a>
-                                    <a href="#"><img src="img/uploads/car-1.jpg" alt=""></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="small-description m-b-0">О себе:</div>
-                        <div class="text page-text">
-                            <p>
-                                Зовут меня Плахотин Иван. Родился, живу и работаю
-                                в «Первой столице» Украины, славном городе Харькове.
-                                Там же закончил школу и университет ХГТУСХ
-                                имени П. Василенко, с дипломом инженера-механика
-                                по ремонту и обслуживанию с\х техники. И вот уже более
-                                10 лет своей жизни посвятил ремонту легковых автомобилей
-                                в своей небольшой мастерской. Все статьи на сайте написал
-                                лично, исходя из персонального опыта и багажа знаний.
-                                И практически все фотографии сделал сам, как говорится
-                                «в рабочей обстановке».
-                            </p>
-                        </div>
-
-                        <div class="title">
-                            <h3>Рейтинг и баллы</h3>
-                            <div class="small-description">
-                                <a href="#">Как заработать рейтинг и получить баллы?</a>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="info-list">
-                                    <div class="item">
-                                        <span class="title">Рейтинг:</span>
-                                        <span class="value">
-                                            <i class="fa fa-signal"></i>
-                                            <span class="count font-20">1 416</span>
-                                        </span>
-                                    </div>
-                                    <div class="item">
-                                        <span class="title">Баллы:</span>
-                                        <span class="value">
-                                            <i class="fa fa-money"></i>
-                                            <span class="count font-20 m-r-25">1 416</span>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="user-balance">
-                                    <div class="description">
-                                        <a href="#" class="small-description">Пополнить баланс</a>
-                                        <a href="#" class="small-description">Выбрать сувенир</a>
-                                    </div>
-                                    <img src="img/money.svg" alt="" class="image">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="title">
-                            <h3>Награды</h3>
-                            <div class="small-description">
-                                <a href="#">Как получить награду?</a>
-                            </div>
-                        </div>
-
-                        <div class="user-awards">
-                            <a href="#" class="item" title="Лучший знаток 2015 года">
-                                <img src="img/uploads/awards/pisatel-goda.png" alt="">
-                            </a>
-                            <a href="#" class="item" title="Лучший писатель 2015 года">
-                                <img src="img/uploads/awards/znatok-goda.png" alt="">
-                            </a>
-                            <a href="#" class="item" title="Лучший комментатор августа 2015 года">
-                                <img src="img/uploads/awards/kommentator-mesyatsa.png" alt="">
-                            </a>
-                        </div>
-                    </section>
                 </div>
                 <div class="col-lg-3 col-md-12 sidebar">
                     <div class="widget widget-questions">
