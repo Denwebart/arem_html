@@ -69,7 +69,7 @@ body
 .widget
     display: inline-block
     width: 100%
-    a
+    a:not(.button)
         color: $gray-color
         &.text, & .text
             color: $dark-color
@@ -94,6 +94,9 @@ body
 .sidebar
     img.avatar
         background-color: $light-color
+    .title
+        .small-description
+            margin-top: -10px
     .small-description
         a
             color: $accent-color
@@ -111,6 +114,9 @@ body
             border-bottom: none
             padding-bottom: 0
 
+        &.white-section
+            padding: 15px 20px 20px
+            border: 1px solid #eeeeee
         .widget-title
             display: inline-block
             width: 100%
@@ -400,10 +406,10 @@ body
         border: 1px solid #eeeeee
         border-radius: 3px
         font-family: $title-font
-        color: $dark-color
-        text-decoration: none
+        color: $dark-color !important
+        text-decoration: none !important
         span
-            text-decoration: none
+            text-decoration: none !important
             &:first-child
                 border-right: 1px solid $light-color
                 padding-right: 5px
@@ -459,6 +465,31 @@ body
                 &:hover .title,
                 &:hover .title span
                     color: $dark-color
+
+    // Contact Page
+    .social-links
+        a
+            display: inline-block
+            width: 100%
+            float: left
+            margin-bottom: 20px
+            text-decoration: none
+            line-height: 50px
+            &:last-child
+                margin-bottom: 0
+            i, .fa, span
+                float: left
+            i, .fa
+                font-size: 50px
+                width: 50px
+                text-align: center
+                margin-right: 20px
+        a, i, .fa
+            color: $dark-color
+        a:hover, a:hover i, a:hover .fa
+            color: $accent-color
+        a:hover span
+            text-decoration: none
 
 // Blog List
 
@@ -646,31 +677,6 @@ body
             i, .fa
                 margin-right: 5px
 
-// Contact Page
-#content
-    .social-links
-        a
-            display: inline-block
-            width: 100%
-            float: left
-            margin-bottom: 20px
-            text-decoration: none
-            line-height: 50px
-            &:last-child
-                margin-bottom: 0
-            i, .fa, span
-                float: left
-            i, .fa
-                font-size: 50px
-                width: 50px
-                text-align: center
-                margin-right: 20px
-        a, i, .fa
-            color: $dark-color
-        a:hover, a:hover i, a:hover .fa
-            color: $accent-color
-        a:hover span
-            text-decoration: none
 // End Widgets
 
 // Comments
@@ -884,15 +890,15 @@ footer
 /* USER PROFILE */
 .user-profile
     .white-section
-        display: inline-block
-        width: 100%
+        display: table
+    #user-content-section
+        display: table-cell
     #user-menu-section
-        display: inline-block
-        float: left
+        display: table-cell
+        vertical-align: top
         width: 100px
         height: 100%
         background: $dark-color
-        border-right: 1px solid #eeeeee
         .user-menu
             text-align: center
             li
@@ -931,10 +937,11 @@ footer
                     right: 20px
                     top: 7px
                     border-color: $dark-color
+
     #user-section
         display: inline-block
         float: left
-        width: calc(100% - 100px)
+        width: 100%
         .user-avatar
             width: 200px
             height: 200px
@@ -947,74 +954,79 @@ footer
             float: left
             width: calc(100% - 200px)
             height: 200px
-        .user-statistics
-            display: inline-block
-            float: left
-            width: 100%
-            background: #ffffff
-            border-top: 1px solid #eeeeee
-            border-bottom: 1px solid #eeeeee
-    #content
-        display: inline-block
-        float: left
-        width: calc(100% - 100px)
-
-.user-sidebar
-    background: $light-color
-    margin-top: 50px //
-    padding-bottom: 30px
-    text-align: center
-    .user-info
-        display: inline-block
-        width: 100%
-        margin-bottom: 15px
-        > div
-            display: inline-block
-            width: 100%
-
-        .login
-            font-size: em(24px)
-            font-family: $title-font
-            color: #3d4347
-            text-decoration: none
-            &:hover
-                color: inherit
-        .fullname
-            font-size: em(18px)
-        .rank
-            color: #565a5f
-            margin: 10px 0 3px
-        .rating-position
-            .label
+            .gradient
                 display: inline-block
-                background: #ffffff
-                border: 1px solid #eeeeee
-                border-radius: 12px
-                padding: 1px 0 1px 10px
+                width: 100%
+                height: 100%
+                background: linear-gradient(to right, #ffffff 0%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%)
+        .user-avatar,
+        .user-profile-picture
+            position: relative
+            .buttons
+                position: absolute
+                bottom: 0
+                width: 100%
+                padding: 0 20px 10px
+        .user-info
+            padding: 10px 20px 0
+            > div
+                display: inline-block
+                width: 100%
+            .login
+                font-size: em(24px)
                 font-family: $title-font
-                font-size: em(16px)
-                line-height: 22px
-                > *
-                    float: left
-                svg.image
-                    position: relative
-                    top: 1px
-                    width: 22px
-                    margin-left: 5px
-                    path
-                        fill: $dark-color
-        .is-online
-            font-size: em(12px)
-            color: $dark-gray-color
-            font-weight: bold
-            &.online
-                color: $green-color
-    .user-buttons
-        display: inline-block
-        width: 100%
-        margin: 5px 0
+                color: #3d4347
+                text-decoration: none
+                &:hover
+                    color: inherit
+            .fullname
+                font-size: em(18px)
+            .rank
+                color: $accent-color
+                margin: 5px 0 5px
+            .rating-position
+                .label
+                    display: inline-block
+                    background: #ffffff
+                    border: 1px solid #eeeeee
+                    border-radius: 12px
+                    padding: 1px 0 1px 10px
+                    font-family: $title-font
+                    font-size: em(16px)
+                    line-height: 22px
+                    > *
+                        float: left
+                    svg.image
+                        position: relative
+                        top: 1px
+                        width: 22px
+                        margin-left: 5px
+                        path
+                            fill: $dark-color
+            .is-online
+                font-size: em(12px)
+                color: $dark-gray-color
+                font-weight: bold
+                position: relative
+                top: 10px
+                margin-left: 15px
+                &.online
+                    color: $green-color
+        .user-avatar
+            .buttons
+                padding-right: 10px
+    #content
+        padding-top: 10px
+        margin-bottom: 0
 
 .user-statistics
+    display: inline-block
+    float: left
+    width: 100%
+    background: #ffffff
+    border-top: 1px solid #eeeeee
+    border-bottom: 1px solid #eeeeee
+    padding: 0 20px
     height: 48px
     color: #565a5f
     a.item:hover, a.item.active
@@ -1024,6 +1036,8 @@ footer
         float: left
         display: inline-block
         margin-left: 25px
+        &:first-child
+            margin-left: 0
         > *
             color: #565a5f
             font-size: em(14px)
@@ -1042,6 +1056,7 @@ footer
         &.rating
             .count
                 color: $accent-color
+                font-weight: bold
                 margin: 0 0 0 5px
 
 .info-list
@@ -1079,21 +1094,6 @@ footer
         &:first-child
             width: calc(2 * 100% / 3)
 
-.user-balance
-    text-align: right
-    .image
-        float: left
-        width: 40%
-        margin-top: -45px
-    .description
-        float: left
-        display: inline-block
-        width: 60%
-        padding: 5px 20px 0 0
-        .small-description
-            display: inline-block
-            width: 100%
-
 .user-awards
     display: inline-block
     width: 100%
@@ -1107,4 +1107,19 @@ footer
         .small-description
             margin-bottom: 0
 
+
+.widget
+    &.user-balance-widget
+        .user-balance
+            margin-top: -10px
+            margin-bottom: 10px
+            .count
+                font-size: em(50px)
+                color: $accent-color
+                margin-right: 10px
+        .buttons
+            margin-bottom: 10px
+            display: inline-block
+        .small-description
+            margin-bottom: 0
 @import "media"

@@ -162,7 +162,7 @@ button:active, button:focus
     outline: none
 button::-moz-focus-inner
     border: 0
-
+    
 .button
     font-family: $title-font
     display: inline-block
@@ -183,6 +183,15 @@ button::-moz-focus-inner
         span
             text-decoration: none
             color: inherit
+.buttons
+    .button
+        float: left
+        margin-right: 20px
+        &:last-child
+            margin-right: 0
+    .button-group
+        .button
+            margin-right: 0
 
 .button-group
     .button
@@ -219,6 +228,20 @@ button::-moz-focus-inner
     &:hover, &:focus, &.active
         color: #ffffff
         background: #1F3245
+
+.red-button
+    color: #ffffff
+    background: $red-color
+    i, .fa
+        color: #ffffff !important
+    &:hover, &:focus, &.active
+        color: #ffffff
+        background: #9b0d28
+
+.transparent-button
+    opacity: 0.75
+    &:hover, &.active
+        opacity: 1
 
 .dashed-button,
 .dashed-button:not(.active):focus,
