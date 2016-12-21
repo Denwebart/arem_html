@@ -5,7 +5,7 @@
 
 	<meta charset="utf-8">
 
-	<title>Вопрос - Avtorem.info</title>
+	<title>Пользователи - Avtorem.info</title>
 	<meta name="description" content="">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -89,7 +89,7 @@
                 <li><a href="category.html"><span>Гараж</span></a></li>
                 <li><a href="questions.html"><span>Вопрос-ответ</span></a></li>
                 <li><a href="articles.html"><span>Бортовой журнал</span></a></li>
-            <li><a href="users.html"><span>Пользователи</span></a></li>
+                <li><a href="users.html"><span>Пользователи</span></a></li>
             </ul>
 
             <div class="title">Информация</div>
@@ -463,7 +463,7 @@
                             <div class="menu-section">
                                 <nav>
                                     <ul class="menu main-menu pull-left">
-                                        <li class="active">
+                                        <li>
                                             <a href="index.html">
                                                 <span>Главная</span>
                                             </a>
@@ -511,7 +511,7 @@
                                                 <span>Бортовой журнал</span>
                                             </a>
                                         </li>
-                                    <li>
+                                        <li class="active">
                                             <a href="users.html">
                                                 <span>Пользователи</span>
                                             </a>
@@ -561,98 +561,286 @@
                                 <a href="index.html" itemprop="item"><span itemprop="name">Главная</span></a>
                                 <meta itemprop="position" content="1">
                             </li>
-                            <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-                                <a href="questions.html" itemprop="item"><span itemprop="name">Вопрос-ответ</span></a>
-                                <meta itemprop="position" content="2">
-                            </li>
                         </ul>
 
-                        <div class="table-block page-title">
-                            <h2 class="responsive-block p-r-25">Страница вопроса?</h2>
+                        <div class="table-block page-title enter-xxs">
+                            <h2 class="responsive-block p-r-25">Все пользователи</h2>
                             <div class="fixed-block">
-                                <div class="widget like-dislike-widget">
-                                    <div class="buttons">
-                                        <button class="like active">
-                                            <i class="fa fa-thumbs-up"></i>
-                                            <span class="count">14 031</span>
-                                        </button>
-                                        <button class="dislike">
-                                            <i class="fa fa-thumbs-o-down"></i>
-                                            <span class="count">3</span>
-                                        </button>
+                                <a href="form-register.html" class="button dark-button">
+                                    <i class="fa fa-address-card"></i>
+                                    <span>Зарегистрироваться</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <form action="search.html" method="POST" class="search-form" id="search-form">
+                            <div class="input-group">
+                                <input class="input" type="text" name="query" placeholder="Поиск пользователей" value="">
+                                <span class="input-group-button">
+                                    <button type="submit" form="search-form-2" value="" class="button accent-button">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </span>
+                            </div>
+                            <div class="form-group input-group">
+                                <div class="fixed">
+                                    <input name="online" id="online" type="checkbox" value="1">
+                                </div>
+                                <label for="online">
+                                    Сейчас на сайте
+                                </label>
+                            </div>
+                        </form>
+
+                        <div class="blog with-filters">
+                            <div class="filters">
+                                <div class="on-page">
+                                    Всего<span class="hidden-xxs"> пользователей</span>:
+                                    <span class="count">3 124</span>
+                                </div>
+                                <div class="sort">
+                                    <span>Сортировать по:</span>
+                                    <div class="sortby dropdown">
+                                        <a href="#" class="dropdown-button dropdown-arrow">рейтингу</a>
+                                        <div class="dropdown-container">
+                                            <div class="container-body">
+                                                <ul class="select-list">
+                                                    <li data-value="published_at">
+                                                        <i class="fa fa-calendar-o"></i>
+                                                        <span>дате регистрации</span>
+                                                    </li>
+                                                    <li data-value="rating" class="selected">
+                                                        <i class="fa fa-signal"></i>
+                                                        <span>рейтингу</span>
+                                                    </li>
+                                                    <li data-value="questions">
+                                                        <i class="fa fa-question"></i>
+                                                        <span>количеству вопросов</span>
+                                                    </li>
+                                                    <li data-value="articles">
+                                                        <i class="fa fa-book"></i>
+                                                        <span>количеству статей</span>
+                                                    </li>
+                                                    <li data-value="answers">
+                                                        <i class="fa fa-comments-o"></i>
+                                                        <span>количеству ответов</span>
+                                                    </li>
+                                                    <li data-value="comments">
+                                                        <i class="fa fa-comment-o"></i>
+                                                        <span>количеству комментариев</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="percentage">
-                                        <div class="value percentage-like" style="width: 99%"></div>
+                                    <div class="direction">
+                                        <button data-value="desc" title="По убыванию" class="active">
+                                            <i class="fa fa-angle-down"></i>
+                                        </button>
+                                        <button data-value="asc" title="По возростанию">
+                                            <i class="fa fa-angle-up"></i>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="page-info">
-                            <div class="user" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-                                <a href="#" itemprop="url">
-                                    <img src="/img/uploads/ivan.jpg" class="avatar micro" title="" alt=""><span class="login" itemprop="name">Ivan</span>
-                                </a>
+                            <div class="list users-list">
+                                <div class="item user online">
+                                    <div class="rating-position">1</div>
+                                    <a href="profile.html" class="user-avatar">
+                                        <img src="/img/uploads/ivan.jpg" alt="" class="avatar mini">
+                                    </a>
+                                    <div class="user">
+                                        <a href="profile.html" class="login"><span>Ivan</span></a>
+                                        <span class="rank">Эксперт</span>
+                                        <span class="date">
+                                            <span>Стаж:</span>
+                                            <span class="value">1 год 10 месяцев 12 дней</span>
+                                        </span>
+                                    </div>
+                                    <div class="statistic articles">
+                                        <span class="count">127</span>
+                                        <span class="title">статей</span>
+                                    </div>
+                                    <div class="statistic questions">
+                                        <span class="count">54</span>
+                                        <span class="title">вопроса</span>
+                                    </div>
+                                    <div class="statistic answers">
+                                        <span class="count">933</span>
+                                        <span class="title">ответа</span>
+                                    </div>
+                                    <div class="statistic comments">
+                                        <span class="count">3 245</span>
+                                        <span class="title">комментариев</span>
+                                    </div>
+                                    <div class="statistic rating">
+                                        <span class="count">1 416</span>
+                                        <span class="title">рейтинг</span>
+                                    </div>
+                                </div>
+                                <div class="item user">
+                                    <div class="rating-position">2</div>
+                                    <a href="profile.html" class="user-avatar">
+                                        <img src="/img/uploads/avatar-2.jpg" alt="" class="avatar mini">
+                                    </a>
+                                    <div class="user">
+                                        <a href="profile.html" class="login"><span>SKS</span></a>
+                                        <span class="rank">Эксперт</span>
+                                        <span class="date">
+                                            <span>Стаж:</span>
+                                            <span class="value">1 год 6 месяцев 2 дня</span>
+                                        </span>
+                                    </div>
+                                    <div class="statistic articles">
+                                        <span class="count">45</span>
+                                        <span class="title">статей</span>
+                                    </div>
+                                    <div class="statistic questions">
+                                        <span class="count">34</span>
+                                        <span class="title">вопроса</span>
+                                    </div>
+                                    <div class="statistic answers">
+                                        <span class="count">627</span>
+                                        <span class="title">ответов</span>
+                                    </div>
+                                    <div class="statistic comments">
+                                        <span class="count">1 879</span>
+                                        <span class="title">комментариев</span>
+                                    </div>
+                                    <div class="statistic rating">
+                                        <span class="count">1 097</span>
+                                        <span class="title">рейтинг</span>
+                                    </div>
+                                </div>
+                                <div class="item user online">
+                                    <div class="rating-position">3</div>
+                                    <a href="profile.html" class="user-avatar">
+                                        <img src="/img/uploads/avatar-3.jpg" alt="" class="avatar mini">
+                                    </a>
+                                    <div class="user">
+                                        <a href="profile.html" class="login"><span>Мастер</span></a>
+                                        <span class="rank">Профи</span>
+                                        <span class="date">
+                                            <span>Стаж:</span>
+                                            <span class="value">1 год 10 месяцев 17 дней</span>
+                                        </span>
+                                    </div>
+                                    <div class="statistic articles">
+                                        <span class="count">121</span>
+                                        <span class="title">статья</span>
+                                    </div>
+                                    <div class="statistic questions">
+                                        <span class="count">0</span>
+                                        <span class="title">вопросов</span>
+                                    </div>
+                                    <div class="statistic answers">
+                                        <span class="count">50</span>
+                                        <span class="title">ответов</span>
+                                    </div>
+                                    <div class="statistic comments">
+                                        <span class="count">191</span>
+                                        <span class="title">комментарий</span>
+                                    </div>
+                                    <div class="statistic rating">
+                                        <span class="count">
+                                            987
+                                            <span class="rating-up">+1</span>
+                                        </span>
+                                        <span class="title">рейтинг</span>
+                                    </div>
+                                </div>
+                                <div class="item user">
+                                    <div class="rating-position">4</div>
+                                    <a href="profile.html" class="user-avatar">
+                                        <img src="/img/uploads/avatar-1.jpg" alt="" class="avatar mini">
+                                    </a>
+                                    <div class="user">
+                                        <a href="profile.html" class="login"><span>Muph1984</span></a>
+                                        <span class="rank">Энтузиаст</span>
+                                        <span class="date">
+                                            <span>Стаж:</span>
+                                            <span class="value">9 месяцев 21 день</span>
+                                        </span>
+                                    </div>
+                                    <div class="statistic articles">
+                                        <span class="count">2</span>
+                                        <span class="title">статьи</span>
+                                    </div>
+                                    <div class="statistic questions">
+                                        <span class="count">5</span>
+                                        <span class="title">вопросов</span>
+                                    </div>
+                                    <div class="statistic answers">
+                                        <span class="count">15</span>
+                                        <span class="title">ответов</span>
+                                    </div>
+                                    <div class="statistic comments">
+                                        <span class="count">43</span>
+                                        <span class="title">комментария</span>
+                                    </div>
+                                    <div class="statistic rating">
+                                        <span class="count">
+                                            456
+                                            <span class="rating-down">-12</span>
+                                        </span>
+                                        <span class="title">рейтинг</span>
+                                    </div>
+                                </div>
+                                <div class="item user">
+                                    <div class="rating-position">5</div>
+                                    <a href="profile.html" class="user-avatar">
+                                        <img src="/img/uploads/default-avatar.png" alt="" class="avatar mini">
+                                    </a>
+                                    <div class="user">
+                                        <a href="profile.html" class="login"><span>Макс</span></a>
+                                        <span class="rank">Любитель</span>
+                                        <span class="date">
+                                            <span>Стаж:</span>
+                                            <span class="value">12 месяцев 1 день</span>
+                                        </span>
+                                    </div>
+                                    <div class="statistic articles">
+                                        <span class="count">0</span>
+                                        <span class="title">статей</span>
+                                    </div>
+                                    <div class="statistic questions">
+                                        <span class="count">4</span>
+                                        <span class="title">вопроса</span>
+                                    </div>
+                                    <div class="statistic answers">
+                                        <span class="count">3</span>
+                                        <span class="title">ответа</span>
+                                    </div>
+                                    <div class="statistic comments">
+                                        <span class="count">15</span>
+                                        <span class="title">комментариев</span>
+                                    </div>
+                                    <div class="statistic rating">
+                                        <span class="count">123</span>
+                                        <span class="title">рейтинг</span>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="date">
-                                <i class="fa fa-calendar-o"></i>
-                                <time datetime="2013-03-17T19:55" itemprop="datePublished">17 марта 2013 в 19:55</time>
-                            </div>
-                            <div class="views" title="Количество просмотров">
-                                <i class="fa fa-eye"></i>
-                                <span>13 122</span>
-                            </div>
-                            <div class="comments-count" title="Количество комментариев">
-                                <a href="question.html#answers">
-                                    <i class="fa fa-comments-o"></i><span class="count">12</span>
-                                </a>
-                            </div>
-                            <div class="saved-count active" title="Сколько пользователей сохранили">
-                                <i class="fa fa-heart"></i>
-                                <span>1</span>
-                            </div>
-                        </div>
-
-                        <div class="text page-text">
-                            <p>
-                                Вот для ответов на подобные вопросы и был создан сайт
-                                <strong>"Школа авторемонта"</strong>.
-                                Здесь для автолюбителей собраны и, конечно же, будут постоянно
-                                добавляться статьи, советы и рекомендации по техническому
-                                обслуживанию и ремонту легковых автомобилей различных марок и
-                                моделей. И мы надеемся, что информация, прочитанная Вами,
-                                будет полезной и поможет самостоятельно, быстро, а главное,
-                                правильно, отремонтировать и обслужить&nbsp; автомобиль.
-                            </p>
-                        </div>
-                        <div class="tags">
-                            <a href="#">
-                                <span>Daewoo Lanos</span>
-                                <span class="count">234</span>
-                            </a>
-                            <a href="#">
-                                <span>Замена колеса</span>
-                                <span class="count">34</span>
-                            </a>
-                            <a href="#">
-                                <span>Колесные диски</span>
-                                <span class="count">4</span>
-                            </a>
-                            <a href="#">
-                                <span>Ремонт</span>
-                                <span class="count">67</span>
-                            </a>
-                        </div>
-                        <div id="social-buttons-widget" class="widget">
-                            <div class="text help-text pull-left">
-                                Понравилась статья? Поделись ею на своей странице!
-                            </div>
-                            <div class="social-buttons pull-left">
-                                <!--Yandex Блок "Поделиться"-->
-                                <script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
-                                <script src="//yastatic.net/share2/share.js"></script>
-                                <div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,evernote,lj,pocket,viber,whatsapp,skype,telegram"></div>
-                                <!--Yandex Блок "Поделиться"-->
+                            <div class="pagination">
+                                <ul>
+                                    <li class="active"><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li class="next" title="Следующая">
+                                        <a href="#">
+                                            <span>следующая</span>
+                                            <i class="fa fa-angle-right"></i>
+                                        </a>
+                                    </li>
+                                    <li class="last">
+                                        <a href="#" title="Последняя">
+                                            <span>последняя</span>
+                                            <i class="fa fa-angle-double-right"></i>
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </section>

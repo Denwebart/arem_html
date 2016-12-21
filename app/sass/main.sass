@@ -262,52 +262,102 @@ body
                     i, .fa
                         font-size: 16px
                     margin: 0
-        &.widget-users
-            .item
-                display: table
-                width: 100%
-                *
-                    display: table-cell
-                    vertical-align: middle
-                .rating-position
-                    width: 30px
-                .user-avatar
-                    width: 70px
-                .user
-                    .login, .rank
-                        display: inline-block
-                        width: 100%
-                    .login
-                        color: $dark-color
-                        text-decoration: none
-                        span
-                            text-decoration: none
-                    .rank
-                        font-size: em(14px)
-
-                .rating
-                    width: 90px
-                    font-family: $title-font
-                    font-size: em(24px)
-                    color: $accent-color
-                    .rating-up, .rating-down
-                        font-size: 0.5em
-                        top: -7px
-                        position: relative
-                        left: 5px
-                        i, .fa
-                            float: left
-                            margin: 3px 3px 0 0
-                            color: inherit
-                    .rating-up
-                        color: $green-color
-                    .rating-down
-                        color: $red-color
         &.widget-tags
             .tags
                 a
                     background: #f4f4f4
                     margin-bottom: 20px
+.sidebar .widget.widget-users, .blog .users-list
+    .item
+        display: table
+        width: 100%
+        > *
+            display: table-cell
+            vertical-align: middle
+        .rating-position
+            width: 30px
+        .user-avatar
+            width: 70px
+            padding-right: 20px
+        .user
+            .login, .rank, .date
+                display: inline-block
+                width: 100%
+                float: left
+            .login
+                color: $dark-color
+                text-decoration: none
+                span
+                    text-decoration: none
+            .rank
+                font-size: em(14px)
+                color: $dark-gray-color
+            .date
+                font-size: em(12px)
+                color: $gray-color
+                white-space: nowrap
+        .rating, .statistic
+            width: 90px
+            font-family: $title-font
+            font-size: em(24px)
+            .count
+                color: $accent-color
+            .title
+                font-size: 13px
+                font-family: $default-font
+                color: $gray-color
+            .rating-up, .rating-down
+                font-size: 0.5em
+                top: -15px
+                position: relative
+                left: 0
+                i, .fa
+                    float: left
+                    margin: 3px 3px 0 0
+                    color: inherit
+            .rating-up
+                color: $green-color
+            .rating-down
+                color: $red-color
+.blog .filters + .list.users-list
+    padding-top: 15px
+.blog
+    .users-list
+        .item
+            padding: 15px 0
+            &.online
+                .user-avatar
+                    position: relative
+                    &:after
+                        content: ""
+                        width: 8px
+                        height: 8px
+                        border-radius: 50%
+                        background: $green-color
+                        position: absolute
+                        right: 18px
+                        top: 7px
+                        border: 3px solid $light-color
+                        box-sizing: content-box
+            .statistic
+                position: relative
+                text-align: center
+                > *
+                    float: none
+                .title, .count
+                    display: inline-block
+                    width: 100%
+                    float: left
+                    text-align: center
+                .count
+                    line-height: 1
+                &:not(.rating)
+                    .count
+                        color: $dark-gray-color
+                        font-size: em(12px)
+                &.rating
+                    padding-left: 50px
+                    width: 150px
 
 // like-dislike widget
 .like-dislike-widget
