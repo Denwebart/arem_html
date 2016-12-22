@@ -116,6 +116,21 @@
                         width: 60px
                     .rating
                         width: 80px
+    .sidebar .widget.widget-users, .blog .users-list
+        .item
+            .rating, .statistic
+                .title
+                    font-size: 12px
+    .blog
+        .users-list
+            .item
+                .user
+                    .date
+                        font-size: em(11px)
+                .statistic
+                    &.rating
+                        padding-left: 20px
+                        width: 90px
 
     /* Footer */
     footer
@@ -142,6 +157,17 @@
         padding: 0
     section
         padding: 25px 15px
+
+    .blog
+        .users-list
+            .item
+                .user
+                    .date
+                        font-size: em(12px)
+                .statistic
+                    &.rating
+                        padding-left: 30px
+                        width: 130px
 
     /* Footer */
     footer
@@ -204,7 +230,12 @@
                 &:hover
                     .text
                         background: rgba(255, 255, 255, 0.85)
-
+    .blog
+        .users-list
+            .item
+                .user
+                    .date
+                        font-size: em(11px)
     /* Content */
     #content
         .social-links
