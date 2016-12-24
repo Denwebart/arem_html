@@ -705,42 +705,209 @@
 
                                 <h2>Друзья пользователя Ivan</h2>
 
-                                <div class="text page-text">
-                                    <p>
-                                        В жизни каждого <em>автолюбителя</em> <i>наступает</i> такой момент,
-                                        когда приходится все делать самому. Засучивать рукава,
-                                        брать <strong>инструмент</strong> в <b>руки</b> и самостоятельно обслуживать,
-                                        диагностировать неисправность, <strong><em>ремонтировать</em></strong> или тюнинговать
-                                        свой автомобиль.
-                                    </p>
-                                    <p>
-                                        Причин, по которым человек пытается все
-                                        сделать своими руками, - множество. Это, например: желание
-                                        человека узнать и понять устройство своего автомобиля и научиться
-                                        чему-то новому. А для кого-то «поковыряться» в машине – это проявление
-                                        нежных и глубоких чувств к своему верному, железному другу.
-                                        Для других ремонт своими руками – это просто способ сэкономить деньги.
-                                        Но, какими бы мотивами не руководствовался человек, для успешного
-                                        решения поставленных задач ему будет необходима информация.
-                                        То есть: желание или необходимость отремонтировать личное транспортное
-                                        средство своими силами - есть, а необходимых знаний для этого, - нет.
-                                        И, естественно, возникают вопросы примерно такого характера:
-                                        Как всё правильно сделать?
-                                        Какая последовательность выполнения работы?
-                                        Как не допустить досадных ошибок?
-                                        Какой инструмент будет необходим?
-                                        И как выбрать качественные запчасти?
-                                    </p>
-                                    <p>
-                                        Вот для ответов на подобные вопросы и был создан сайт
-                                        <strong>"Школа авторемонта"</strong>.
-                                        Здесь для автолюбителей собраны и, конечно же, будут постоянно
-                                        добавляться статьи, советы и рекомендации по техническому
-                                        обслуживанию и ремонту легковых автомобилей различных марок и
-                                        моделей. И мы надеемся, что информация, прочитанная Вами,
-                                        будет полезной и поможет самостоятельно, быстро, а главное,
-                                        правильно, отремонтировать и обслужить&nbsp; автомобиль.
-                                    </p>
+                                <form action="search.html" method="POST" class="search-form" id="search-form">
+                                    <div class="input-group">
+                                        <input class="input" type="text" name="query" placeholder="Поиск пользователей" value="">
+                                        <span class="input-group-button">
+                                    <button type="submit" form="search-form-2" value="" class="button accent-button">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </span>
+                                    </div>
+                                    <div class="form-group input-group">
+                                        <div class="fixed">
+                                            <input name="online" id="online" type="checkbox" value="1">
+                                        </div>
+                                        <label for="online">
+                                            Сейчас на сайте
+                                        </label>
+                                    </div>
+                                </form>
+
+                                <div class="blog with-filters">
+                                    <div class="filters">
+                                        <div class="on-page">
+                                            Всего<span class="hidden-xs"> друзей</span>:
+                                            <span class="count">48</span>
+                                        </div>
+                                        <div class="sort">
+                                            <span>Сортировать по:</span>
+                                            <div class="sortby dropdown">
+                                                <a href="#" class="dropdown-button dropdown-arrow">умолчанию</a>
+                                                <div class="dropdown-container">
+                                                    <div class="container-body">
+                                                        <ul class="select-list">
+                                                            <li data-value="login" class="selected">
+                                                                <i class="fa fa-heart"></i>
+                                                                <span>умолчанию</span>
+                                                            </li>
+                                                            <li data-value="login">
+                                                                <i class="fa fa-user"></i>
+                                                                <span>логину</span>
+                                                            </li>
+                                                            <li data-value="name">
+                                                                <i class="fa fa-user"></i>
+                                                                <span>имени</span>
+                                                            </li>
+                                                            <li data-value="rank">
+                                                                <i class="fa fa-user-circle-o"></i>
+                                                                <span>рангу</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="direction">
+                                                <button data-value="desc" title="По убыванию" class="active">
+                                                    <i class="fa fa-angle-down"></i>
+                                                </button>
+                                                <button data-value="asc" title="По возростанию">
+                                                    <i class="fa fa-angle-up"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list users-list">
+                                        <div class="item user online">
+                                            <a href="profile.html" class="user-avatar big">
+                                                <img src="/img/uploads/ivan.jpg" alt="" class="avatar">
+                                            </a>
+                                            <div class="user">
+                                                <a href="profile.html" class="login"><span>Ivan</span></a>
+                                                <span class="fullname">Иван Плахотин</span>
+                                                <span class="rank">Эксперт</span>
+                                                <span class="date">
+                                                    <span>В друзьях:</span>
+                                                    <span class="value">1 год 3 месяца 22 дня</span>
+                                                </span>
+                                            </div>
+                                            <div class="buttons">
+                                                <button class="button dark-button small-button transparent-button">
+                                                    <i class="fa fa-paper-plane"></i>
+                                                    Написать сообщение
+                                                </button>
+                                                <button class="button default-button small-button">
+                                                    <i class="fa fa-user-times"></i>
+                                                    Убрать из друзей
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="item user">
+                                            <a href="profile.html" class="user-avatar big">
+                                                <img src="/img/uploads/avatar-2.jpg" alt="" class="avatar">
+                                            </a>
+                                            <div class="user">
+                                                <a href="profile.html" class="login"><span>SKS</span></a>
+                                                <span class="fullname">Вася Пупкин</span>
+                                                <span class="rank">Эксперт</span>
+                                                <span class="date">
+                                                    <span>В друзьях:</span>
+                                                    <span class="value">1 год 6 месяцев 2 дня</span>
+                                                </span>
+                                            </div>
+                                            <div class="buttons">
+                                                <button class="button dark-button small-button transparent-button">
+                                                    <i class="fa fa-paper-plane"></i>
+                                                    Написать сообщение
+                                                </button>
+                                                <button class="button default-button small-button">
+                                                    <i class="fa fa-user-times"></i>
+                                                    Убрать из друзей
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="item user online">
+                                            <a href="profile.html" class="user-avatar big">
+                                                <img src="/img/uploads/avatar-3.jpg" alt="" class="avatar">
+                                            </a>
+                                            <div class="user">
+                                                <a href="profile.html" class="login"><span>Мастер</span></a>
+                                                <span class="rank">Профи</span>
+                                                <span class="date">
+                                                    <span>В друзьях:</span>
+                                                    <span class="value">1 год 10 месяцев 17 дней</span>
+                                                </span>
+                                            </div>
+                                            <div class="buttons">
+                                                <button class="button dark-button small-button transparent-button">
+                                                    <i class="fa fa-paper-plane"></i>
+                                                    Написать сообщение
+                                                </button>
+                                                <button class="button default-button small-button">
+                                                    <i class="fa fa-user-times"></i>
+                                                    Убрать из друзей
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="item user">
+                                            <a href="profile.html" class="user-avatar big">
+                                                <img src="/img/uploads/avatar-1.jpg" alt="" class="avatar">
+                                            </a>
+                                            <div class="user">
+                                                <a href="profile.html" class="login"><span>Muph1984</span></a>
+                                                <span class="rank">Энтузиаст</span>
+                                                <span class="date">
+                                                    <span>В друзьях:</span>
+                                                    <span class="value">9 месяцев 21 день</span>
+                                                </span>
+                                            </div>
+                                            <div class="buttons">
+                                                <button class="button dark-button small-button transparent-button">
+                                                    <i class="fa fa-paper-plane"></i>
+                                                    Написать сообщение
+                                                </button>
+                                                <button class="button default-button small-button">
+                                                    <i class="fa fa-user-times"></i>
+                                                    Убрать из друзей
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="item user">
+                                            <a href="profile.html" class="user-avatar big">
+                                                <img src="/img/uploads/default-avatar.png" alt="" class="avatar">
+                                            </a>
+                                            <div class="user">
+                                                <a href="profile.html" class="login"><span>Макс</span></a>
+                                                <span class="fullname">Максим Галкин</span>
+                                                <span class="rank">Любитель</span>
+                                                <span class="date">
+                                                    <span>В друзьях:</span>
+                                                    <span class="value">12 месяцев 1 день</span>
+                                                </span>
+                                            </div>
+                                            <div class="buttons">
+                                                <button class="button dark-button small-button transparent-button">
+                                                    <i class="fa fa-paper-plane"></i>
+                                                    Написать сообщение
+                                                </button>
+                                                <button class="button default-button small-button">
+                                                    <i class="fa fa-user-times"></i>
+                                                    Убрать из друзей
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pagination">
+                                        <ul>
+                                            <li class="active"><a href="#">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">4</a></li>
+                                            <li><a href="#">5</a></li>
+                                            <li class="next" title="Следующая">
+                                                <a href="#">
+                                                    <span>следующая</span>
+                                                    <i class="fa fa-angle-right"></i>
+                                                </a>
+                                            </li>
+                                            <li class="last">
+                                                <a href="#" title="Последняя">
+                                                    <span>последняя</span>
+                                                    <i class="fa fa-angle-double-right"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </section>
                         </div>
