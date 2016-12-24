@@ -233,9 +233,30 @@
     .blog
         .users-list
             .item
+                display: inline-block
+                > *
+                    display: inline-block
+                    float: left
                 .user
-                    .date
-                        font-size: em(11px)
+                    width: calc(100% - 20px - 90px)
+                .statistic:not(.rating)
+                    margin-top: 10px
+                    margin-right: 20px
+                    width: auto
+                    min-width: 10%
+                    max-width: 100%
+                    .count, .title
+                        width: auto !important
+                        float: left
+                    .count
+                        margin-right: 5px
+                .statistic.articles
+                    margin-left: 100px
+                .statistic.rating
+                    position: absolute
+                    top: 17px
+                    right: 0
+
     /* Content */
     #content
         .social-links
@@ -367,6 +388,31 @@
         .social-links
             a
                 width: 100%
+    .blog
+        .users-list
+            .item
+                //display: inline-block
+                //> *
+                //    display: inline-block
+                //    float: left
+                //.user
+                //    width: calc(100% - 20px - 90px)
+                .statistic:not(.rating)
+                    margin-right: 0
+                    width: 20%
+                    min-width: 20%
+                    max-width: 20%
+                    .count, .title
+                        width: 100% !important
+                    .count
+                        margin-right: 0
+                .statistic.articles
+                    margin-left: 20px
+                .statistic.rating
+                    .count
+                        text-align: right
+                    .title
+                        display: none !important
     // Page Tags
     .tags
         a
@@ -481,6 +527,30 @@
                     .answers-count
                         width: 70px
                         padding: 5px 0 0 10px
+        .filters
+            .sort
+                width: 100%
+                float: left
+                > *
+                    float: left
+                > span:first-child
+                    width: 100%
+                .dropdown
+                    &.active
+                        .dropdown-arrow
+                            &:after
+                                left: 14px
+                                right: auto
+                    .dropdown-container
+                        right: auto
+                        left: 0
+                .sortby, .direction
+                    margin-left: 0
+                .direction
+                    float: right
+                    button
+                        i, .fa
+                            font-size: 20px
 
     /* Footer */
     footer

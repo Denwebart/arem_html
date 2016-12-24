@@ -323,11 +323,13 @@ body
             .rating-down
                 color: $red-color
 .blog .filters + .list.users-list
-    padding-top: 15px
+    padding-top: 0
 .blog
     .users-list
         .item
             padding: 15px 0
+            &:first-child
+                padding-top: 15px
             &.online
                 .user-avatar
                     position: relative
@@ -690,6 +692,7 @@ body
             padding-top: 20px
         .on-page
             float: left
+            margin-right: 20px
         .sort
             float: right
             > *
