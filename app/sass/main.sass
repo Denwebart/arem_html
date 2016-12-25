@@ -322,11 +322,9 @@ body
                 color: $green-color
             .rating-down
                 color: $red-color
-.blog .filters + .list.users-list
-    padding-top: 0
 .blog
     .users-list
-        .item
+        .item.user
             padding: 15px 0
             &:first-child
                 padding-top: 15px
@@ -692,6 +690,29 @@ body
                     &:hover
                         > *, .count, .title
                             color: $green-color
+        &.notification
+            display: table
+            padding: 15px 0
+            &:after
+                content: none
+            > *
+                display: table-cell
+                vertical-align: middle
+            .icon
+                width: 50px
+                i, .fa
+                    font-size: 30px
+            .content
+                > *
+                    display: inline-block
+                    width: 100%
+                    float: left
+                .date
+                    font-size: em(12px)
+                    color: $gray-color
+            .buttons
+                width: 50px
+                text-align: center
 
     .filters
         display: inline-block
@@ -1100,10 +1121,6 @@ footer
     #content
         padding-top: 10px
         margin-bottom: 0
-    .blog
-        .notification
-            &:after
-                content: none
 
 .user-statistics
     display: inline-block
