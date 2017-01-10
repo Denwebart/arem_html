@@ -5,7 +5,7 @@
 
 	<meta charset="utf-8">
 
-	<title>Профиль пользователя: подписки - Avtorem.info</title>
+	<title>Профиль пользователя: диалог с другим пользователем - Avtorem.info</title>
 	<meta name="description" content="">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -377,7 +377,7 @@
                                                     <li><a href="profile-comments.html"><i class="fa fa-comment"></i><span>Комментарии</span></a></li>
                                                     <li><a href="profile-answers.html"><i class="fa fa-comments"></i><span>Ответы</span></a></li>
                                                     <li><a href="profile-saved.html"><i class="fa fa-heart"></i><span>Сохраненное</span></a></li>
-                                                    <li class="active"><a href="profile-subscriptions.html"><i class="fa fa-newspaper-o"></i><span>Подписки</span></a></li>
+                                                    <li><a href="profile-subscriptions.html"><i class="fa fa-newspaper-o"></i><span>Подписки</span></a></li>
                                                     <li><a href="profile-friends.html"><i class="fa fa-handshake-o"></i><span>Друзья</span></a></li>
                                                 </ul>
                                             </div>
@@ -557,9 +557,9 @@
                                 <li><a href="profile-articles.html"><i class="fa fa-book"></i><span>Журнал</span></a></li>
                                 <li><a href="profile-comments.html"><i class="fa fa-comment"></i><span>Комментарии</span></a></li>
                                 <li><a href="profile-answers.html"><i class="fa fa-comments"></i><span>Ответы</span></a></li>
-                                <li><a href="profile-messages.html"><i class="fa fa-paper-plane"></i><span>Сообщения</span></a></li>
+                                <li class="active"><a href="profile-messages.html"><i class="fa fa-paper-plane"></i><span>Сообщения</span></a></li>
                                 <li><a href="profile-saved.html"><i class="fa fa-heart"></i><span>Сохраненное</span></a></li>
-                                <li class="active"><a href="profile-subscriptions.html"><i class="fa fa-newspaper-o"></i><span>Подписки</span></a></li>
+                                <li><a href="profile-subscriptions.html"><i class="fa fa-newspaper-o"></i><span>Подписки</span></a></li>
                                 <li><a href="profile-notifications.html"><i class="fa fa-bell"></i><span>Уведомления</span></a></li>
                                 <li><a href="profile-friends.html"><i class="fa fa-handshake-o"></i><span>Друзья</span></a></li>
                             </ul>
@@ -701,46 +701,81 @@
                                         <a href="profile.html" itemprop="item"><span itemprop="name">Профиль пользователя Ivan</span></a>
                                         <meta itemprop="position" content="2">
                                     </li>
+                                    <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                                        <a href="profile-messages.html" itemprop="item"><span itemprop="name">Сообщения</span></a>
+                                        <meta itemprop="position" content="3">
+                                    </li>
                                 </ul>
 
-                                <h2>Подписки пользователя Ivan</h2>
+                                <h2>Диалог с другим пользователем</h2>
 
-                                <div class="text page-text">
-                                    <p>
-                                        В жизни каждого <em>автолюбителя</em> <i>наступает</i> такой момент,
-                                        когда приходится все делать самому. Засучивать рукава,
-                                        брать <strong>инструмент</strong> в <b>руки</b> и самостоятельно обслуживать,
-                                        диагностировать неисправность, <strong><em>ремонтировать</em></strong> или тюнинговать
-                                        свой автомобиль.
-                                    </p>
-                                    <p>
-                                        Причин, по которым человек пытается все
-                                        сделать своими руками, - множество. Это, например: желание
-                                        человека узнать и понять устройство своего автомобиля и научиться
-                                        чему-то новому. А для кого-то «поковыряться» в машине – это проявление
-                                        нежных и глубоких чувств к своему верному, железному другу.
-                                        Для других ремонт своими руками – это просто способ сэкономить деньги.
-                                        Но, какими бы мотивами не руководствовался человек, для успешного
-                                        решения поставленных задач ему будет необходима информация.
-                                        То есть: желание или необходимость отремонтировать личное транспортное
-                                        средство своими силами - есть, а необходимых знаний для этого, - нет.
-                                        И, естественно, возникают вопросы примерно такого характера:
-                                        Как всё правильно сделать?
-                                        Какая последовательность выполнения работы?
-                                        Как не допустить досадных ошибок?
-                                        Какой инструмент будет необходим?
-                                        И как выбрать качественные запчасти?
-                                    </p>
-                                    <p>
-                                        Вот для ответов на подобные вопросы и был создан сайт
-                                        <strong>"Школа авторемонта"</strong>.
-                                        Здесь для автолюбителей собраны и, конечно же, будут постоянно
-                                        добавляться статьи, советы и рекомендации по техническому
-                                        обслуживанию и ремонту легковых автомобилей различных марок и
-                                        моделей. И мы надеемся, что информация, прочитанная Вами,
-                                        будет полезной и поможет самостоятельно, быстро, а главное,
-                                        правильно, отремонтировать и обслужить&nbsp; автомобиль.
-                                    </p>
+                                <div class="blog with-filters messages">
+                                    <div class="filters">
+                                        <div class="on-page">
+                                            Всего<span class="hidden-xs"> сообщений</span>:
+                                            <span class="count">11</span>
+                                        </div>
+                                        <button class="link pull-right" title="Удалить всю пекреписку">
+                                            <i class="fa fa-trash"></i>
+                                        </button>
+                                        <button class="link pull-right" title="Обновить">
+                                            <i class="fa fa-refresh"></i>
+                                        </button>
+                                    </div>
+                                    <div class="list">
+                                        <div class="item message outgoing-message">
+                                            <div class="user">
+                                                <a href="profile.html" class="user-avatar">
+                                                    <img src="/img/uploads/default-avatar.png" alt="" class="avatar mini">
+                                                </a>
+                                            </div>
+                                            <div class="content">
+                                                <span class="small-text date">25 мин. назад</span>
+                                                <span class="text">
+                                                    Пользователю <a href="profile.html">Support</a> понравилась ваша статья.
+                                                </span>
+                                            </div>
+                                            <div class="buttons">
+                                                <a href="#" class="delete-button">
+                                                    <i class="fa fa-close"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="item message incoming-message">
+                                            <div class="user">
+                                                <i class="fa fa-comment success"></i>
+                                            </div>
+                                            <div class="content">
+                                                <span class="small-text date">1 ч. назад</span>
+                                                <span class="text">
+                                                    Роман (roman@email.com) оставил комментарий к вашей статье.
+                                                </span>
+                                            </div>
+                                            <div class="buttons">
+                                                <a href="#" class="delete-button">
+                                                    <i class="fa fa-close"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pagination">
+                                        <ul>
+                                            <li class="active"><a href="#">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li class="next" title="Следующая">
+                                                <a href="#">
+                                                    <span>следующая</span>
+                                                    <i class="fa fa-angle-right"></i>
+                                                </a>
+                                            </li>
+                                            <li class="last">
+                                                <a href="#" title="Последняя">
+                                                    <span>последняя</span>
+                                                    <i class="fa fa-angle-double-right"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </section>
                         </div>
