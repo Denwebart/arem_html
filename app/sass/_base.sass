@@ -109,7 +109,7 @@ i:only-child, .fa:only-child
         span
             display: inline-block
             position: relative
-            top: -5px
+            top: 5px
             width: 12px
             height: 3px
             background: $gray-color
@@ -327,6 +327,11 @@ a.small-description
     color: $green-color !important
 .danger
     color: $red-color !important
+
+*::selection,
+mark
+    background: $accent-color
+    color: #ffffff
 
 .opacity-0
     @include transition(0.5s)
@@ -552,6 +557,8 @@ input, .input
         .input
             float: left
             width: 50%
+            &:first-child
+                border-right-color: #c5c5c5
     .input-group-button, .fixed
         display: table-cell
         width: 1%
