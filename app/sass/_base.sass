@@ -285,6 +285,17 @@ ul.horisontal
         &:last-child
             margin-right: 0
 
+.horisontal
+    &.list
+        display: inline-block
+        width: 100%
+        float: left
+    .item
+        float: left
+    &.four-item
+        .item
+            width: 25%
+
 // Text
 .fixed-right         // parent container must has "position: relative"
     position: absolute
