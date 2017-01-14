@@ -134,6 +134,8 @@ a, button
 a.link, button.link
     font-family: $title-font
     text-decoration: none
+    > *
+        line-height: 38px
     span
         text-decoration: underline
     i, .fa
@@ -192,6 +194,9 @@ button::-moz-focus-inner
         margin-right: 20px
         &:last-child
             margin-right: 0
+        &.pull-right
+            margin-right: 0
+            margin-left: 20px
     .button-group
         .button
             margin-right: 0
@@ -601,6 +606,8 @@ input, .input
         display: table-cell
         width: 1%
         vertical-align: top
+        .buttons
+            min-width: 320px
 
 .dropdown
     position: relative
