@@ -300,38 +300,6 @@ body.is-windows-phone
                 i, .fa
                     color: $accent-color
 
-    .search-form
-        width: 280px
-        position: absolute
-        z-index: 10
-        right: 20px
-        margin: 10px 0 0 0
-        input, button
-            border: none
-            background: none
-            opacity: 0.5
-            float: left
-            cursor: pointer
-        input
-            width: 60px
-            float: right
-            @include transition(1s)
-            height: 30px
-            font-size: em(18px)
-            box-shadow: none
-            padding: 0 10px 0 2px
-            &:hover, &:focus, &:active,
-            &:hover ~ button, &:focus ~ button, &:active ~ button
-                opacity: 1
-            &:focus
-                width: 250px
-                border-bottom: 1px solid $gray-color
-                cursor: pointer
-        button
-            padding: 0
-            height: 30px
-            i, .fa
-                font-size: 30px
 
 // Search
 .search-form
