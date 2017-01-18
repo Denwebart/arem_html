@@ -387,6 +387,19 @@ body
             .button
                 float: none
                 margin: 0 0 10px 20px
+        .date
+            width: 120px
+            text-align: right
+            vertical-align: top
+        .last-message
+            color: $dark-gray-color
+    a.item.user
+        text-decoration: none
+        padding: 15px 10px
+        span
+            text-decoration: none
+        &:hover
+            background: #eeeeee
     &.horisontal
         .item.user
             .user-avatar
@@ -1238,6 +1251,10 @@ footer
             margin-bottom: 0
 
 /* Users messages */
+.dialogs.users-list
+    .item
+        .user
+            width: 20%
 .dialogs-users.users-list
     .item.user
         padding: 10px 0
