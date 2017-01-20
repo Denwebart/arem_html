@@ -766,6 +766,7 @@ body
         border-top: 1px solid #eeeeee
     .list
         float: left
+        width: 100%
     .pagination
         display: inline-block
         width: 100%
@@ -1269,5 +1270,61 @@ footer
 .dialogs-users.users-list
     .item.user
         padding: 10px 0
+.dialog
+    border: 1px solid #eeeeee
+    border-radius: 3px
+    .filters
+        padding-left: 10px
+        padding-right: 10px
+    .dialog-user-info
+        .user-avatar
+            display: inline-block
+        .user
+            margin-left: 10px
+            display: inline-block
+            position: relative
+            top: 8px
+            > *
+                display: block
+            .login
+                color: $dark-color
+                font-size: em(16px)
+            .is-online
+                color: $gray-color
+                font-size: em(12px)
+    .messages-container
+        display: inline-block
+        padding: 10px 10px 30px
+        width: 100%
+        float: left
+        background: #eeeeee
+        .message
+            position: relative
+            border: none
+            padding-top: 25px
+            .user,
+            .content
+                float: left
+                display: inline-block
+            .user
+                position: absolute
+                top: 25px
+                left: 0
+            .content
+                position: relative
+                margin-left: 60px
+                max-width: calc(100% - 60px)
+                background: $light-color
+                border-radius: 5px
+                padding: 10px 45px 10px 15px
+                .date
+                    position: absolute
+                    top: -20px
+                    right: 0
+                .buttons
+                    display: inline-block
+                    position: absolute
+                    top: 10px
+                    right: 15px
 
 @import "media"
