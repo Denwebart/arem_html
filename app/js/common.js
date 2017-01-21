@@ -153,5 +153,11 @@ $(function() {
         $('#deleteImage').val(1);
     });
 
+    // User Messages
+    $('.dialog .scroll').slimScroll({
+        start: 'bottom',
+        height: '340px'
+    });
+
 
 });

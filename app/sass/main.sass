@@ -432,6 +432,11 @@ body
         margin-top: 5px
         .percentage-like
             background: $accent-color
+.table-block
+    .fixed-block
+        .like-dislike-widget
+            .buttons
+                min-width: inherit
 .percentage
     width: 100%
     height: 3px
@@ -606,8 +611,6 @@ body
         &:first-child
             border-top: none
             padding-top: 0
-        &:last-child
-            //border-bottom: none
         &.full
             .item-image, .item-text
                 width: 100%
@@ -1271,17 +1274,29 @@ footer
     .item.user
         padding: 10px 0
 .dialog
-    border: 1px solid #eeeeee
-    border-radius: 3px
+    .slimScrollDiv
+        display: inline-block
     .filters
         padding-left: 10px
         padding-right: 10px
+        .back
+            float: left
+            margin: 10px 20px 0 0
+            line-height: 1
+            i, .fa
+                font-size: 30px
+        button
+            line-height: 1
+            i, .fa
+                font-size: 20px
     .dialog-user-info
+        display: inline-block
+        float: left
         .user-avatar
-            display: inline-block
+            float: left
         .user
+            float: left
             margin-left: 10px
-            display: inline-block
             position: relative
             top: 8px
             > *
@@ -1297,7 +1312,6 @@ footer
         padding: 10px 10px 30px
         width: 100%
         float: left
-        background: #eeeeee
         .message
             position: relative
             border: none
@@ -1317,14 +1331,60 @@ footer
                 background: $light-color
                 border-radius: 5px
                 padding: 10px 45px 10px 15px
+                clear: both
+                background: #e5e5e5
+                & ~ .content
+                    margin-top: 10px
+                    .date
+                        display: none
+                &:hover
+                    background: #eeeeee
+                    .buttons
+                        display: inline-block
+                .attachments
+                    margin-top: 10px
                 .date
                     position: absolute
                     top: -20px
                     right: 0
                 .buttons
-                    display: inline-block
+                    display: none
                     position: absolute
                     top: 10px
                     right: 15px
+            &.outgoing-message
+                .content
+                    background: #c1ddea
+
+    #message-form
+        display: inline-block
+        width: 100%
+        position: relative
+        margin-top: 20px
+        textarea, .textarea
+            min-height: 50px
+            max-height: 200px
+            width: calc(100% - 50px)
+            float: left
+            padding: 13px 70px 13px 15px
+            line-height: 1.2
+            outline: 0
+            resize: none
+            overflow-y: auto
+            overflow-x: hidden
+            word-wrap: break-word
+        button.send-message
+            position: absolute
+            bottom: 8px
+            right: 0
+            i, .fa
+                font-size: 30px
+        .buttons
+            position: absolute
+            bottom: 12px
+            right: 60px
+            button
+                i, .fa
+                    font-size: 20px
 
 @import "media"
