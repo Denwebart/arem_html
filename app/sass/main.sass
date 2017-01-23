@@ -273,13 +273,17 @@ body
             width: auto
             border: none
             padding-top: 0
+            text-align: center
+            margin: 0 7px
+            &:last-child
+                margin-right: 0
             .user-avatar
+                display: block
                 width: auto
                 min-width: inherit
                 padding: 0
             .user
-                display: inline-block
-                width: 100%
+                display: block
 
 .sidebar .widget.widget-users, .blog .users-list, .users-list
     .item
@@ -302,6 +306,7 @@ body
                 width: 100%
                 float: left
             .login
+                width: auto
                 color: $dark-color
                 text-decoration: none
                 span
