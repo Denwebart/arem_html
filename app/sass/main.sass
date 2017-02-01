@@ -124,18 +124,23 @@ body
                 width: auto
                 display: inline-block
                 margin-bottom: 20px
-            .filters
+            .filters, .count
                 width: auto
                 display: inline-block
                 line-height: 1
                 float: right
                 margin-bottom: 20px
+                font-size: em(12px)
                 a
-                    font-size: em(12px)
                     color: $dark-color
                     margin-left: 10px
                     &.active, &:hover, &:focus
                         color: $accent-color
+            .count
+                float: none
+                position: relative
+                top: -3px // 13px
+                margin: 0 0 0 7px
         .all-items-button
             display: inline-block
             width: 100%

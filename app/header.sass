@@ -24,20 +24,20 @@
         line-height: 50px
 
     .user-panel
-        div
+        > div
             float: left
-        .button,
+        > .button,
         .dropdown-button
             border: none
             float: left
             margin: 0 5px
             padding: 0 10px
+            span
+                color: #ffffff
+                text-decoration: underline
             i, .fa
                 margin: 0
                 color: $gray-color
-            &.active, &:hover
-                i, .fa
-                    color: #ffffff
         .exit-button
             margin-right: -7px
         .notification.button,
@@ -67,6 +67,8 @@
             &.active
                 .button,
                 .dropdown-button
+                    span
+                        text-decoration: none
                     i, .fa
                         color: #ffffff
                 .dropdown-arrow
@@ -93,6 +95,17 @@
                 padding: 0px 6px
             ul
                 height: auto
+            form
+                padding: 15px 5px
+                display: inline-block
+                width: 100%
+                label
+                    line-height: 1.5
+                .button
+                    i, .fa
+                        font-size: 16px
+                        line-height: 1
+
             .list
                 height: auto
                 padding: 5px 0
@@ -183,6 +196,9 @@
                 .container-header
                     .title
                         float: none
+    .sign-in-container
+        a.dropdown-button
+            padding: 0
 
 // End HeaderWidger
 
@@ -316,6 +332,10 @@ body.is-windows-phone
 .slideout-open
     #menu
         display: block
+    .mobile-buttons-menu
+        button
+            *
+                color: $accent-color
 .mobile-buttons-menu
     margin-top: 20px
     button

@@ -120,47 +120,109 @@
     <div id="panel">
         <header>
             <!--Для незарегистрированных пользователей-->
-            <!--<div id="header-widget" class="dark-section">-->
-            <!--<div class="container-fluid">-->
-            <!--<div class="row">-->
-            <!--<div class="col-md-12">-->
-            <!--<div class="pull-left hidden-xs hidden-sm">-->
-            <!--<div class="pull-left m-r-25 hidden-md">-->
-            <!--<a href="#">Регистрируйтесь</a>, чтобы:-->
-            <!--</div>-->
-            <!--<ul class="pull-left">-->
-            <!--<li>-->
-            <!--<i class="fa fa-question"></i>-->
-            <!--<span class="visible-lg">задавать вопросы,</span>-->
-            <!--<span class="visible-md">Задавйте вопросы,</span>-->
-            <!--</li>-->
-            <!--<li>-->
-            <!--<i class="fa fa-file-text"></i>-->
-            <!--<span class="visible-lg">писать статьи,</span>-->
-            <!--<span class="visible-md">пишите статьи,</span>-->
-            <!--</li>-->
-            <!--<li>-->
-            <!--<i class="fa fa-comments"></i>-->
-            <!--<span class="visible-lg">общаться с пользователями,</span>-->
-            <!--<span class="visible-md">общайтесь с пользователями,</span>-->
-            <!--</li>-->
-            <!--<li>-->
-            <!--<i class="fa fa-gift"></i>-->
-            <!--<span class="visible-lg">получать призы!</span>-->
-            <!--<span class="visible-md">получайте призы!</span>-->
-            <!--</li>-->
-            <!--</ul>-->
-            <!--</div>-->
-
-            <!--<div class="pull-right">-->
-            <!--<i class="fa fa-user"></i><a href="#" class="m-r-5">Войти</a>/<a href="#" class="m-l-5">Зарегистрироваться</a>-->
-            <!--</div>-->
-            <!--</div>-->
-            <!--</div>-->
-            <!--</div>-->
-            <!--</div>-->
+            <!-- -->
+            <div id="header-widget" class="dark-section">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="pull-left hidden-xs hidden-sm">
+                                <div class="pull-left m-r-25 hidden-md">
+                                    <a href="#">Регистрируйтесь</a>, чтобы:
+                                </div>
+                                <ul class="pull-left">
+                                    <li>
+                                        <i class="fa fa-question"></i>
+                                        <span class="visible-lg">задавать вопросы,</span>
+                                        <span class="visible-md">Задавйте вопросы,</span>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-file-text"></i>
+                                        <span class="visible-lg">писать статьи,</span>
+                                        <span class="visible-md">пишите статьи,</span>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-comments"></i>
+                                        <span class="visible-lg">общаться с пользователями,</span>
+                                        <span class="visible-md">общайтесь с пользователями,</span>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-gift"></i>
+                                        <span class="visible-lg">получать призы!</span>
+                                        <span class="visible-md">получайте призы!</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="pull-right user-panel sign-in-container">
+                                <i class="fa fa-user"></i>
+                                <div class="dropdown">
+                                    <a href="#" class="dropdown-button dropdown-arrow"><span>Войти</span></a>
+                                    <div class="dropdown-container">
+                                        <div class="container-body">
+                                            <form action="#" id="sign-in-form">
+                                                <div class="form-group" title="Email или логин *">
+                                                    <input name="login" type="text" placeholder="Email или логин *">
+                                                </div>
+                                                <div class="form-group" title="Пароль *">
+                                                    <input name="password" type="text" placeholder="Пароль *">
+                                                </div>
+                                                <div class="form-group input-group">
+                                                    <div class="fixed">
+                                                        <input name="send-copy" id="remember-me" type="checkbox" value="1" checked>
+                                                    </div>
+                                                    <label for="send-copy">
+                                                        Запомнить меня
+                                                    </label>
+                                                </div>
+                                                <button class="button small-button accent-button m-r-10" type="button">
+                                                    <i class="fa fa-sign-in"></i>
+                                                    Войти
+                                                </button>
+                                                <a href="#" class="link">Забыли пароль?</a>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pull-left">
+                                    /
+                                </div>
+                                <div class="dropdown">
+                                    <a href="#" class="dropdown-button dropdown-arrow"><span>Зарегистрироваться</span></a>
+                                    <div class="dropdown-container">
+                                        <div class="container-body">
+                                            <form action="#" id="registration-form">
+                                                <div class="form-group" title="Логин *">
+                                                    <input name="login" type="text" placeholder="Логин *">
+                                                </div>
+                                                <div class="form-group" title="Email *">
+                                                    <input name="email" type="text" placeholder="Email *">
+                                                </div>
+                                                <div class="form-group" title="Пароль *">
+                                                    <input name="password" type="password" placeholder="Пароль *">
+                                                </div>
+                                                <div class="form-group" title="Повтор пароля *">
+                                                    <input name="password_confirmation" type="password" placeholder="Повтор пароля *">
+                                                </div>
+                                                <button class="button small-button accent-button m-r-10" type="button">
+                                                    <i class="fa fa-user-plus"></i>
+                                                    Зарегистрироваться
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--<div class="pull-right">-->
+                                <!--<i class="fa fa-user"></i>-->
+                                <!--<a href="#" class="m-r-5">Войти</a>/<a href="#" class="m-l-5">Зарегистрироваться</a>-->
+                            <!--</div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- -->
 
             <!--Для зарегистрированных пользователей-->
+            <!--
             <div id="header-widget" class="dark-section">
                 <div class="container-fluid">
                     <div class="row">
@@ -180,11 +242,6 @@
 
                             <div class="pull-right">
                                 <div class="user-panel">
-                                    <!--<div><span class="visible-lg">LG</span></div>
-                                    <div><span class="visible-md">MD</span></div>
-                                    <div><span class="visible-sm">SM</span></div>
-                                    <div><span class="visible-xs">XS</span></div>-->
-
                                     <div class="notifications pull-left dropdown">
                                         <a href="#" class="notification dropdown-button"><i class="fa fa-bell-o dropdown-arrow"></i></a>
                                         <div class="dropdown-container">
@@ -365,7 +422,7 @@
                                     <div class="user pull-left dropdown">
                                         <a href="profile.html" class="dropdown-button">
                                             <img src="/img/uploads/avatar.jpg" class="avatar pull-left" alt="">
-                                            <i class="fa fa-bars"></i>
+                                            <i class="fa fa-bars dropdown-arrow"></i>
                                         </a>
                                         <div class="dropdown-container">
                                             <div class="container-body">
@@ -390,6 +447,7 @@
                     </div>
                 </div>
             </div>
+            -->
 
             <div id="header">
                 <div class="container-fluid">
@@ -1349,6 +1407,10 @@
                                             <li><a href="#"><i class="fa fa-rss"></i></a></li>
                                         </ul>
                                     </div>
+
+                                    <p class="m-t-20 small hidden-xs">
+                                        Нашли опечатку? Выделите фрагмент и отправьте нажатием Ctrl+Enter.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -1410,6 +1472,10 @@
                             <div class="m-t-20 align-center-xs">
                                 <img src="/img/uploads/hit.png" alt="Счетчик, заменить на код счетчика">
                             </div>
+
+                            <p class="m-t-20 small visible-xs">
+                                Нашли опечатку? Выделите фрагмент и отправьте нажатием Ctrl+Enter.
+                            </p>
                         </div>
                     </div>
                 </div>
