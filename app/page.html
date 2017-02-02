@@ -922,35 +922,81 @@
                             </div>
 
                             <div class="row">
-                                <div class="col-md-8 col-sm-8">
-                                    <h3>Оставить комментарий</h3>
+                                <div class="col-md-12 col-sm-12">
+                                    <h3>Оставить комментарий (незарегистриров. польз.)</h3>
                                     <div class="small-description">
                                         Если у Вас возникли вопросы - оставьте комментарий,
                                         и мы постараемся ответить на него как можно быстрее.
                                     </div>
                                     <form action="#" id="comment-form">
-                                        <a href="#" class="user-info">
-                                            <img src="/img/uploads/ivan.jpg" class="avatar micro" title="" alt="">
-                                            <span class="login">Ivan</span>
-                                        </a>
-                                        <div class="form-group" title="Имя *">
-                                            <input name="name" type="text" placeholder="Имя *">
-                                        </div>
-                                        <div class="form-group" title="Email *">
-                                            <input name="email" type="text" placeholder="Email *">
-                                        </div>
-                                        <div class="form-group" title="Текст комментария *">
-                                            <textarea name="text" rows="5" placeholder="Текст комментария *"></textarea>
-                                        </div>
-                                        <div class="form-group input-group">
-                                            <div class="fixed">
-                                                <input name="send-copy" id="send-copy" type="checkbox" value="1" checked>
+                                        <div class="row">
+                                            <div class="col-md-4 col-sm-4">
+                                                <div class="form-group" title="Имя *">
+                                                    <input name="name" type="text" placeholder="Имя *">
+                                                </div>
+                                                <div class="form-group" title="Email *">
+                                                    <input name="email" type="text" placeholder="Email *">
+                                                </div>
                                             </div>
-                                            <label for="send-copy">
-                                                Уведомить об ответе на email
-                                            </label>
+                                            <div class="col-md-8 col-sm-8">
+                                                <div class="form-group" title="Текст комментария *">
+                                                    <textarea name="text" rows="3" placeholder="Текст комментария *"></textarea>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <button class="button accent-button pull-right" type="button">Отправить</button>
+                                        <div class="row">
+                                            <div class="col-md-5 col-md-offset-4 col-sm-5 col-sm-offset-4 col-xs-8 full-xxs">
+                                                <div class="form-group input-group">
+                                                    <div class="fixed">
+                                                        <input name="send-copy" id="send-copy" type="checkbox" value="1" checked>
+                                                    </div>
+                                                    <label for="send-copy">
+                                                        Уведомить об ответе на email
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-3 col-xs-4 full-xxs">
+                                                <button class="button accent-button pull-right" type="button">Отправить</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12">
+                                    <h3>Оставить комментарий (зарегистриров. польз.)</h3>
+                                    <div class="small-description">
+                                        Если у Вас возникли вопросы - оставьте комментарий,
+                                        и мы постараемся ответить на него как можно быстрее.
+                                    </div>
+                                    <form action="#" id="comment-form-2">
+                                        <div class="row">
+                                            <div class="col-md-4 col-sm-4">
+                                                <a href="#" class="user-info">
+                                                    <img src="/img/uploads/ivan.jpg" class="avatar micro" title="" alt="">
+                                                    <span class="login">Ivan</span>
+                                                </a>
+                                                <div class="form-group" title="Имя *">
+                                                    <input name="name" type="text" placeholder="Имя *" value="Ivan" disabled>
+                                                </div>
+                                                <div class="form-group" title="Email *">
+                                                    <input name="email" type="text" placeholder="Email *" value="ivan@email.com" disabled>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8 col-sm-8">
+                                                <div class="form-group" title="Текст комментария *">
+                                                    <textarea name="text" rows="3" placeholder="Текст комментария *"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-5 col-md-offset-4 col-sm-5 col-sm-offset-4 col-xs-8 full-xxs">
+                                            </div>
+                                            <div class="col-md-3 col-sm-3 col-xs-4 full-xxs">
+                                                <button class="button accent-button pull-right" type="button">Отправить</button>
+                                            </div>
+                                        </div>
                                     </form>
                                 </div>
                             </div>

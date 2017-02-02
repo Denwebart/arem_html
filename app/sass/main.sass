@@ -640,19 +640,24 @@ body
                 width: 100%
                 margin-left: 0
                 margin-top: 0
+            .item-image + .item-text
+                width: 100%
             .item-text
                 p:last-of-type
                     margin-bottom: 20px
         .item-image
             float: left
             width: calc(35% - 25px)
-            margin: 0 25px 20px 0
-        .item-text
+            margin: 0 25px 0 0
+        .item-image + .item-text
             width: 65%
+        .item-text
+            width: 100%
             position: relative
             float: left
             overflow: hidden
             text-overflow: ellipsis
+            margin-bottom: 30px
             p:last-of-type
                 margin-bottom: 0
         .item-title
@@ -698,6 +703,10 @@ body
                 padding: 0 0 0 70px
             .breadcrumbs
                 padding-right: 100px
+            .delimiter
+                margin: 10px 0 25px
+                .link
+                    left: 50%
             .item-content
                 display: table
                 width: 100%
@@ -831,128 +840,131 @@ body
 // End Widgets
 
 // Comments
-.comment
-    float: left
-    display: inline-block
-    width: 100%
-    .comment-left-side
+#comments, #best-comments, #answers, #best-answers
+    .comment
         float: left
-        width: 50px
-        margin-right: 20px
-    .comment-right-side
-        float: left
-        width: calc(100% - 70px)
-
-    .like-dislike
-        position: relative
-        margin-top: 10px
-        padding-top: 28px
-        text-align: center
-        .total-count
-            position: absolute
-            top: 0
-            left: 50%
-            margin: 0
-            padding: 0
-            font-size: em(20px)
-            .count
-                position: relative
-                left: -50%
-        button
-            height: 20px
+        display: inline-block
+        width: 100%
+        .comment-left-side
             float: left
-            padding: 0
-            &:last-child
-                float: right
+            width: 50px
+            margin-right: 20px
+        .comment-right-side
+            float: left
+            width: calc(100% - 70px)
+
+        .like-dislike
+            position: relative
+            margin-top: 10px
+            padding-top: 28px
+            text-align: center
+            .total-count
+                position: absolute
+                top: 0
+                left: 50%
+                margin: 0
+                padding: 0
+                font-size: em(20px)
+                .count
+                    position: relative
+                    left: -50%
+            button
+                height: 20px
+                float: left
+                padding: 0
+                &:last-child
+                    float: right
+                i, .fa
+                    font-size: 20px
+
+        .comment-container
+            background: #ececec
+            border-radius: 3px
+            border: 1px solid #eeeeee
+            .container-header
+                display: inline-block
+                width: 100%
+                float: left
+                padding: 7px 10px 7px 20px
+                border-bottom: 1px solid #e5e5e5
+                > *
+                    float: left
+                    margin-right: 20px
+                    line-height: 24px
+                    &:last-child
+                        margin-right: 0
+            .container-body
+                display: inline-block
+                width: 100%
+                float: left
+                padding: 5px 10px 15px 20px
+                border-top: 1px solid #f4f4f4
+        .user
+            text-decoration: none
+            .login
+                color: $dark-color
+                text-decoration: none
+                font-weight: bold
+        a.user
+            .login:hover
+                color: $accent-color
+        .date
+            font-size: em(14px)
+            color: $dark-gray-color
+            font-style: italic
+
+        .buttons
+            > *
+                padding: 0 5px
+                margin-left: 5px
             i, .fa
                 font-size: 20px
-
-    .comment-container
-        background: #ececec
-        border-radius: 3px
-        border: 1px solid #eeeeee
-        .container-header
-            display: inline-block
-            width: 100%
-            float: left
-            padding: 7px 10px 7px 20px
-            border-bottom: 1px solid #e5e5e5
+        .comment-text
+            p
+                margin-bottom: 10px
+                &:last-of-type
+                    margin-bottom: 5px
+        .reply
+            float: right
             > *
                 float: left
-                margin-right: 20px
-                line-height: 24px
-                &:last-child
-                    margin-right: 0
-        .container-body
-            display: inline-block
-            width: 100%
-            float: left
-            padding: 5px 10px 15px 20px
-            border-top: 1px solid #f4f4f4
-    .user
-        text-decoration: none
-        .login
-            color: $dark-color
-            text-decoration: none
-            font-weight: bold
-    a.user
-        .login:hover
-            color: $accent-color
-    .date
-        font-size: em(14px)
-        color: $dark-gray-color
-        font-style: italic
+            span
+                line-height: 20px
+            i, .fa
+                margin-top: 5px
 
-    .buttons
-        > *
-            padding: 0 5px
-            margin-left: 5px
-        i, .fa
-            font-size: 20px
-    .comment-text
-        p
-            margin-bottom: 10px
-            &:last-of-type
-                margin-bottom: 5px
-    .reply
-        float: right
-        > *
-            float: left
-        span
-            line-height: 20px
-        i, .fa
-            margin-top: 5px
-
-.comments-list
-    display: inline-block
-    width: 100%
-    margin-bottom: 20px
-    > .comment
-        margin-bottom: 20px
-        &:last-child
-            margin-bottom: 0
     .comments-list
-        margin: 20px 0 0 70px
-        width: calc(100% - 70px)
-        padding: 0
-        .comment-container
-            background: #f0f0f0
+        display: inline-block
+        width: 100%
+        margin-bottom: 20px
+        > .comment
+            margin-bottom: 20px
+            &:last-child
+                margin-bottom: 0
+        .comments-list
+            margin: 20px 0 0 70px
+            width: calc(100% - 70px)
+            padding: 0
+            .comment-container
+                background: #f0f0f0
+    textarea
+        min-height: 130px
+    .user-info
+        text-decoration: none
+        display: inline-block
+        margin-bottom: 10px
+        float: left
+        .avatar
+            float: left
+            margin-right: 7px
+        .login
+            float: left
+            text-decoration: underline
+            color: $dark-gray-color
+            &:hover
+                text-decoration: none
+                color: $accent-color
 
-.user-info
-    text-decoration: none
-    display: inline-block
-    margin-bottom: 10px
-    float: left
-    .avatar
-        float: left
-        margin-right: 7px
-    .login
-        float: left
-        text-decoration: underline
-        color: $dark-gray-color
-        &:hover
-            text-decoration: none
-            color: $accent-color
 // End Comments
 
 // Tree
