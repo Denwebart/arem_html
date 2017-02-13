@@ -104,10 +104,15 @@ gulp.task('build', ['removedist', 'buildhtml', 'imagemin', 'sass', 'libs'], func
 		'app/.htaccess'
 	]).pipe(gulp.dest('dist'));
 
+    var buildLibsFiles = gulp.src([
+        'app/libs/**/**/*'
+    ]).pipe(gulp.dest('dist/libs'));
+
 	var buildFonts = gulp.src('app/fonts/**/*').pipe(gulp.dest('dist/fonts'));
 
-	var buildJs = gulp.src('app/js/**/*').pipe(gulp.dest('dist/js'));
-
+	var buildJs = gulp.src('app/js/**/*')
+        .pipe(uglify())
+        .pipe(gulp.dest('dist/js'));
 });
 
 gulp.task('deploy', function() {
